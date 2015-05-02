@@ -1,0 +1,11 @@
+{
+  "name": "stabfort",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-watch": "^4.2.4"
+  }
+}
