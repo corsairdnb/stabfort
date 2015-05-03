@@ -1,24 +1,12 @@
 var gulp = require('gulp'),
 	less = require('gulp-less'),
-	plumber = require('gulp-plumber'),
 	watch = require('gulp-watch'),
 	autoprefixer = require('gulp-autoprefixer'),
-	sourcemaps = require('gulp-sourcemaps'),
-	print = require('gulp-print');
+	sourcemaps = require('gulp-sourcemaps');
 
-var lessPath = 'less/',
-	lessMainPath = lessPath + '*.less',
-	cssOutputPath = 'css/';
-
-gulp.task('watch', function () {
-	return gulp.src(lessMainPath)
-		.pipe(watch(lessMainPath))
-		.pipe(plumber())
-		.pipe(print(function(filepath) {
-			var date = new Date(),
-				dateformat = require('gulp/node_modules/gulp-util/node_modules/dateformat');
-			return dateformat(date, 'HH:MM:ss') + ' ' + filepath;
-		}))
+gulp.task('less', function () {
+	return gulp
+		.src('less/*.less')
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(autoprefixer({
@@ -26,5 +14,9 @@ gulp.task('watch', function () {
 			cascade: false
 		}))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(cssOutputPath))
+		.pipe(gulp.dest('css/'))
+});
+
+gulp.task('watch', function () {
+	gulp.watch(['less/*.less', 'less/stabfort/**/*.less'], ['less'])
 });
