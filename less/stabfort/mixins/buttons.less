@@ -1,0 +1,66 @@
+.natural-button(@color-1, @color-2) {
+	display: inline-block;
+	padding: 15px 20px;
+	background: linear-gradient(to bottom, @color-1, @color-2);
+	border: 0 none;
+	border-bottom: 1px solid @color-2;
+	box-shadow: 0 0 10px @color-1 inset;
+	border-radius: 7px;
+	font-size: 19px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+	&, &:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		background: linear-gradient(to bottom, @color-1, lighten(@color-2, 10%));
+		color: #fff;
+		text-decoration: none;
+	}
+	&:active {
+		background: linear-gradient(to bottom, @color-2, @color-1);
+	}
+}
+
+.btn-orange() {
+	.natural-button(@color-orange-btn-1, @color-orange-btn-2);
+}
+
+.btn-green() {
+	.natural-button(@color-green-btn-1, @color-green-btn-2);
+}
+
+.flat-button(@color, @font-size) {
+	display: inline-block;
+	padding: 10px 20px;
+	background: @color;
+	border: 3px solid @color;
+	border-radius: 10px;
+	font-size: @font-size;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+	&, &:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		background: linear-gradient(to bottom, @color, lighten(@color, 10%));
+		color: #fff;
+		text-decoration: none;
+	}
+	&:active {
+		background: linear-gradient(to bottom, @color, @color);
+	}
+	&.transparent {
+		background: transparent;
+		color: @color;
+		&:hover {
+			background: @color;
+			color: #fff;
+		}
+	}
+}
