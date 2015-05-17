@@ -6,9 +6,6 @@
 	position: relative;
 	font-size: 0;
 	line-height: 0;
-	&.opened {
-		z-index: 1050;
-	}
 	.top-menu-bg {
 		position: absolute;
 		width: 100%;
@@ -27,8 +24,8 @@
 		top: @top-menu-height;
 	}
 	ul {
-		background: rgba(0,0,0,.8);
-		box-shadow: 0 0 5px rgba(0,0,0,.3);
+		background: rgba(0,0,0,.9);
+		/*box-shadow: 0 0 5px rgba(0,0,0,.3);*/
 		transition: transform .3s;
 		transform: translateX(250px);
 		width: 100%;
@@ -53,6 +50,12 @@
 				color: #000;
 				text-decoration: none;
 			}
+		}
+	}
+	&.opened {
+		z-index: 1100;
+		ul {
+			transform: translateX(0);
 		}
 	}
 	.mobile-icon {

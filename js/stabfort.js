@@ -1,5 +1,9 @@
 $(function(){
 
+	$('.mobile-icon').on('click', function(){
+		$('.top-menu').toggleClass('opened');
+	});
+
 	$('.peppermint').Peppermint({
 		//transition time when changing slides, ms
 		speed: 300,

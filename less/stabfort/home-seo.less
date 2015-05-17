@@ -1,0 +1,49 @@
+.home-seo-block {
+	margin: 50px 0;
+	padding: 0 15px;
+	.h1, h1 {
+		margin: 0 0 1em;
+		font-size: 15px;
+		line-height: 1.5em;
+		font-weight: 600;
+		color: @color-blue-1;
+		text-transform: uppercase;
+	}
+	.col {
+		padding: 0;
+		font-size: 14px;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.home-seo-block {
+		.h1, h1 {
+			margin: 0 0 1em;
+			font-size: 18px;
+			line-height: 1.5em;
+		}
+		.col {
+			padding: 0;
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.home-seo-block {
+		padding: 40px 0;
+		background: linear-gradient(to bottom, #f0f0f0, #fff 100px, #fff);
+		.h1, h1 {
+			margin: 0;
+			font-size: 22px;
+			line-height: 1.2em;
+			font-weight: 700;
+			text-align: center;
+		}
+		.col {
+			width: 50%;
+			float: left;
+			padding: 0 2%;
+			font-size: 16px;
+		}
+	}
+}
