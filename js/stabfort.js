@@ -45,7 +45,12 @@ $(function(){
 
 		//Callback function, runs at slide change.
 		//Receives slide number as a parameter.
-		onSlideChange: undefined,
+		onSlideChange: function(a){
+			/*var slide = $('.home-carousel').find('.slide').eq(parseInt(a)-1).find('.slide-content').css('opacity', 0);
+			setTimeout(function(){
+				slide.css('opacity', 1);
+			}, 300, slide);*/
+		},
 
 		//Callback function, runs at setup end.
 		//Receives total number of slides as a parameter.

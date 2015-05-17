@@ -1,15 +1,47 @@
 .home-carousel {
-	padding: 50px 0 0;
-	.slide {
-		background: rgba(0,172,187,.5);
+	background: rgba(0,172,187,.5) repeat-y 46px 0;
+	position: relative;
+	margin: 50px 0 0;
+	&:before {
+		content: "";
+		display: block;
+		width: 50%;
+		height: 1px;
+		background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 95px;
+		background: url(../img/rounded_shadow.png) no-repeat center top;
+		position: absolute;
+		left: 0;
+		bottom: -95px;
 	}
 }
 
-.slide-content-type-1 {
+.slide-content {
 	width: @vw-iphone;
 	margin: 0 auto;
 	padding: 20px 10px;
 	text-align: center;
+	height: 322px;
+	transition: opacity .1s;
+	.btn {
+		.btn-luminous-blue();
+		width: 100%;
+		padding: .7em .3em;
+		font-size: 13px;
+		font-weight: 300;
+		text-shadow: none;
+	}
+}
+
+.slide-content-type-1 {
 	color: #fff;
 	.h1 {
 		margin: 0 0 .3em;
@@ -29,29 +61,38 @@
 	.list {
 		margin: 0;
 		padding: 0;
-	}
-	.list > li {
-		display: block;
-		margin: 0 30px 20px 30px;
-		padding: 0 0 0 30px;
-		position: relative;
-		font-size: 14px;
-		line-height: 1.2em;
-		text-align: left;
-	}
-	.list > li > i {
-		position: absolute;
-		left: -.4em;
-		top: 0;
-		font-size: 30px;
+		> li {
+			display: block;
+			margin: 0 30px 20px 30px;
+			padding: 0 0 0 30px;
+			position: relative;
+			font-size: 14px;
+			line-height: 1.2em;
+			text-align: left;
+			> i {
+				position: absolute;
+				left: -.4em;
+				top: 0;
+				font-size: 30px;
+			}
+			nobr {
+				white-space: normal;
+			}
+		}
 	}
 }
 
 @media (min-width: @vw-iphone-land) {
-	.slide-content-type-1 {
+	.slide-content {
 		width: auto;
+		height: 390px;
 		max-width: @vw-iphone-5-land;
 		padding: 20px 50px;
+		.btn {
+			font-size: 15px;
+		}
+	}
+	.slide-content-type-1 {
 		.h1 {
 			font-size: 30px;
 			line-height: 1em;
@@ -64,16 +105,22 @@
 			padding-left: 40px;
 			margin-left: 45px;
 			font-size: 18px;
-		}
-		.list > li > i {
-			font-size: 40px;
+			> i {
+				font-size: 40px;
+			}
 		}
 	}
 }
 @media (min-width: @vw-iphone-5-land) {
-	.slide-content-type-1 {
+	.slide-content {
 		max-width: none;
+		height: 480px;
 		padding: 40px 60px;
+		.btn {
+			font-size: 18px;
+		}
+	}
+	.slide-content-type-1 {
 		.h1 {
 			font-size: 36px;
 			line-height: 1em;
@@ -88,10 +135,73 @@
 			text-align: center;
 			font-size: 24px;
 			font-weight: 300;
+			> i {
+				font-size: 1em;
+				position: static;
+			}
 		}
-		.list > li > i {
-			font-size: 1em;
-			position: static;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.home-carousel {
+		background-image: url(../img/carousel_bg.png);
+		margin: 0;
+	}
+	.slide-content {
+		width: 50%;
+		height: 476px;
+		margin: 0;
+		text-align: left;
+		.h1 {
+			margin: 0;
+			font-size: 48px;
+			line-height: 1.2em;
+		}
+		.h2 {
+			margin-bottom: 1em;
+			font-size: 25px;
+			line-height: 1.1em;
+		}
+		.list > li {
+			margin: 0 0 20px 20px;
+			padding: 0 50px 0 40px;
+			text-align: left;
+			font-size: 25px;
+			line-height: 1em;
+			font-weight: 400;
+			> i {
+				font-size: 2em;
+				position: absolute;
+				top: 50%;
+				margin-top: -.5em;
+				&.md-chat {
+					margin-top: -.3em;
+				}
+			}
+			nobr {
+				white-space: nowrap;
+			}
+		}
+		.btn {
+			.btn-luminous-blue();
+			width: auto;
+			padding: 10px 20px;
+			font-size: 21px;
+			font-weight: 500;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		}
+	}
+	.slide-content-type-1 {
+		padding-top: 50px;
+	}
+	.slide-content-type-1-1 {
+		.list > li {
+			margin-bottom: 32px;
+		}
+	}
+	.home-carousel {
+		.slide {
+
 		}
 	}
 }

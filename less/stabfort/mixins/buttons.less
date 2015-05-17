@@ -64,3 +64,36 @@
 		}
 	}
 }
+
+.luminous-button(@color-1, @color-2) {
+	display: inline-block;
+	padding: 10px 20px;
+	background: linear-gradient(to bottom, @color-1, @color-2);
+	border: 0 none;
+	box-shadow: 0 0 10px fade(darken(@color-2, 20%), 50%), 0 0 10px @color-1 inset;
+	border-radius: 7px;
+	font-size: 21px;
+	line-height: 1em;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	&, &:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		background: linear-gradient(to bottom, @color-1, lighten(@color-2, 10%));
+		color: #fff;
+		text-decoration: none;
+	}
+	&:active {
+		background: linear-gradient(to bottom, @color-2, @color-1);
+	}
+	[class^="md-"] {
+		vertical-align: bottom;
+	}
+}
+
+.btn-luminous-blue() {
+	.luminous-button(@color-cyan-1, @color-blue-1);
+}

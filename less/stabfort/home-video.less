@@ -1,0 +1,70 @@
+.home-video {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	&:before {
+		content: "";
+		position: absolute;
+		left: -1px;
+		top: 0;
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: rgba(255,255,255,.3);
+	}
+	.play-icon {
+		&:before {
+			display: inline-block;
+			margin: auto;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 1em;
+			height: 1em;
+			font-size: 190px;
+			line-height: 1em;
+			color: #fff;
+			text-shadow: 0 0 22px rgba(0,0,0,.2);
+			transition: all .3s;
+		}
+	}
+	.play-label {
+		display: block;
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		top: 70%;
+		color: #fff;
+		font-size: 20px;
+		font-style: italic;
+		text-shadow: 0 1px 6px rgba(0,0,0,.4);
+	}
+}
+
+.home-video-play:hover {
+	.play-icon:before {
+		text-shadow: 0 0 30px rgba(0,0,0,.5);
+	}
+}
+
+.home-video-play {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.home-video-bg {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.home-video {
+		display: block;
+	}
+}
