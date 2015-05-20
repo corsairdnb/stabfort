@@ -1,57 +1,168 @@
 .home-advantages-customers {
 	position: relative;
-	background: @color-green-1 url(../img/office_bg.jpg) no-repeat center -300px;
-	padding: 60px 0 40px;
+	background: @color-green-1 url(../img/office_bg_green.jpg) no-repeat center top;
+	background-size: auto 100%;
+	padding: 40px 0 20px;
 	text-align: center;
 	color: #fff;
 	.section-cnt {
 		max-width: 1100px;
+		padding: 0 10px;
 	}
 	.title {
 		margin: 0 0 1em;
-		font-size: 40px;
+		font-size: 24px;
 		font-weight: 300;
 		line-height: 1.2em;
 		text-transform: uppercase;
 	}
 	.cols {
-		margin: 0 0 50px;
+		margin: 0;
 	}
 	.col {
-
+		margin: 0 0 30px;
 	}
 	.col-icon {
 		display: block;
-		font-size: 140px;
+		font-size: 100px;
 	}
 	.col-title {
 		display: block;
 		margin: 5px 0 0;
-		font-size: 40px;
+		font-size: 30px;
 		line-height: 1em;
-		font-weight: 900;
+		font-weight: 700;
 		text-transform: uppercase;
 	}
 	.col-text {
 		display: block;
 		margin: 5px 0 0;
-		font-size: 18px;
+		padding: 0 30px;
+		font-size: 16px;
 		line-height: 1.2em;
 	}
 	.text {
-		font-size: 30px;
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 1.5em;
 		b {
-			font-weight: 900;
+			font-weight: 700;
 		}
 	}
 }
 
-@media (min-width: @vw-tablet-lg) {
-	.col {
-		width: 33%;
-		float: left;
-		padding: 0 45px;
+@media (min-width: @vw-iphone-land) {
+	.home-advantages-customers {
+		background-size: cover;
+		.col {
+			width: 33%;
+			float: left;
+			padding: 0 5px;
+		}
+		.title {
+			margin: 0 0 1em;
+			font-size: 35px;
+			font-weight: 300;
+			line-height: 1.2em;
+		}
+		.col-icon {
+			font-size: 60px;
+		}
+		.col-title {
+			margin: 5px 0 0;
+			font-size: 20px;
+			line-height: 1em;
+			font-weight: 700;
+		}
+		.col-text {
+			margin: 5px 0 0;
+			padding: 0;
+			font-size: 12px;
+			line-height: 1.2em;
+		}
+		.text {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.5em;
+		}
 	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.home-advantages-customers {
+		.cols {
+			margin: 0 0 20px;
+		}
+		.col {
+			width: 33%;
+			float: left;
+			margin: 0;
+			padding: 0 15px;
+		}
+		.title {
+			margin: 0 0 1em;
+			font-size: 35px;
+			font-weight: 300;
+			line-height: 1.2em;
+			br {
+				display: none;
+			}
+		}
+		.col-icon {
+			font-size: 90px;
+		}
+		.col-title {
+			margin: 5px 0 0;
+			font-size: 30px;
+			line-height: 1em;
+			font-weight: 700;
+		}
+		.col-text {
+			margin: 5px 0 0;
+			padding: 0;
+			font-size: 18px;
+			line-height: 1.2em;
+		}
+		.text {
+			font-size: 23px;
+			font-weight: 300;
+			line-height: 1.5em;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.home-advantages-customers {
+		padding: 60px 0 40px;
+		.title {
+			margin: 0 0 1em;
+			padding: 0;
+			font-size: 40px;
+			font-weight: 300;
+			line-height: 1.2em;
+		}
+		.col-icon {
+			font-size: 140px;
+		}
+		.col-title {
+			margin: 5px 0 0;
+			font-size: 40px;
+			line-height: 1em;
+			font-weight: 900;
+		}
+		.col-text {
+			margin: 5px 0 0;
+			font-size: 18px;
+			line-height: 1.2em;
+		}
+		.text {
+			font-size: 30px;
+			font-weight: 300;
+			line-height: 1.5em;
+			b {
+				font-weight: 900;
+			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+
 }
