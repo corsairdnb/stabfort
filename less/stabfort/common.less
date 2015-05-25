@@ -8,7 +8,7 @@ body {
 	-webkit-text-size-adjust: none;
 }
 .section-cnt {
-	max-width: @vw-laptop-sm;
+	max-width: @vw-laptop-sm - 40px;
 	margin: 0 auto;
 }
 .relative {
@@ -19,4 +19,25 @@ body {
 }
 .r {
 	text-align: right;
+}
+
+.stabfort-logo {
+	width: 185px;
+	height: 45px;
+	> a {
+		display: block;
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	html, body {
+		height: 100%;
+	}
+	body {
+		display: table;
+		width: 100%;
+	}
+	.wrapper {
+		display: table-row-group;
+	}
 }

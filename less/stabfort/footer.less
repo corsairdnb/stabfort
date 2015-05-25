@@ -1,0 +1,118 @@
+.footer {
+	background: #556567;
+}
+.footer-cnt {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	padding: 30px 20px;
+	text-align: center;
+	.stabfort-logo {
+		display: none;
+		float: left;
+		position: relative;
+		top: -5px;
+		margin: 0 20px 20px 0;
+	}
+}
+.footer-about {
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #b6b6b6;
+}
+.footer-copyright {
+	font-size: 14px;
+	line-height: 1.2em;
+}
+.footer-copyright-text {
+	margin: 10px 0;
+	color: #b6b6b6;
+	vertical-align: top;
+}
+.footer-copyright-contacts {
+	margin: 0;
+	vertical-align: top;
+	a {
+		&, &:visited {
+			color: #fff;
+			text-decoration: none;
+		}
+		&:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+}
+.footer-about-social {
+	margin: 25px 0 0;
+	vertical-align: top;
+}
+
+@media (min-width: @vw-iphone-land) {
+	.footer-cnt {
+		padding-left: 20px;
+		padding-right: 20px;
+		.stabfort-logo {
+			margin: 0 20px 10px 0;
+		}
+	}
+	.footer-about {
+		font-size: 16px;
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.footer-copyright-text {
+		font-size: 16px;
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.footer-cnt {
+		text-align: left;
+	}
+	.footer-about {
+		margin: 0 0 20px;
+		line-height: 1.5em;
+	}
+	.footer-copyright-text {
+		line-height: 1.5em;
+	}
+	.footer-copyright-text {
+		display: inline-block;
+		width: 65%;
+	}
+	.footer-copyright-contacts {
+		display: inline-block;
+		margin: 10px 0 10px 5%;
+		float: right;
+		width: 30%;
+		text-align: right;
+	}
+	.footer-about-text {
+		display: inline-block;
+		width: 70%;
+		margin: 0 5% 0 0;
+	}
+	.footer-about-social {
+		margin: 0;
+		float: right;
+		text-align: right;
+		max-width: 280px;
+		width: 25%;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.footer {
+		display: table-footer-group;
+	}
+	.footer-cnt {
+		width: @vw-laptop-sm - 40px;
+		padding-left: 0;
+		padding-right: 0;
+		.stabfort-logo {
+			display: block;
+		}
+	}
+	.footer-copyright-text {
+		font-size: 14px;
+	}
+}

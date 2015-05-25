@@ -1,0 +1,66 @@
+.footer-menu {
+	ul {
+		margin: 0;
+		padding: 1px 0;
+		text-align: center;
+		li {
+			display: block;
+			margin: 15px 0;
+			padding: 0;
+			text-align: center;
+			a, a:visited, span {
+				display: inline-block;
+				padding: 0 0 2px;
+				vertical-align: top;
+				font: 20px/1em @font-condensed;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-bottom: 1px solid #aab2b3;
+			}
+			a:hover {
+				color: #fff;
+				text-decoration: none;
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.footer-menu {
+		 ul {
+			 li {
+				 display: inline-block;
+				 margin: 5px 30px 5px 0;
+				 a, a:visited, span {
+					 font-size: 17px;
+				 }
+				 &:last-child {
+					 margin-right: 0;
+				 }
+			 }
+		 }
+	 }
+}
+@media (min-width: @vw-tablet-lg) {
+	.footer-menu {
+		margin: 0 0 20px;
+		ul {
+			li {
+			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.footer-menu {
+		ul {
+			text-align: right;
+			li {
+				a, a:visited, span {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
