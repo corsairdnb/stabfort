@@ -61,4 +61,12 @@ $(function(){
 		onSetup: undefined
 	});
 
+	$('.home-video-play').on('click', function(){
+		$('.video-modal')
+			.on('show.bs.modal', function () {
+				$(this).find('.modal-body').html('<iframe width="850" height="638" src="https://www.youtube.com/embed/3zbvUTQq6Uc?rel=0" frameborder="0" allowfullscreen></iframe>');
+			})
+			.modal();
+	});
+
 });

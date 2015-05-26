@@ -1,8 +1,13 @@
+@video-width: 620px;
+@video-height: 476px;
+
 .home-video {
 	display: none;
 	position: absolute;
 	right: 0;
 	top: 0;
+	width: @video-width;
+	height: @video-height;
 	&:before {
 		content: "";
 		position: absolute;
@@ -28,7 +33,7 @@
 			line-height: 1em;
 			color: #fff;
 			text-shadow: 0 0 22px rgba(0,0,0,.2);
-			transition: all .3s;
+			transition: all .5s;
 		}
 	}
 	.play-label {
@@ -43,13 +48,6 @@
 		text-shadow: 0 1px 6px rgba(0,0,0,.4);
 	}
 }
-
-.home-video-play:hover {
-	.play-icon:before {
-		text-shadow: 0 0 30px rgba(0,0,0,.5);
-	}
-}
-
 .home-video-play {
 	position: absolute;
 	width: 100%;
@@ -57,11 +55,125 @@
 	left: 0;
 	top: 0;
 	cursor: pointer;
+	transition: background-color .5s;
+}
+.home-video-play:hover {
+	background-color: rgba(0, 79, 94, .2);
+	.play-icon:before {
+		text-shadow: 0 0 30px rgba(0,0,0,.5);
+	}
 }
 .home-video-bg {
 	display: block;
 	font-size: 0;
 	line-height: 0;
+}
+/*.home-video-container {
+	display: none;
+}
+.home-video-is-playing {
+	.home-video-bg {
+		display: none;
+	}
+	.home-video-container {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}*/
+
+.video-modal {
+	iframe {
+		display: block;
+	}
+	.modal-body, .modal-footer {
+		padding: 0;
+		border: 0 none;
+	}
+	.modal-content {
+		border-radius: 0;
+	}
+	.steps {
+		background: #212121;
+		padding: 15px 10px;
+		text-align: center;
+	}
+	.step {
+		display: inline-block;
+		position: relative;
+		margin: 0 35px 0 0;
+		padding: 0;
+		vertical-align: top;
+		&:after {
+			content: "";
+			position: absolute;
+			right: -30px;
+			top: 50%;
+			margin-top: -7px;
+			border-left: 7px solid #fff;
+			border-right: 7px solid transparent;
+			border-top: 7px solid transparent;
+			border-bottom: 7px solid transparent;
+		}
+		&:last-child {
+			margin-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.number {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin: 0 3px 0 0;
+		vertical-align: middle;
+		border-radius: 50%;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 40px;
+		color: #212121;
+	}
+	.step-1 .number {
+		background: #03a9f4;
+	}
+	.step-2 .number {
+		background: #70b60b;
+	}
+	.step-3 .number {
+		background: #f46903;
+	}
+	.text {
+		display: inline-block;
+		vertical-align: middle;
+		font: 21px/1em @font-condensed;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	.call-to-action {
+		padding: 36px 10px 36px 75px;
+		text-align: left;
+		.btn {
+			width: 30%;
+			vertical-align: middle;
+			.btn-orange();
+		}
+	}
+	.call-to-action-text {
+		width: 67%;
+		display: inline-block;
+		padding: 0 0 0 3%;
+		vertical-align: middle;
+		font-size: 20px;
+		line-height: 1.5em;
+		color: #212121;
+		b {
+			font-weight: 900;
+		}
+	}
 }
 
 @media (min-width: @vw-laptop-sm) {

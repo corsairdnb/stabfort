@@ -1,0 +1,26 @@
+@zindex-modal: 2000;
+@zindex-modal-background: @zindex-modal - 10;
+
+.modal {
+	z-index: @zindex-modal;
+}
+.modal-dialog {
+	width: 850px;
+}
+.modal-backdrop {
+	z-index: @zindex-modal-background;
+	background-color: #000;
+	&.in { .opacity(.9); }
+}
+.modal-close-btn {
+	position: absolute;
+	right: -60px;
+	top: 0;
+	color: #fff;
+	font-size: 40px;
+	cursor: pointer;
+	transition: transform .4s;
+	&:hover {
+		transform: rotate(90deg) scale(1.1);
+	}
+}
