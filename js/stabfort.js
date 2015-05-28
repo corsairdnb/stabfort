@@ -62,10 +62,19 @@ $(function(){
 	});
 
 	$('.home-video-play').on('click', function(){
+		//TODO: реализовать остановку видео при закрытии модального окна
+		// из-за same-origin-policy невозможно получить доступ к плееру
 		$('.video-modal')
 			.on('show.bs.modal', function () {
-				$(this).find('.modal-body').html('<iframe width="850" height="638" src="https://www.youtube.com/embed/3zbvUTQq6Uc?rel=0" frameborder="0" allowfullscreen></iframe>');
+				var body = $(this).find('.modal-body');
+				if (body.html() == '') {
+					body.html('<iframe width="850" height="638" src="http://www.youtube.com/embed/3zbvUTQq6Uc?rel=0&autoplay=true" frameborder="0" allowfullscreen id="'+ player_id +'"></iframe>');
+				}
 			})
+			/*.on('hide.bs.modal', function () {
+				var iframe = document.getElementById(player_id).contentWindow;
+				iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			})*/
 			.modal();
 	});
 
