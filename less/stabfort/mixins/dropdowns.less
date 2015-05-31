@@ -1,0 +1,16 @@
+.dropdown-basic() {
+	display: inline-block;
+	position: relative;
+	padding: 0 0 3px;
+	font: 15px/1em @font-condensed;
+	border-bottom: 1px dotted @color-blue-1;
+	text-transform: uppercase;
+	color: @color-blue-1;
+	cursor: pointer;
+	&:hover {
+		border-bottom-color: transparent;
+	}
+	&:after {
+		.arrow-after(5px, currentColor, top);
+	}
+}

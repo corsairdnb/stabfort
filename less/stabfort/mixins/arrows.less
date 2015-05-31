@@ -1,0 +1,37 @@
+.arrow-border(@size: .4em, @color: currentColor, @dir: top) {
+	border-width: @size;
+	border-color: transparent;
+	border-@{dir}-color: @color;
+	border-style: solid;
+}
+
+.arrow(@size: .4em, @color: currentColor, @dir: top, @rest...) {
+	.arrow-border(@size, @color, @dir);
+}
+
+.arrow(@size: .4em, @color: currentColor, @dir: top, @rest...) when (@rest = block) {
+	display: inline-block;
+	vertical-align: middle;
+	.arrow-border(@size, @color, @dir);
+}
+
+.arrow-after(@size: .4em, @color: currentColor, @dir: top) {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	top: 50%;
+	margin: -(ceil(@size/2)+1px) 0 0 6px;
+	.arrow-border(@size, @color, @dir);
+}
+
+.arrow-before(@size: .4em, @color: currentColor, @dir: top) {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	left: -(@size*3);
+	top: 50%;
+	margin: -(ceil(@size/2)+1px) 0 0;
+	.arrow-border(@size, @color, @dir);
+}

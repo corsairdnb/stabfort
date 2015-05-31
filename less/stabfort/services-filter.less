@@ -1,0 +1,164 @@
+.services-filter {
+	margin: 20px 0;
+	padding: 0 20px;
+	position: relative;
+	text-align: center;
+}
+.services-filter-location {
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+}
+.services-filter-location-current {
+	.dropdown-basic();
+}
+.services-filter-location-select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.services-filter-type {
+	vertical-align: top;
+	position: relative;
+	margin: 10px 0;
+	text-align: center;
+	cursor: pointer;
+}
+.services-filter-type-list {
+	display: none;
+	margin: 0;
+	padding: 0;
+	> li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		> a {
+			display: inline-block;
+			padding: .3em 1.2em .6em;
+			border-bottom: 3px solid transparent;
+			font: 15px/1em @font-condensed;
+			text-transform: uppercase;
+			&, &:visited {
+				color: #b6b6b6;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+		}
+		&.active, &:hover {
+			> a, > a:visited, > a:hover {
+				color: @color-blue-1;
+				border-bottom-color: @color-blue-1;
+			}
+		}
+	}
+}
+.services-filter-type-select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 0 none;
+	box-shadow: none;
+	opacity: 0;
+}
+.services-filter-type-current {
+	.dropdown-basic();
+}
+.services-search {
+	display: inline-block;
+	vertical-align: top;
+	color: @color-blue-1;
+	text-align: center;
+	.input {
+		display: inline-block;
+		width: 100px;
+		background: none;
+		border: 0 none;
+		box-shadow: none;
+		outline: 0 none;
+		padding: 0;
+		vertical-align: top;
+		border-bottom: 1px solid transparent;
+		transition: all .5s;
+		font: 15px/1.7em @font-condensed;
+		color: @color-grey-1;
+		&::placeholder {
+			text-transform: uppercase;
+			color: @color-blue-1;
+		}
+		&:focus {
+			width: 150px;
+			border-bottom-color: @color-blue-1;
+		}
+	}
+	.icon {
+		font-size: 28px;
+		vertical-align: bottom;
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+
+}
+@media (min-width: @vw-tablet-sm) {
+	.services-filter {
+		margin: 20px 0;
+		padding: 0 0 0 15px;
+		text-align: left;
+	}
+	.services-filter-location {
+		display: inline-block;
+	}
+	.services-filter-type {
+		display: inline-block;
+		margin: 0;
+		float: right;
+	}
+	.services-filter-location-select,
+	.services-filter-type-select,
+	.services-filter-type-current{
+		display: none;
+	}
+	.services-filter-type-list {
+		display: block;
+	}
+	.services-filter-search {
+		margin: 20px 0 0;
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.services-filter {
+		text-align: center;
+		padding-right: 140px;
+	}
+	.services-filter-location {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		float: left;
+	}
+	.services-filter-type {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		float: none;
+	}
+	.services-filter-search {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		vertical-align: top;
+		margin: 0 10px 0 0;
+	}
+}

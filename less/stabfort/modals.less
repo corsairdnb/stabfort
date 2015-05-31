@@ -4,15 +4,13 @@
 .modal {
 	z-index: @zindex-modal;
 }
-.modal-dialog {
-	width: 850px;
-}
 .modal-backdrop {
 	z-index: @zindex-modal-background;
 	background-color: #000;
 	&.in { .opacity(.9); }
 }
 .modal-close-btn {
+	display: none;
 	position: absolute;
 	right: -60px;
 	top: 0;
@@ -22,5 +20,14 @@
 	transition: transform .4s;
 	&:hover {
 		transform: rotate(90deg) scale(1.1);
+	}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.modal-dialog {
+		width: 850px;
+	}
+	.modal-close-btn {
+		display: block;
 	}
 }

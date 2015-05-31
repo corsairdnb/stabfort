@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Stabfort.ru</title>
     <link rel="stylesheet" href="../css/home.css">
-    <!--<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400|Roboto:500,900,400italic,100,700italic,300,700,400&amp;subset=latin,cyrillic' rel='stylesheet'>-->
+    <!--
+    раскомментируй это
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400|Roboto:500,900,400italic,100,700italic,300,700,400&amp;subset=latin,cyrillic' rel='stylesheet'>-->
 </head>
 <body>
 
@@ -132,7 +134,67 @@
         </section>
         <section class="section home-services">
             <div class="section-cnt">
-                Выберите нужную вам услугу
+                <div class="title">Выберите нужную вам услугу</div>
+                <div class="services-filter clearfix">
+                    <div class="services-filter-location">
+                        <div class="services-filter-location-current" data-toggle="modal" data-target="#exampleModal">Петропавловск-камчатский</div>
+                        <select class="services-filter-location-select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="services-filter-type">
+                        <ul class="services-filter-type-list">
+                            <li class="active"><a href="#">Все услуги</a></li>
+                            <li><a href="#">Для юридических лиц</a></li>
+                            <li><a href="#">Для физических лиц</a></li>
+                        </ul>
+                        <div class="services-filter-type-current" data-toggle="modal" data-target="#exampleModal">Все услуги</div>
+                        <select class="services-filter-type-select">
+                            <option>Все услуги</option>
+                            <option>Для юридических лиц</option>
+                            <option>Для физических лиц</option>
+                        </select>
+                    </div>
+                    <div class="services-filter-search">
+                        <form action="/" class="services-search">
+                            <label>
+                                <i class="md-search icon"></i>
+                                <input type="search" placeholder="Поиск услуг" class="input">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="services-list">
+                    <div class="services-list-container">
+                        <div class="tile">
+                            <div class="tile-header">
+                                <a href="#" class="tile-header-link">Регистрационные услуги</a>
+                            </div>
+                            <div class="tile-body">
+                                <div class="tile-list-item">
+                                    <a href="#" class="tile-list-link">Юридические адреса</a>
+                                </div>
+                                <div class="tile-list-item">
+                                    <a href="#" class="tile-list-link">Открытие расчетного счета</a>
+                                </div>
+                                <div class="tile-list-item">
+                                    <a href="#" class="tile-list-link">Готовые фирмы</a>
+                                </div>
+                                <div class="tile-list-item">
+                                    <a href="#" class="tile-list-link">Регистрация юридических лиц</a>
+                                </div>
+                                <div class="tile-list-item">
+                                    <a href="#" class="tile-list-link">Почтовое обслуживание</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c">
+                    <div class="home-services-more"><b>Все услуги</b><i class="icon-more md-expand-more"></i><i class="icon-less md-expand-less"></i></div>
+                </div>
             </div>
         </section>
         <section class="section home-seo-block">
@@ -388,7 +450,7 @@
     </div>
 </footer>
 
-<div class="modal fade video-modal" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade video-modal" id="video-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body"></div>
@@ -414,6 +476,22 @@
             </div>
         </div>
         <div class="modal-close-btn md-close" data-dismiss="modal" title="Закрыть"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Модальное окно</h4>
+            </div>
+            <div class="modal-body">
+                На мобилах для выпадашек срабатывает обычный селект
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Готово</button>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -68,7 +68,7 @@ $(function(){
 			.on('show.bs.modal', function () {
 				var body = $(this).find('.modal-body');
 				if (body.html() == '') {
-					body.html('<iframe width="850" height="638" src="http://www.youtube.com/embed/3zbvUTQq6Uc?rel=0&autoplay=true" frameborder="0" allowfullscreen id="'+ player_id +'"></iframe>');
+					body.html('<iframe width="850" height="638" src="http://www.youtube.com/embed/3zbvUTQq6Uc?rel=0&autoplay=true" frameborder="0" allowfullscreen></iframe>');
 				}
 			})
 			/*.on('hide.bs.modal', function () {
@@ -76,6 +76,16 @@ $(function(){
 				iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 			})*/
 			.modal();
+	});
+
+	$('.home-services-more').on('click', function(){
+		$(this).toggleClass('triggered');
+	});
+
+	$('.services-filter-type-list a').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).parent().addClass('active').siblings().removeClass('active');
 	});
 
 });
