@@ -20,3 +20,5 @@ gulp.task('less', function () {
 gulp.task('watch', function () {
 	gulp.watch(['less/*.less', 'less/stabfort/**/*.less'], ['less'])
 });
+
+gulp.task('default', ['less']);
