@@ -1,8 +1,154 @@
+@tile-padding: 15px 0;
+@tile-header-margin: 0 0 12px 23px;
+@tile-list-item-margin: 4px 0 2px;
+@tile-list-item-padding: 1px 10px 5px 23px;
+
 .services-list {
+	position: relative;
 	margin: 20px 0;
+	font-family: @font-condensed;
 }
-.services-list-container {
-
+.services-list-level-1 {
+	z-index: 1000;
+}
+.level-2-active .services-list-level-1 {
+	filter: blur(3px);
+}
+.tile {
+	width: @vw-iphone - 10px;
+	margin: 0 auto;
+	padding: @tile-padding;
+	border-bottom: 1px solid @color-grey-3;
+	position: relative;
+	cursor: pointer;
+}
+.tile-header {
+	margin: @tile-header-margin;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.tile-header-link {
+	position: relative;
+	border-bottom: 1px dashed @color-blue-1;
+	font-size: 20px;
+	font-weight: 700;
+	white-space: nowrap;
+	&:after {
+		.arrow-after(6px, @color-blue-1, top);
+		margin-top: -1px;
+	}
+	&, &:visited {
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+	&:hover {
+		border-bottom-color: transparent;
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+}
+.tile:hover {
+	.tile-header-link {
+		border-bottom-color: transparent;
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+}
+.tile-body {}
+.tile-list-item {
+	margin: @tile-list-item-margin;
+	padding: @tile-list-item-padding;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.tile-list-link {
+	position: relative;
+	font-size: 18px;
+	white-space: nowrap;
+	&, &:visited {
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+	&:hover {
+		color: @color-blue-1;
+		text-decoration: underline;
+	}
 }
 
-@media (min-width: @vw-tablet-sm) {}
+.level-1-overlay {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+@import "services-list-level-2.less";
+@import "services-list-level-3.less";
+
+@media (min-width: @vw-iphone-5-land) {
+	.services-list-level-1 {
+		width: @vw-iphone-5-land;
+		margin: 0 auto;
+	}
+	.tile {
+		float: left;
+		width: floor(@vw-iphone-5-land/2);
+		margin: 0;
+		border: 1px solid transparent;
+		&:before {
+			opacity: 0;
+			content: "";
+			position: absolute;
+			right: 1px;
+			bottom: 1px;
+			border: 20px solid transparent;
+			border-right-color: #c8e4e7;
+			border-bottom-color: #c8e4e7;
+		}
+		&:after {
+			opacity: 0;
+			content: "\f10a";
+			font-family: 'Material Design Iconic Font', serif;
+			position: absolute;
+			right: 2px;
+			bottom: 1px;
+			color: #fff;
+			font-size: 20px;
+		}
+		&:hover {
+			box-shadow: 0 0 15px rgba(0,0,0,.2);
+			&:before, &:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+@media (min-width: @vw-iphone-6-land) {
+	.services-list-level-1 {
+		width: @vw-iphone-6-land;
+	}
+	.tile {
+		width: floor(@vw-iphone-6-land/2);
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	@container-width: @vw-tablet-lg - 24px;
+	.services-list-level-1 {
+		width: @container-width;
+	}
+	.tile {
+		width: floor(@container-width/3);
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	@container-width: @vw-laptop-sm - 40px;
+	.services-list-level-1 {
+		width: @container-width;
+	}
+	.tile {
+		width: floor(@container-width/4);
+	}
+}

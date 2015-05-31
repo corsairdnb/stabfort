@@ -1,0 +1,133 @@
+.services-list-level-3 {
+	width: @vw-iphone - 10px;
+	position: absolute;
+	z-index: 1100;
+	left: 5px;
+	top: 0;
+	background: #fff;
+	box-shadow: 0 0 15px rgba(0,0,0,.2);
+	transform: translateX(-2000px);
+	transition: transform .5s;
+	&.active {
+		transform: translateX(0);
+	}
+}
+.level-3 {
+	padding: @tile-padding;
+}
+.level-3-header {
+	margin: @tile-header-margin;
+	padding-right: 25px;
+}
+.level-3-col {
+	float: left;
+	width: 50%;
+	padding: 0 1% 0 0;
+}
+.level-3-header-link {
+	font-size: 20px;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	&, &:visited, &:hover {
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+}
+.level-3-item {
+	margin: @tile-list-item-margin;
+	padding: @tile-list-item-padding;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -5px;
+		opacity: 0;
+		.arrow(6px, #fff, right);
+	}
+}
+.level-3-item-link {
+	position: relative;
+	font-size: 18px;
+	white-space: nowrap;
+	&, &:visited {
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+	&:hover {
+		color: @color-blue-1;
+		text-decoration: none;
+	}
+}
+.level-3-item-more {
+	display: none;
+	color: #c2dfe2;
+	font-size: 13px;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+.level-3-item-more-link {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	&, &:visited {
+		color: inherit;
+		text-decoration:underline;
+	}
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+.level-3-item.active {
+	background: @color-blue-1;
+	&:after {
+		opacity: 1;
+	}
+	.level-3-item-more {
+		display: block;
+	}
+	.level-3-item-link {
+		&, &:visited, &, &:hover {
+			color: #fff;
+		}
+	}
+}
+
+.services-list-level-3-back {
+	margin: 20px 0 10px;
+	padding: 0 0 0 20px;
+	font-size: 23px;
+	color: @color-blue-1;
+	> i {
+		font-size: 1.5em;
+		vertical-align: middle;
+	}
+}
+
+.services-list-level-2-close, .services-list-level-3-close {
+	position: absolute;
+	right: 3px;
+	top: 17px;
+	color: @color-grey-2;
+	font-size: 25px;
+	cursor: pointer;
+	transition: transform .4s;
+	&:hover {
+		transform: rotate(90deg);
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.services-list-level-3 {
+		width: @vw-iphone-5-land;
+		left: 0;
+	}
+}
+@media (min-width: @vw-iphone-6-land) {
+	.services-list-level-3 {
+		width: @vw-iphone-6-land;
+		left: @vw-iphone - 10px;
+	}
+}

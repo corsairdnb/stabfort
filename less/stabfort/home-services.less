@@ -27,11 +27,12 @@
 	}
 	.home-services-more {
 		display: inline-block;
-		margin: 30px 0;
+		margin: 10px 0;
 		color: @color-blue-1;
 		font-size: 18px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+		cursor: pointer;
 		> b {
 			font-weight: 500;
 			border-bottom: 2px dotted currentColor;
@@ -78,6 +79,10 @@
 }
 @media (min-width: @vw-tablet-sm) {
 	.home-services {
+		.section-cnt {
+			margin-top: -50px;
+			padding: 0 0 30px;
+		}
 		.title {
 			padding: 15px 0;
 			font-size: 27px;
@@ -87,13 +92,8 @@
 				margin-left: -8px;
 			}
 		}
-	}
-}
-@media (min-width: @vw-tablet-sm) {
-	.home-services {
-		.section-cnt {
-			margin-top: -50px;
-			padding: 0;
+		.home-services-more {
+			margin: 30px 0;
 		}
 	}
 }
