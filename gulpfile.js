@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
 	less = require('gulp-less'),
-	watch = require('gulp-watch'),
 	autoprefixer = require('gulp-autoprefixer'),
 	sourcemaps = require('gulp-sourcemaps');
 
