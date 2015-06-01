@@ -124,6 +124,9 @@
 				opacity: 1;
 			}
 		}
+		&:nth-of-type(2n+3) {
+			clear: both;
+		}
 	}
 }
 @media (min-width: @vw-iphone-6-land) {
@@ -141,6 +144,12 @@
 	}
 	.tile {
 		width: floor(@container-width/3);
+		&:nth-of-type(2n+3) {
+			clear: none;
+		}
+		&:nth-of-type(3n+4) {
+			clear: both;
+		}
 	}
 }
 @media (min-width: @vw-laptop-sm) {
@@ -150,5 +159,17 @@
 	}
 	.tile {
 		width: floor(@container-width/4);
+		&:nth-of-type(2n+3) {
+			clear: none;
+		}
+		&:nth-of-type(3n+4) {
+			clear: none;
+		}
+		&:nth-of-type(4n+5) {
+			clear: both;
+		}
+	}
+	.tile-list-item {
+		margin: 0;
 	}
 }
