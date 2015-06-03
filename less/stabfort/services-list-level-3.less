@@ -20,8 +20,6 @@
 	padding-right: 25px;
 }
 .level-3-col {
-	float: left;
-	width: 50%;
 	padding: 0 1% 0 0;
 }
 .level-3-header-link {
@@ -37,6 +35,7 @@
 .level-3-item {
 	margin: @tile-list-item-margin;
 	padding: @tile-list-item-padding;
+	padding-right: 25px;
 	position: relative;
 	&:after {
 		content: "";
@@ -58,7 +57,7 @@
 	}
 	&:hover {
 		color: @color-blue-1;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 .level-3-item-more {
@@ -124,13 +123,39 @@
 		width: @vw-iphone-5-land;
 		left: 0;
 	}
+	.level-3-col {
+		float: left;
+		width: 50%;
+		padding: 0 1% 0 0;
+	}
 }
 @media (min-width: @vw-iphone-6-land) {
 	.services-list-level-3 {
 		width: @vw-iphone-6-land;
-		left: @vw-iphone - 10px;
+		left: 0;
 	}
 	.level-3-item {
 		margin: 0;
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.services-list-level-3 {
+		left: @vw-tablet-sm - @vw-iphone-6-land;
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	@container-width: @vw-tablet-lg - 24px;
+	.services-list-level-3 {
+		left: floor(@container-width/3);
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	@container-width: @vw-laptop-sm - 40px;
+	.services-list-level-3 {
+		width: floor(@container-width/4)*3;
+		left: floor(@container-width/4);
+	}
+	.level-3-col {
+		width: 33%;
 	}
 }
