@@ -1,4 +1,5 @@
 .auth-block {
+	display: none;
 	position: absolute;
 	right: 20px;
 	top: 55px;
@@ -19,4 +20,10 @@
 	}
 	.login {}
 	.reg {}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.auth-block {
+		display: block;
+	}
 }

@@ -1,7 +1,6 @@
 .home-carousel {
-	background: rgba(0,172,187,.5) repeat-y 46px 0;
+	background: rgba(0,0,0,.3) repeat-y 46px 0;
 	position: relative;
-	margin: 50px 0 0;
 	&:before {
 		content: "";
 		display: none;
@@ -27,9 +26,9 @@
 .slide-content {
 	width: @vw-iphone;
 	margin: 0 auto;
-	padding: 20px 10px;
+	padding: 30px 10px 20px;
 	text-align: center;
-	height: 322px;
+	height: 335px;
 	transition: opacity .1s;
 	.btn {
 		background: #76dae2;
@@ -191,7 +190,7 @@
 		}
 		.list > li {
 			padding: 0;
-			margin: 0 0 20px;
+			margin: 0 0 15px;
 			text-align: center;
 			font-size: 24px;
 			font-weight: 300;
@@ -199,6 +198,11 @@
 				font-size: 1em;
 				position: static;
 			}
+		}
+	}
+	.slide-content-type-1-1 {
+		.list > li {
+			margin-bottom: 25px;
 		}
 	}
 	.slide-content-type-2 {
@@ -244,8 +248,8 @@
 			margin: 0 3px 3px 0;
 			padding: 3px 5px;
 			border: 0 none;
-			background: #fff;
-			color: #74c9d0;
+			/*background: #fff;
+			color: #74c9d0;*/
 			font-size: 14px;
 			line-height: 1em;
 			font-weight: 600;
@@ -256,11 +260,14 @@
 			padding-right: 1em;
 		}
 	}
+	.slide-content-type-1 .list > li {
+		margin-bottom: 30px;
+	}
 }
 @media (min-width: @vw-laptop-sm) {
 	.home-carousel {
+		background-color: rgba(0,172,187,.5);
 		background-image: url(../img/carousel_bg.png);
-		margin: 0;
 		&:before, &:after {
 			display: block;
 		}
