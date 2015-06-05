@@ -22,9 +22,10 @@
 		width: 200px;
 		right: 0;
 		top: @top-menu-height;
+		z-index: -1;
 	}
 	ul {
-		background: rgba(0,0,0,.9);
+		background: fadeout(darken(@color-blue-1, 40%), 10%);
 		/*box-shadow: 0 0 5px rgba(0,0,0,.3);*/
 		transition: transform .3s;
 		transform: translateX(250px);
