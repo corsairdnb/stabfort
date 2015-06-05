@@ -1,0 +1,11 @@
+@inputs: ~'[type="text"], [type="search"], [type="email"], [type="tel"], [type="password"]';
+
+label {
+	font-weight: inherit;
+}
+@{inputs}, textarea, select {
+	font-family: @font-condensed;
+}
+label, .form-control {
+	width: 100%;
+}
