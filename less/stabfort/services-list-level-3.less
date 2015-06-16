@@ -1,9 +1,9 @@
 .services-list-level-3 {
 	width: @vw-iphone - 10px;
-	position: absolute;
+	position: fixed;
 	z-index: 1100;
 	left: 5px;
-	top: 0;
+	top: 5px;
 	background: #fff;
 	box-shadow: 0 0 15px rgba(0,0,0,.2);
 	transform: translateX(-2000px);
@@ -155,6 +155,8 @@
 	.services-list-level-3 {
 		width: floor(@container-width/4)*3;
 		left: floor(@container-width/4);
+		position: absolute;
+		top: 0;
 	}
 	.level-3-col {
 		width: 33%;
