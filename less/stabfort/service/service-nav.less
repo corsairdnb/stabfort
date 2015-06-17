@@ -12,14 +12,20 @@
 	width: 100%;
 	height: @mobile-nav-height;
 	position: relative;
-	border-left: 1px solid #ddd;
 	ul {
+		position: fixed;
+		right: 0;
+		top: @top-menu-height;
+		width: 50%;
+		height: @mobile-nav-height;
 		z-index: 0;
 		margin: 0;
 		padding: 0;
 		background: #fff;
+		overflow: hidden;
+		overflow-y: auto;
 		li {
-			display: block;
+			display: none;
 			margin: 0;
 			padding: 0;
 			border-bottom: 1px solid @color-grey-3;
@@ -43,11 +49,12 @@
 				}
 			}
 			&.current-item {
-				display: flex;
+				display: flex !important;
 				align-items: stretch;
 				height: @mobile-nav-height;
 				margin-bottom: 1px;
 				background: #f9f9f9;
+				border-left: 1px solid #ddd;
 			}
 			.current {
 				flex: 1 1 0;
@@ -98,8 +105,10 @@
 		display: none;
 	}
 	ul {
+		height: 80%;
 		box-shadow: 0 3px 10px rgba(0,0,0,.3);
 		li {
+			display: block;
 			&.current-item {
 
 			}
