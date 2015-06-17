@@ -4,7 +4,7 @@
 	right: 20px;
 	top: 55px;
 	z-index: 1060;
-	.login, .reg {
+	.login, .reg, .user {
 		padding: 0 0 0 10px;
 		font: 15px/1em @font-condensed;
 		text-transform: uppercase;
@@ -20,6 +20,12 @@
 	}
 	.login {}
 	.reg {}
+	.user {
+		&:after {
+			.arrow-after(4px);
+			margin-top: -1px;
+		}
+	}
 }
 
 @media (min-width: @vw-tablet-lg) {

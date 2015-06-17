@@ -55,6 +55,9 @@
 		border-bottom-color: transparent;
 		color: @color-blue-1;
 		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 .tile-body {}
@@ -105,12 +108,31 @@
 		width: floor(@vw-iphone-5-land/2);
 		margin: 0;
 		border: 1px solid transparent;
+		&:hover {
+			box-shadow: 0 0 15px rgba(0,0,0,.2);
+			.tile-second-level-trigger {
+				&:before, &:after {
+					opacity: 1;
+				}
+			}
+		}
+		&:nth-of-type(2n+3) {
+			clear: both;
+		}
+	}
+	.tile-second-level-trigger {
+		position: absolute;
+		right: 1px;
+		bottom: 1px;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
 		&:before {
 			opacity: 0;
 			content: "";
 			position: absolute;
-			right: 1px;
-			bottom: 1px;
+			right: 0;
+			bottom: 0;
 			border: 20px solid transparent;
 			border-right-color: #c8e4e7;
 			border-bottom-color: #c8e4e7;
@@ -120,19 +142,16 @@
 			content: "\f10a";
 			font-family: 'Material Design Iconic Font', serif;
 			position: absolute;
-			right: 2px;
-			bottom: 1px;
+			right: 1px;
+			bottom: 0;
 			color: #fff;
 			font-size: 20px;
 		}
 		&:hover {
-			box-shadow: 0 0 15px rgba(0,0,0,.2);
-			&:before, &:after {
-				opacity: 1;
+			&:before {
+				border-right-color: #b5d1d4;
+				border-bottom-color: #b5d1d4;
 			}
-		}
-		&:nth-of-type(2n+3) {
-			clear: both;
 		}
 	}
 }
