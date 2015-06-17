@@ -21,7 +21,7 @@
 		position: absolute;
 		width: 200px;
 		right: 0;
-		top: @top-menu-height;
+		top: -2000px;
 		z-index: -1;
 	}
 	ul {
@@ -55,6 +55,9 @@
 	}
 	&.opened {
 		z-index: 1100;
+		.top-menu-cnt {
+			top: @top-menu-height;
+		}
 		ul {
 			transform: translateX(0);
 		}
@@ -71,6 +74,7 @@
 		line-height: 1em;
 		color: #fff;
 		cursor: pointer;
+		z-index: 1020;
 	}
 }
 

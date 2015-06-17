@@ -1,0 +1,31 @@
+.services-popup {
+	display: none;
+	position: relative;
+	top: @top-menu-height * 2;
+	left: 0;
+	width: 100%;
+	background: #fff;
+}
+
+.services-popup-less {
+	display: inline-block;
+	margin: 10px 0;
+	color: @color-blue-1;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	> b {
+		font-weight: 500;
+		border-bottom: 2px dotted currentColor;
+	}
+	&:hover {
+		> b {
+			border-bottom-color: transparent;
+		}
+	}
+	.icon-less {
+		font-size: 1.5em;
+		vertical-align: text-top;
+	}
+}

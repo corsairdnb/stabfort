@@ -1,3 +1,29 @@
-.breadcrumbs {
+@breadcrumbs-height: @top-menu-height;
 
+.breadcrumbs {
+	position: fixed;
+	left: 0;
+	top: @top-menu-height;
+	width: 100%;
+	height: @breadcrumbs-height;
+	ul {
+		display: none;
+	}
+}
+
+.breadcrumbs-open-services {
+	display: flex;
+	align-items: stretch;
+	height: @breadcrumbs-height;
+	background: #f9f9f9;
+	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	.icon {
+		flex: 1 1 0;
+		align-self: center;
+		color: @color-blue-1;
+		font-family: @font-condensed;
+		font-size: 18px;
+		line-height: 1em;
+		text-transform: uppercase;
+	}
 }
