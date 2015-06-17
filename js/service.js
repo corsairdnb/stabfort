@@ -66,4 +66,9 @@ $(function(){
 		$('.service-menu').removeClass('opened');
 	});
 
+	$('.breadcrumbs-open-services, .services-popup-less').on('click', function(){
+		$('.services-popup').toggle();
+		window.scrollTo(0, 0);
+	});
+
 });
