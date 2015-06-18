@@ -1,0 +1,27 @@
+.main {
+	padding-top: @top-menu-height * 2;
+}
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1020;
+}
+.header-shadow {
+	position: fixed;
+	width: 100%;
+	height: @top-menu-height * 2;
+	left: 0;
+	top: 0;
+	box-sizing: content-box;
+	border-bottom: 1px solid #fff;
+	box-shadow: 0 1px 12px rgba(0,0,0,.3);
+	z-index: 1;
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.header-shadow {
+		display: none;
+	}
+}

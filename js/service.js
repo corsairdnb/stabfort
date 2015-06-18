@@ -67,8 +67,20 @@ $(function(){
 	});
 
 	$('.breadcrumbs-open-services, .services-popup-less').on('click', function(){
+		$('.breadcrumbs-open-services').toggleClass('active');
 		$('.services-popup').toggle();
 		window.scrollTo(0, 0);
+	});
+
+	function fixedNav(){
+		if (document.documentElement.clientWidth > 1280) {
+			var serviceNavLeft = Math.floor((document.documentElement.clientWidth - 1240) / 2 + $('.main .section-cnt').width());
+			$('.service-nav').css('left', serviceNavLeft);
+		}
+	}
+	fixedNav();
+	$(window).resize(function(){
+		fixedNav();
 	});
 
 });
