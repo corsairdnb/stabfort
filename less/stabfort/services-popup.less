@@ -29,3 +29,20 @@
 		vertical-align: text-top;
 	}
 }
+
+@media (min-width: @vw-laptop-sm) {
+	.services-popup {
+		position: fixed;
+		background: none;
+	}
+	.services-popup-cnt {
+		max-width: @vw-laptop-sm - 40px;
+		margin: 0 auto;
+		background: #fff;
+		box-shadow: 0 0 20px rgba(0,0,0,.5);
+	}
+	.services-filter {
+		margin: 0;
+		padding: 10px 20px;
+	}
+}

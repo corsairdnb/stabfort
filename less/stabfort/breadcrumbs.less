@@ -17,6 +17,10 @@
 	height: @breadcrumbs-height;
 	background: #f9f9f9;
 	background: linear-gradient(to bottom, #fff, #f0f0f0);
+	cursor: pointer;
+	&:hover {
+		background: linear-gradient(to bottom, #fff, #e4e4e4);
+	}
 	.icon {
 		flex: 1 1 0;
 		align-self: center;
@@ -25,5 +29,66 @@
 		font-size: 18px;
 		line-height: 1em;
 		text-transform: uppercase;
+		i {
+			vertical-align: bottom;
+		}
+	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.breadcrumbs-open-services {
+		.icon {
+			font-size: 21px;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.breadcrumbs {
+		width: 100% !important;
+		position: relative;
+		left: 0;
+		top: 0;
+		text-align: left !important;
+		ul {
+			display: inline-block;
+			margin: 0 0 0 20px;
+			padding: 0;
+			overflow: hidden;
+			vertical-align: top;
+			li {
+				display: inline-block;
+				margin: 0 10px;
+				a {
+					display: inline-block;
+					padding: 10px 0 0;
+					vertical-align: top;
+					&, &:visited, &:hover {
+						color: @color-blue-1;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.breadcrumbs-open-services {
+		display: inline-block;
+		height: @breadcrumbs-height;
+		vertical-align: top;
+		.icon {
+			padding: 0 20px;
+			background: @color-blue-1;
+			font-size: 18px;
+			color: #fff;
+			line-height: @breadcrumbs-height;
+			transition: background .2s;
+			&:hover {
+				background: @color-blue-2;
+			}
+			i {
+				vertical-align: middle;
+				margin-top: -4px;
+				font-size: 1.4em;
+			}
+		}
 	}
 }

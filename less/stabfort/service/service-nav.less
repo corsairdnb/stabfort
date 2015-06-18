@@ -13,17 +13,10 @@
 	height: @mobile-nav-height;
 	position: relative;
 	ul {
-		position: fixed;
-		right: 0;
-		top: @top-menu-height;
-		width: 50%;
-		height: @mobile-nav-height;
-		z-index: 0;
 		margin: 0;
 		padding: 0;
 		background: #fff;
-		overflow: hidden;
-		overflow-y: auto;
+		border-left: 1px solid #e8e8e8;
 		li {
 			display: none;
 			margin: 0;
@@ -54,7 +47,6 @@
 				height: @mobile-nav-height;
 				margin-bottom: 1px;
 				background: #f9f9f9;
-				border-left: 1px solid #ddd;
 			}
 			.current {
 				flex: 1 1 0;
@@ -80,13 +72,16 @@
 }
 
 .service-menu-cnt {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
+	position: fixed;
 	right: 0;
-	margin: 0 auto;
+	top: @top-menu-height;
+	width: 50%;
+	height: @mobile-nav-height;
+	z-index: 0;
+	margin: 0;
+	padding: 0;
 	overflow: hidden;
+	overflow-y: auto;
 }
 
 .service-menu-trigger {
@@ -99,13 +94,12 @@
 }
 .service-menu.opened {
 	.service-menu-cnt {
-		overflow: visible;
+		height: 80%;
 	}
 	.service-menu-trigger {
 		display: none;
 	}
 	ul {
-		height: 80%;
 		box-shadow: 0 3px 10px rgba(0,0,0,.3);
 		li {
 			display: block;
@@ -116,6 +110,56 @@
 	}
 }
 
+@media (min-width: @vw-tablet-sm) {
+	.service-menu {
+		ul {
+			li {
+				a {
+					padding: 10px;
+				}
+				a, .current {
+					font-size: 19px;
+				}
+			}
+		}
+	}
+}
 @media (min-width: @vw-laptop-sm) {
-
+	.service-nav {
+		position: fixed;
+		right: auto;
+		top: 130px;
+		width: 295px;
+	}
+	.service-menu-cnt {
+		position: relative;
+		right: auto;
+		top: auto;
+		width: 100%;
+		height: auto;
+		z-index: 0;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+	}
+	.service-menu {
+		height: auto;
+		ul {
+			background: none;
+			border: 0 none;
+			li {
+				display: block;
+				border: 0 none;
+				&.current-item {
+					display: none !important;
+				}
+				a {
+					text-align: left;
+				}
+			}
+		}
+	}
+	.service-menu-trigger {
+		display: none;
+	}
 }
