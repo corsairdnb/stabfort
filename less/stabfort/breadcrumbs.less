@@ -51,20 +51,29 @@
 		text-align: left !important;
 		ul {
 			display: inline-block;
-			margin: 0 0 0 20px;
+			margin: 0;
 			padding: 0;
 			overflow: hidden;
 			vertical-align: top;
 			li {
 				display: inline-block;
-				margin: 0 10px;
+				margin: 0 0 0 10px;
 				a {
 					display: inline-block;
-					padding: 10px 0 0;
+					padding: 12px 0 0 15px;
 					vertical-align: top;
+					position: relative;
+					&:before {
+						.arrow-before(5px, currentColor, left);
+						left: 0;
+						margin-top: 0;
+					}
 					&, &:visited, &:hover {
 						color: @color-blue-1;
 						text-decoration: none;
+					}
+					&:hover {
+						color: @color-blue-2;
 					}
 				}
 			}
