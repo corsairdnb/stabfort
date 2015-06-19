@@ -41,7 +41,7 @@
 					color: #fff;
 				}
 			}
-			&.current-item {
+			&.current-item-mobile {
 				display: flex !important;
 				align-items: stretch;
 				height: @mobile-nav-height;
@@ -57,15 +57,11 @@
 				font-weight: 500;
 				text-align: center;
 				color: @color-blue-1;
-				/*min-height: @mobile-nav-height;*/
 				padding: 0;
 				i {
 					vertical-align: middle;
 					line-height: 0;
 				}
-				/*&:after {
-					.arrow-after(4px, @color-blue-1);
-				}*/
 			}
 		}
 	}
@@ -81,7 +77,6 @@
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	overflow-y: auto;
 }
 
 .service-menu-trigger {
@@ -95,6 +90,8 @@
 .service-menu.opened {
 	.service-menu-cnt {
 		height: 80%;
+		overflow: hidden;
+		overflow-y: visible;
 	}
 	.service-menu-trigger {
 		display: none;
@@ -103,9 +100,7 @@
 		box-shadow: 0 3px 10px rgba(0,0,0,.3);
 		li {
 			display: block;
-			&.current-item {
-
-			}
+			&.current-item-mobile {}
 		}
 	}
 }
@@ -124,16 +119,34 @@
 		}
 	}
 }
+@media (min-width: @vw-tablet-lg) {
+	.service-nav {
+		background: #fff;
+	}
+	.service-menu-cnt {
+		right: auto;
+		left: 50%;
+		width: 25%;
+		overflow: hidden;
+	}
+	.service-menu {
+		ul {
+			border-right: 1px solid #e8e8e8;
+		}
+	}
+}
 @media (min-width: @vw-laptop-sm) {
 	.service-nav {
 		position: fixed;
 		right: auto;
 		top: 130px;
 		width: 295px;
+		background: none;
 	}
 	.service-menu-cnt {
 		position: relative;
 		right: auto;
+		left: auto;
 		top: auto;
 		width: 100%;
 		height: auto;
@@ -150,11 +163,26 @@
 			li {
 				display: block;
 				border: 0 none;
-				&.current-item {
+				&.current-item-mobile {
 					display: none !important;
 				}
 				a {
+					padding: 10px 0 8px 15px;
+					border-left: 3px solid transparent;
+					font-size: 22px;
+					color: lighten(desaturate(@color-blue-1, 15%), 20%) !important;
 					text-align: left;
+					text-transform: uppercase;
+					transition: all .15s;
+					&:hover {
+						color: @color-blue-1 !important;
+						background: fadeout(@color-blue-1, 88%);
+					}
+				}
+				&.active a {
+					background: fadeout(@color-blue-1, 88%);
+					border-left-color: @color-blue-1;
+					color: @color-blue-1 !important;
 				}
 			}
 		}

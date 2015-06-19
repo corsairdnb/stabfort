@@ -72,15 +72,42 @@ $(function(){
 		window.scrollTo(0, 0);
 	});
 
+	var serviceNav = $('.service-nav'),
+		serviceNavHeight = serviceNav.height(),
+		serviceNavTop = parseInt(serviceNav.css('top')),
+		footer = $('.footer');
+
 	function fixedNav(){
-		if (document.documentElement.clientWidth > 1280) {
+		if (document.documentElement.clientWidth >= 1260) {
 			var serviceNavLeft = Math.floor((document.documentElement.clientWidth - 1240) / 2 + $('.main .section-cnt').width());
-			$('.service-nav').css('left', serviceNavLeft);
+			serviceNav.css('left', serviceNavLeft);
+		}
+	}
+	function fixedNavScroll(){
+		if (document.documentElement.clientWidth >= 1260) {
+			var scrollTop = (function(){
+				var scroll = typeof window.scrollY !== 'undefined' ? window.scrollY : window.pageYOffset;
+				return typeof scroll !== 'undefined' ? scroll : document.documentElement.scrollTop
+			}());
+			var bodyHeight = document.body.clientHeight,
+				breakpoint = parseInt(bodyHeight) - (parseInt(parseInt(footer.height()) + parseInt(serviceNavHeight) + serviceNavTop + 100));
+
+			if (scrollTop > breakpoint) {
+				serviceNav.css('top', breakpoint - scrollTop-breakpoint + serviceNavHeight + serviceNavTop*2);
+			}
+			else {
+				serviceNav.css('top', serviceNavTop);
+			}
 		}
 	}
 	fixedNav();
+	fixedNavScroll();
 	$(window).resize(function(){
 		fixedNav();
+		fixedNavScroll();
+	});
+	$(window).scroll(function(){
+		fixedNavScroll();
 	});
 
 });
