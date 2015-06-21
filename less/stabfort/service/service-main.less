@@ -1,0 +1,77 @@
+.service-main {
+
+}
+.service-primary {
+	padding: 0 0 200px 10px;
+}
+.service-secondary {
+
+}
+.service-content-h1 {
+	margin: 25px 0 .6em;
+	padding: 0 10px;
+	font: 25px/1.2em @font-condensed;
+	color: @color-default;
+}
+.service-content {
+	p {
+		margin: 1em 0;
+		font-size: 18px;
+		line-height: 1.5em;
+		color: @color-default;
+	}
+}
+.service-content-preview {
+	padding: 0 50px 0 0;
+	p:first-child {
+		margin-top: 0;
+	}
+}
+.service-content-detail {
+	display: none;
+}
+.service-content-panel {}
+.service-content-more {
+	display: inline-block;
+	width: 30%;
+}
+.service-content-social {
+	display: inline-block;
+	width: 30%;
+}
+.service-content-favorites {
+	display: inline-block;
+	width: 30%;
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.service-content-h1 {
+		font-size: 30px;
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.service-content-h1 {
+		margin: 25px 0 .6em;
+		padding: 0 50px 0 10px;
+		font-size: 38px;
+		line-height: 1em;
+		font-weight: 300;
+	}
+	.service-primary {
+		display: table-cell;
+		width: 80%;
+		vertical-align: top;
+	}
+	.service-secondary {
+		display: table-cell;
+		width: 20%;
+		vertical-align: top;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.service-content-h1 {
+		margin: 25px 0 .6em;
+		padding: 0 50px 0 0;
+	}
+	.service-primary {}
+}

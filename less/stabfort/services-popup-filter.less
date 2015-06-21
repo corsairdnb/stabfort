@@ -1,0 +1,41 @@
+@media (min-width: @vw-laptop-sm) {
+	.services-filter-search {
+		top: 10px;
+	}
+	.services-filter {
+		background: @color-blue-1;
+		margin: 0;
+		padding: 10px 120px 1px 40px;
+		border-bottom: 1px solid #efefef;
+	}
+	.services-filter-location-current {
+		border-bottom-color: #fff;
+		color: #fff;
+	}
+	.services-filter-type-list {
+		> li, > li.active {
+			> a {
+				&, &:visited, &:hover {
+					color: #fff !important;
+				}
+			}
+		}
+		> li.active, > li:hover {
+			> a {
+				border-bottom-color: #f7ff9d !important;
+			}
+		}
+	}
+	.services-search {
+		color: #fff !important;
+		input {
+			color: #fff !important;
+			&::placeholder {
+				color: #fff !important;
+			}
+			&:focus {
+				border-bottom-color: #fff !important;
+			}
+		}
+	}
+}

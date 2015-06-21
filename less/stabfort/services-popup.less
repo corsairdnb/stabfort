@@ -5,11 +5,12 @@
 	left: 0;
 	width: 100%;
 	background: #fff;
+	z-index: 1000;
 }
 
 .services-popup-less {
 	display: inline-block;
-	margin: 10px 0;
+	margin: 10px 0 15px;
 	color: @color-blue-1;
 	font-size: 18px;
 	letter-spacing: 2px;
@@ -36,13 +37,9 @@
 		background: none;
 	}
 	.services-popup-cnt {
-		max-width: @vw-laptop-sm - 40px;
+		max-width: @vw-laptop-sm;
 		margin: 0 auto;
 		background: #fff;
-		box-shadow: 0 0 20px rgba(0,0,0,.5);
-	}
-	.services-filter {
-		margin: 0;
-		padding: 10px 20px;
+		box-shadow: 0 5px 20px rgba(0,0,0,.3);
 	}
 }
