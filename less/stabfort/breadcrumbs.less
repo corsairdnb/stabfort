@@ -33,6 +33,17 @@
 			vertical-align: bottom;
 		}
 	}
+	.icon-close {
+		display: none;
+	}
+	&.active {
+		.icon-close {
+			display: inline-block;
+		}
+		.icon-normal {
+			display: none;
+		}
+	}
 }
 
 @media (min-width: @vw-tablet-sm) {

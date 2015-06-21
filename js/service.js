@@ -1,7 +1,7 @@
 $(function(){
 
 	/*
-	* данный код предназначен только для демострации
+	* данный код предназначен только для демонстрации
 	* */
 
 	$('.mobile-icon').on('click', function(){
@@ -90,8 +90,7 @@ $(function(){
 				return typeof scroll !== 'undefined' ? scroll : document.documentElement.scrollTop
 			}());
 			var bodyHeight = document.body.clientHeight,
-				breakpoint = parseInt(bodyHeight) - (parseInt(parseInt(footer.height()) + parseInt(serviceNavHeight) + serviceNavTop + 100));
-
+				breakpoint = Math.abs(parseInt(bodyHeight) - (parseInt(parseInt(footer.height()) + parseInt(serviceNavHeight) + serviceNavTop + 100)));
 			if (scrollTop > breakpoint) {
 				serviceNav.css('top', breakpoint - scrollTop-breakpoint + serviceNavHeight + serviceNavTop*2);
 			}
