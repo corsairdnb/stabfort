@@ -28,6 +28,11 @@
 					color: @color-blue-1;
 					text-decoration: underline;
 				}
+				&:after {
+					content: "";
+					.arrow(5px, currentColor, left, block);
+					margin-left: 5px;
+				}
 			}
 		}
 	}
@@ -48,6 +53,13 @@
 				.arrow(4px, currentColor, left, block);
 				margin-left: 5px;
 			}
+		}
+	}
+	.open-icon {
+		font-size: .8em;
+		color: @color-grey-2;
+		&:hover {
+			color: @color-grey-1;
 		}
 	}
 }

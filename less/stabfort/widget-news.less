@@ -1,0 +1,183 @@
+.widget-padding() {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.widget-news {
+	margin: 40px 0;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	.title {
+		font: 300 30px/1em @font-condensed;
+		text-transform: uppercase;
+	}
+	.open-icon {
+		font-size: .8em;
+		color: @color-grey-2;
+		&:hover {
+			color: @color-grey-1;
+		}
+	}
+	.news {
+		.widget-padding();
+	}
+	.news-item {
+		margin: 20px 0;
+		.clearfix();
+	}
+	.news-item-img {
+		display: table-cell;
+		width: 100px;
+		vertical-align: top;
+		padding: 5px 0 0;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.news-item-title {
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 0 0 15px;
+		font-size: 15px;
+		line-height: 1.2em;
+		font-weight: 500;
+		a {
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+		}
+	}
+	.news-item-preview {
+		margin: .5em 0;
+		font-size: 15px;
+		line-height: 1.2em;
+		p {
+			margin-bottom: .5em;
+		}
+	}
+	.detail-link {
+		&, &:visited {
+			color: @color-blue-1;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+		&:after {
+			content: "";
+			.arrow(4px, currentColor, left, block);
+			margin-left: 5px;
+		}
+	}
+	.more {
+		font: 22px/1.4em @font-condensed;
+		a {
+			position: relative;
+			&, &:visited {
+				color: @color-grey-2;
+				text-decoration: underline;
+			}
+			&:hover {
+				color: @color-grey-2;
+				text-decoration: none;
+			}
+			&:after {
+				content: "";
+				.arrow(6px, currentColor, left, block);
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.widget-news {
+		.news-item-img {
+			width: 200px;
+		}
+		.news-item-title {
+			font-size: 20px;
+			line-height: 1.4em;
+		}
+		.news-item-preview {
+			font-size: 17px;
+			line-height: 1.2em;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) {
+	.widget-news {
+		.news-item-title {
+			font-size: 24px;
+			line-height: 1.4em;
+			font-weight: 400;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.widget-padding() {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.widget-news {
+		.news {
+			.widget-padding();
+		}
+		.title {
+			margin-left: 235px;
+			padding-bottom: 5px;
+			font-size: 40px;
+			border-bottom: 2px solid @color-grey-4;
+		}
+		.news-item {
+			margin: 30px 0;
+			&:last-child {
+				margin-bottom: 10px;
+			}
+		}
+		.news-item-img {
+			display: block;
+			float: left;
+			margin: 0 35px 10px 0;
+		}
+		.news-item-title {
+			display: block;
+			padding: 0;
+			font-size: 25px;
+			line-height: 1.2em;
+			a {
+				&, &:visited {
+					color: @color-default;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @color-blue-1;
+					text-decoration: none;
+				}
+			}
+		}
+		.news-item-preview {
+			margin: .8em 0;
+			font-size: 16px;
+			line-height: 1.2em;
+			color: @color-grey-1;
+			overflow: hidden;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.widget-news {
+		.news {
+			padding: 0;
+		}
+	}
+}
