@@ -109,4 +109,10 @@ $(function(){
 		fixedNavScroll();
 	});
 
+	$('.service-content-more-btn').on('click', function(e){
+		e.preventDefault();
+		$(this).toggleClass('opened');
+		$('.service-content-detail').toggle();
+	});
+
 });
