@@ -23,9 +23,11 @@
 	&:active {
 		background: linear-gradient(to bottom, @color-2, @color-1);
 	}
-}
-.natural-button-small() {
-
+	&[disabled] {
+		background: linear-gradient(to bottom, @color-grey-2, @color-grey-1);
+		box-shadow: none;
+		border-bottom-color: @color-grey-2;
+	}
 }
 
 .btn-orange() {
@@ -103,6 +105,10 @@
 	}
 	[class^="md-"] {
 		vertical-align: bottom;
+	}
+	&[disabled] {
+		background: linear-gradient(to bottom, @color-grey-2, @color-grey-1);
+		box-shadow: none;
 	}
 }
 

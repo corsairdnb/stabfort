@@ -9,7 +9,7 @@ gulp.task('less', function () {
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(autoprefixer({
-			browsers: ['Android >= 4', 'Chrome >= 20', 'Firefox >= 15', 'Explorer >= 8', 'iOS >= 6', 'Opera >= 15'],
+			browsers: ['Android >= 4', 'Chrome >= 20', 'Firefox >= 15', 'Explorer >= 8', 'iOS >= 6', 'Safari >= 5.1', 'Opera >= 15'],
 			cascade: false
 		}))
 		.pipe(sourcemaps.write())
