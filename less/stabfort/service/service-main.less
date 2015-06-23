@@ -22,6 +22,11 @@
 	p {
 		margin: 1em 0;
 	}
+	img {
+		max-width: 100%;
+		width: auto;
+		height: auto;
+	}
 }
 .service-content-preview {
 	padding: 0;
@@ -62,6 +67,17 @@
 	}
 	&:hover {
 		background-color: darken(@color-blue-1, 15%);
+	}
+	.less {
+		display: none;
+	}
+	&.opened {
+		.more {
+			display: none;
+		}
+		.less {
+			display: inline;
+		}
 	}
 }
 .service-content-social {
@@ -174,6 +190,7 @@
 @media (min-width: @vw-tablet-sm) {
 	.service-content-h1 {
 		margin: 25px 0 .6em;
+		font-size: 34px;
 	}
 	.service-content-padding() {
 		padding-left: 20px;
