@@ -1,0 +1,83 @@
+.links-block {
+	margin: 50px 0;
+	text-align: center;
+	.title {
+		font: 300 30px/1em @font-condensed;
+		text-transform: uppercase;
+	}
+	.subtitle {
+		font: 18px/1.3em @font-condensed;
+		color: @color-grey-1;
+	}
+	.col {
+		margin: 0 0 30px;
+	}
+	ul {
+		margin: 10px 0;
+		padding: 0;
+		li {
+			display: block;
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+			line-height: 1.8em;
+			a {
+				&, &:visited {
+					color: @color-blue-1;
+					text-decoration: none;
+					border-bottom: 1px solid lighten(@color-blue-1, 28%);
+				}
+				&:hover {
+					color: @color-blue-1;
+					text-decoration: none;
+					border-bottom-color: transparent;
+				}
+				&.more {
+					font-size: .8em;
+					color: @color-grey-2;
+					border-bottom-color: transparent;
+					&:after {
+						content: "";
+						.arrow(4px, currentColor, left, block);
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.links-block {
+		text-align: left;
+		.title {
+			font-size: 26px;
+		}
+		.subtitle {
+			font-size: 16px;
+		}
+		.col {
+			margin: 0;
+		}
+		ul {
+			li {
+				font-size: 16px;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.links-block {
+		.title {
+			font-size: 30px;
+		}
+		.subtitle {
+			font-size: 18px;
+		}
+		ul {
+			li {
+				font-size: 18px;
+			}
+		}
+	}
+}
