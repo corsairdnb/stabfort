@@ -55,15 +55,15 @@ $(function(){
 	});
 
 
-	$('.service-menu-trigger').on('click', function(){
-		$('.service-menu').toggleClass('opened');
+	$('.fixed-menu-nav-trigger').on('click', function(){
+		$('.fixed-menu-nav').toggleClass('opened');
 	});
-	$('.service-menu-trigger, .service-menu ul li a').on('click', function(e){
+	$('.fixed-menu-nav-trigger, .fixed-menu-nav ul li a').on('click', function(e){
 		e.stopPropagation();
 		e.preventDefault();
 	});
 	$('body').on('click', function(e){
-		$('.service-menu').removeClass('opened');
+		$('.fixed-menu-nav').removeClass('opened');
 	});
 
 	$('.breadcrumbs-open-services, .services-popup-less').on('click', function(){
