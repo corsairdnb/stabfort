@@ -1,6 +1,6 @@
 @mobile-nav-height: @top-menu-height;
 
-.service-nav {
+.fixed-menu {
 	position: fixed;
 	right: 0;
 	top: @mobile-nav-height;
@@ -8,7 +8,7 @@
 	z-index: 1010;
 }
 
-.service-menu {
+.fixed-menu-nav {
 	width: 100%;
 	height: @mobile-nav-height;
 	position: relative;
@@ -67,7 +67,7 @@
 	}
 }
 
-.service-menu-cnt {
+.fixed-menu-nav-cnt {
 	position: fixed;
 	right: 0;
 	top: @top-menu-height;
@@ -79,7 +79,7 @@
 	overflow: hidden;
 }
 
-.service-menu-trigger {
+.fixed-menu-nav-trigger {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -87,13 +87,13 @@
 	height: 100%;
 	z-index: 10;
 }
-.service-menu.opened {
-	.service-menu-cnt {
+.fixed-menu-nav.opened {
+	.fixed-menu-nav-cnt {
 		height: 80%;
 		overflow: hidden;
 		overflow-y: visible;
 	}
-	.service-menu-trigger {
+	.fixed-menu-nav-trigger {
 		display: none;
 	}
 	ul {
@@ -106,7 +106,7 @@
 }
 
 @media (min-width: @vw-tablet-sm) {
-	.service-menu {
+	.fixed-menu-nav {
 		ul {
 			li {
 				a {
@@ -120,31 +120,34 @@
 	}
 }
 @media (min-width: @vw-tablet-lg) {
-	.service-nav {
+	.fixed-menu {
 		background: #fff;
 	}
-	.service-menu-cnt {
+	.fixed-menu-nav-cnt {
 		right: auto;
 		left: 50%;
 		width: 25%;
 		overflow: hidden;
 	}
-	.service-menu {
+	.fixed-menu-nav {
 		ul {
 			border-right: 1px solid #e8e8e8;
 		}
 	}
 }
 @media (min-width: @vw-laptop-sm) {
-	.service-nav {
+	.fixed-menu {
 		position: fixed;
 		right: auto;
 		top: 130px;
-		width: 295px;
+		width: 280px;
 		background: none;
 		margin-left: 30px;
+		&.not-fixed {
+			position: absolute;
+		}
 	}
-	.service-menu-cnt {
+	.fixed-menu-nav-cnt {
 		position: relative;
 		right: auto;
 		left: auto;
@@ -156,7 +159,7 @@
 		padding: 0;
 		overflow: visible;
 	}
-	.service-menu {
+	.fixed-menu-nav {
 		height: auto;
 		ul {
 			background: none;
@@ -189,7 +192,7 @@
 			}
 		}
 	}
-	.service-menu-trigger {
+	.fixed-menu-nav-trigger {
 		display: none;
 	}
 }

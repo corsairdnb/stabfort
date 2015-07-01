@@ -17,10 +17,10 @@
 		padding: 0;
 		li {
 			display: block;
-			margin: 0;
+			margin: 0 0 10px;
 			padding: 0;
 			font-size: 18px;
-			line-height: 1.8em;
+			line-height: 1.3em;
 			a {
 				&, &:visited {
 					color: @color-blue-1;
@@ -36,6 +36,9 @@
 					font-size: .8em;
 					color: @color-grey-2;
 					border-bottom-color: transparent;
+					&:hover {
+						text-decoration: underline;
+					}
 					&:after {
 						content: "";
 						.arrow(4px, currentColor, left, block);
