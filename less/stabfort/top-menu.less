@@ -1,8 +1,9 @@
-@top-menu-height: 46px;
+@top-menu-height: 58px;
+@mobile-top-menu-height: 46px;
 
 .top-menu {
 	width: 100%;
-	min-height: @top-menu-height;
+	min-height: @mobile-top-menu-height;
 	position: relative;
 	font-size: 0;
 	line-height: 0;
@@ -63,8 +64,8 @@
 		right: 0;
 		top: 0;
 		padding: 10px;
-		width: @top-menu-height - 1px;
-		height: @top-menu-height - 1px;
+		width: @mobile-top-menu-height - 1px;
+		height: @mobile-top-menu-height - 1px;
 		font-size: 28px;
 		line-height: 1em;
 		color: #fff;
@@ -75,7 +76,7 @@
 		z-index: 1100;
 		.top-menu-cnt {
 			ul {
-				top: @top-menu-height;
+				top: @mobile-top-menu-height;
 			}
 		}
 		ul {
@@ -98,6 +99,7 @@
 			overflow: visible;
 			position: relative;
 			width: auto;
+			height: 100%;
 			left: 0;
 			top: 0;
 			max-width: @vw-laptop-sm;
@@ -133,7 +135,7 @@
 					padding: 0 9px;
 					border-top: 3px solid transparent;
 					font-size: 14px;
-					line-height: 42px;
+					line-height: 53px;
 					color: #fff;
 					text-decoration: none;
 					text-transform: uppercase;
@@ -159,6 +161,7 @@
 			li {
 				a, a:visited, span {
 					font-size: 16px;
+					line-height: 51px;
 					padding: 0 18px;
 				}
 			}

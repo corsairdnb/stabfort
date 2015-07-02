@@ -197,9 +197,28 @@
 		padding-right: 20px;
 	}
 	.service-content-h1,
-	.service-brief-info-cnt,
-	.service-content {
+	.service-content,
+	.service-secondary {
 		.service-content-padding();
+	}
+	.service-secondary {
+		width: 100%;
+	}
+	.service-brief-info-cnt {
+		display: inline-block;
+		width: 33%;
+		padding: 0;
+		vertical-align: top;
+	}
+	.service-brief-info {
+		text-align: left;
+	}
+	.secondary-buttons {
+		display: inline-block;
+		width: 33%;
+		margin: 48px 0 0 50px;
+		padding: 0;
+		vertical-align: top;
 	}
 }
 @media (min-width: @vw-tablet-lg) {
@@ -232,17 +251,19 @@
 		width: 30%;
 	}
 	.service-brief-info-cnt {
+		display: block;
+		width: auto;
 		margin: 0 0 20px;
 		padding: 0;
 	}
 	.service-brief-info {
 		margin: 0 0 10px;
-		text-align: left;
 	}
 	.service-brief-info-name {
 		font-size: 18px;
 	}
 	.secondary-buttons {
+		display: block;
 		width: auto;
 		margin: 0;
 		padding: 0;

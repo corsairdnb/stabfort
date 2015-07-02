@@ -1,4 +1,4 @@
-@mobile-nav-height: @top-menu-height;
+@mobile-nav-height: @mobile-top-menu-height;
 
 .fixed-menu {
 	position: fixed;
@@ -70,7 +70,7 @@
 .fixed-menu-nav-cnt {
 	position: fixed;
 	right: 0;
-	top: @top-menu-height;
+	top: @mobile-nav-height;
 	width: 50%;
 	height: @mobile-nav-height;
 	z-index: 0;
@@ -120,6 +120,12 @@
 	}
 }
 @media (min-width: @vw-tablet-lg) {
+	@mobile-nav-height: @top-menu-height;
+
+	.fixed-menu, .fixed-menu-nav, .fixed-menu-nav-cnt, .fixed-menu-nav ul li a.current-item-mobile {
+		top: @mobile-nav-height;
+	}
+
 	.fixed-menu {
 		background: #fff;
 	}
@@ -136,10 +142,16 @@
 	}
 }
 @media (min-width: @vw-laptop-sm) {
+	@mobile-nav-height: @top-menu-height;
+
+	.fixed-menu, .fixed-menu-nav, .fixed-menu-nav-cnt, .fixed-menu-nav ul li a.current-item-mobile {
+		top: auto;
+	}
+
 	.fixed-menu {
 		position: fixed;
 		right: auto;
-		top: 130px;
+		top: 140px;
 		width: 280px;
 		background: none;
 		margin-left: 30px;

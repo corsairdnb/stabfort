@@ -1,9 +1,9 @@
-@breadcrumbs-height: @top-menu-height;
+@breadcrumbs-height: @mobile-top-menu-height;
 
 .breadcrumbs {
 	position: fixed;
 	left: 0;
-	top: @top-menu-height;
+	top: @mobile-top-menu-height;
 	width: 100%;
 	height: @breadcrumbs-height;
 	ul {
@@ -51,6 +51,12 @@
 		.icon {
 			font-size: 21px;
 		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	@breadcrumbs-height: @top-menu-height;
+	.breadcrumbs {
+		top: @top-menu-height;
 	}
 }
 @media (min-width: @vw-laptop-sm) {
