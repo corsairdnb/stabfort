@@ -30,12 +30,37 @@ body {
 
 .stabfort-logo {
 	width: 185px;
-	height: 45px;
+	height: 46px;
 	> a {
-		display: block;
+		height: 100%;
+		&, > img {
+			display: block;
+		}
 	}
 }
+.stabfort-slogan {
+	display: none;
+	width: 185px;
+	position: absolute;
+	left: 0;
+	top: 36px;
+	z-index: 1120;
+	text-align: center;
+	color: #fff;
+	white-space: nowrap;
+	font-size: 11px;
+	line-height: 1em;
+	letter-spacing: 1px;
+}
 
+@media (min-width: @vw-tablet-lg) {
+	.stabfort-logo {
+		height: 58px;
+	}
+	.stabfort-slogan {
+		display: inline-block;
+	}
+}
 @media (min-width: @vw-laptop-sm) {
 	html, body {
 		height: 100%;

@@ -1,7 +1,7 @@
 .services-popup {
 	display: none;
 	position: relative;
-	top: @top-menu-height * 2;
+	top: @mobile-top-menu-height * 2;
 	left: 0;
 	width: 100%;
 	background: #fff;
@@ -31,6 +31,11 @@
 	}
 }
 
+@media (min-width: @vw-tablet-lg) {
+	.services-popup {
+		top: @top-menu-height + @breadcrumbs-height;
+	}
+}
 @media (min-width: @vw-laptop-sm) {
 	.services-popup {
 		position: fixed;
