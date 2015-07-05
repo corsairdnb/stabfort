@@ -755,13 +755,16 @@
                                     <input type="file">
                                 </label>
                                 <label class="form-submit">
-                                    <input type="submit" value="Разместить заявку">
+                                    <input type="submit" value="Разместить заявку" data-toggle="modal" data-target="#success-modal">
                                 </label>
                                 <span class="checkbox">
                                     <label class="form-checkbox">
                                         <input type="checkbox"> Я ознакомлен с условиями пользовательского соглашения
                                     </label>
                                 </span>
+                            </div>
+                            <div class="col-sm-8 col-sm-push-2 col-md-12 col-md-push-0">
+                                <p class="notice"><i class="md-info"></i> Вашу заявку получат все зарегистрированные квалифицированные компании по данной услуге.</p>
                             </div>
                         </div>
                     </form>
@@ -1140,6 +1143,27 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Готово</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-iconic modal-success" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Ваша заявка успешно отправлена!</p>
+            </div>
+            <div class="modal-body">
+                <div class="col col-icon">
+                    <i class="md-check icon"></i>
+                </div>
+                <div class="col">
+                    <p>Коммерческие предложения от компаний вы сможете просмотреть, как в личном кабинете, так и на электронной почте. Надеемся вы подберете лучшие условия для выполнения вашей заявки благодаря нашему сервису</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             </div>
         </div>
     </div>
