@@ -78,4 +78,8 @@ $(function(){
 		$('.service-content-detail').toggle();
 	});
 
+	$('.form').on('submit', function(e){
+		e.preventDefault();
+	});
+
 });

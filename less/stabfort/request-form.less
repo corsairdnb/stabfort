@@ -1,5 +1,5 @@
 .request-form {
-	margin: 40px 0;
+	margin: 60px 0;
 	.request {
 		max-width: 720px;
 		margin: 0 auto;
@@ -27,6 +27,31 @@
 	.form-checkbox {
 		text-align: center;
 	}
+	.notice {
+		margin: 0;
+		color: @color-grey-2;
+		font-size: .8em;
+		line-height: 1.1em;
+		text-align: center;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.request-form {
+		.notice {
+			padding: 0 10%;
+			font-size: .9em;
+		}
+	}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.request-form {
+		.notice {
+			padding: 0 10%;
+			font-size: .95em;
+		}
+	}
 }
 
 @media (min-width: @vw-laptop-sm) {
@@ -50,6 +75,10 @@
 			width: auto;
 		}
 		.form-checkbox {
+			text-align: left;
+		}
+		.notice {
+			padding: 0 20% 0 0;
 			text-align: left;
 		}
 	}
