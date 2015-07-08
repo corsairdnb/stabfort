@@ -1,17 +1,27 @@
 $(function(){
 
-	var fixedMenu = $('.fixed-menu'),
-		fixedMenuHeight = parseInt(fixedMenu.height()),
+	var fixedMenu = $('.fixed-menu');
+
+	if (fixedMenu.length == 0) {
+		return;
+	}
+
+	var	fixedMenuHeight = parseInt(fixedMenu.height()),
 		fixedMenuTop = parseInt(fixedMenu.css('top')),
 		fixedMenuVerticalSize = parseInt(fixedMenuHeight + fixedMenuTop),
+		main = $('.main'),
+		mainHeight = main.height(),
+		footerHeight = parseInt($('.footer').height()),
 		breakpoint = getBreakpoint();
 
+	main.css('min-height', fixedMenuVerticalSize);
+
 	function getBreakpoint(){
-		return parseInt(document.body.clientHeight) - parseInt($('.footer').height()) - fixedMenuVerticalSize - 100;
+		return mainHeight < fixedMenuVerticalSize ? 0 : parseInt(document.body.clientHeight) - footerHeight - fixedMenuVerticalSize - 100;
 	}
 	function fixedMenuHorizontal(){
 		if (document.documentElement.clientWidth >= 1260) {
-			var serviceMenuLeft = Math.floor((document.documentElement.clientWidth - 1240) / 2 + $('.main .section-cnt').width());
+			var serviceMenuLeft = Math.floor((document.documentElement.clientWidth - 1240) / 2 + main.find('.section-cnt').width());
 			fixedMenu.css('left', serviceMenuLeft);
 		}
 	}
