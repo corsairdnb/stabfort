@@ -8,6 +8,9 @@ body {
 	min-width: @vw-iphone;
 	-webkit-text-size-adjust: none;
 }
+.main {
+	box-sizing: content-box;
+}
 .section-cnt {
 	max-width: @vw-laptop-sm - 40px;
 	margin: 0 auto;
@@ -71,5 +74,15 @@ body {
 	}
 	.wrapper {
 		display: table-row-group;
+	}
+	.container-fluid-wide {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+}
+@media (max-width: (@vw-laptop-sm - 1)) {
+	.container-fluid-wide {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
