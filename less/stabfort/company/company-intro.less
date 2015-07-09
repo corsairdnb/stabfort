@@ -4,6 +4,30 @@
 		font: 400 25px/1em @font-condensed;
 		.word-break();
 	}
+	.btn-callback {
+		.btn-green-small();
+	}
+	.btn-review {
+		display: inline-block;
+		text-shadow: none;
+		font-weight: 500;
+		text-align: center;
+		text-transform: uppercase;
+		border-radius: 7px;
+		border: 1px solid @color-grey-1;
+		&, &:visited, &:hover {
+			text-decoration: none;
+			color: @color-grey-1;
+		}
+	}
+	.btn-callback, .btn-review {
+		width: 145px;
+		padding: 5px 10px;
+		font-size: 12px;
+	}
+	.btn-favorites {
+		.favorite-button();
+	}
 }
 
 @media (min-width: @vw-iphone-5-land) {

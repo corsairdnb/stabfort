@@ -1,5 +1,6 @@
 .services-list-level-3 {
 	width: @vw-iphone - 10px;
+	min-height: 450px;
 	position: fixed;
 	z-index: 1100;
 	left: 5px;
@@ -37,21 +38,11 @@
 	padding: @tile-list-item-padding;
 	padding-right: 25px;
 	position: relative;
-	&:after {
-		content: "";
-		position: absolute;
-		right: 0;
-		top: 50%;
-		margin-top: -5px;
-		opacity: 0;
-		.arrow(6px, #fff, right);
-	}
 }
 .level-3-item-link {
 	position: relative;
 	font-size: 18px;
 	line-height: 1em;
-	/*white-space: nowrap;*/
 	&, &:visited {
 		color: @color-blue-1;
 		text-decoration: none;
@@ -78,20 +69,6 @@
 	&:hover {
 		color: inherit;
 		text-decoration: none;
-	}
-}
-.level-3-item.active {
-	background: @color-blue-1;
-	&:after {
-		opacity: 1;
-	}
-	.level-3-item-more {
-		display: block;
-	}
-	.level-3-item-link {
-		&, &:visited, &, &:hover {
-			color: #fff;
-		}
 	}
 }
 
