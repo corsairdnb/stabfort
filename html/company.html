@@ -457,18 +457,19 @@
         <section class="section section-company-intro">
             <div class="section-cnt">
                 <div class="container-fluid container-fluid-wide">
-                    <div class="col-sm-7">
+                    <div class="col-sm-7 col-left">
                         <h1 class="company-h1">ООО «Мобильные телесистемы»</h1>
                         <aside class="buttons">
-                            <a href="#" class="btn-callback">Заказать звонок</a>
-                            <a href="#" class="btn-review">Оставить отзыв</a>
-                            <a href="#" class="btn-favorites"><i class="md-star icon"></i> в закладки</a>
+                            <span class="block">
+                                <a href="#" class="btn btn-callback">Заказать звонок</a>
+                                <a href="#" class="btn btn-review">Оставить отзыв</a>
+                            </span>
+                            <a href="#" class="btn btn-favorites"><i class="md-star icon"></i> в закладки</a>
                         </aside>
                     </div>
-                    <div class="col-sm-5">
-                        <br>
-                        <div><i class="md-done"></i>Проверенная компания</div>
-                        <div>
+                    <div class="col-sm-5 col-right">
+                        <a href="#" class="btn-verified"><i class="icon md-done"></i>Проверенная компания</a>
+                        <div class="rating">
                             <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i>
                         </div>
                     </div>
@@ -507,10 +508,10 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <img src="../img/company-logo.png" alt="Название компании">
-                        <div>
-                            <a href="#">Скачать карточку организации</a>
+                        <div class="company-logo">
+                            <img src="../img/company-logo.png" alt="Название компании">
                         </div>
+                        <a href="#" class="btn-download-info">Скачать карточку организации</a>
                     </div>
                 </div>
             </div>
@@ -524,7 +525,59 @@
         </section>
         <section class="section section-company-callback">
             <div class="section-cnt">
-
+                <h1>Разместите заказ | Закажите звонок</h1>
+                <div class="request-form">
+                    <div class="request">
+                        <form action="/" class="form">
+                            <div class="form-group container-fluid container-fluid-wide">
+                                <label class="col-sm-6">
+                                    <input type="text" class="form-control input-lg" placeholder="Ваше имя">
+                                </label>
+                                <label class="col-sm-6">
+                                    <input type="tel" class="form-control input-lg" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group container-fluid clearfix">
+                                <label class="col-sm-6">
+                                    <select class="form-control input-lg">
+                                        <option>Лицензирование</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                    </select>
+                                </label>
+                                <label class="col-sm-6">
+                                    <select class="form-control input-lg">
+                                        <option>Лицензия на розничную продажу алкогольной продукции</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="form-group container-fluid clearfix">
+                                <label class="form-submit">
+                                    <input type="submit" value="Получить выгодные условия">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="phone-form">
+                    <form action="/">
+                        <div class="form-group container-fluid container-fluid-wide">
+                            <label class="col-sm-4">
+                                <input type="text" class="form-control input-lg" placeholder="Ваше имя">
+                            </label>
+                            <label class="col-sm-4">
+                                <input type="tel" class="form-control input-lg" placeholder="Ваш телефон">
+                            </label>
+                            <label class="col-sm-4">
+                                <input type="submit" value="Получить выгодные условия">
+                            </label>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <section class="section section-company-specialist">
