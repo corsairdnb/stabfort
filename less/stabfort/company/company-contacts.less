@@ -1,25 +1,72 @@
 .section-company-contacts {
-	img {
-		max-width: 100%;
-		height: auto;
+	margin-bottom: 50px;
+	.company-logo {
+		margin: 0 auto;
+		width: 80%;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	dl {}
-	dt {
-		width: 100px;
-		float: left;
-		clear: both;
+	.list {
+		width: 100%;
+		margin: 0;
+		border: 0 none;
+		border-spacing: 0;
+		td {
+			padding: 7px 0;
+			vertical-align: top;
+		}
+		.dt {
+			width: 90px;
+			color: @color-grey-2;
+			font-size: 13px;
+			line-height: 1em;
+			font-style: italic;
+			text-transform: uppercase;
+		}
+		.dd {
+			font-size: 15px;
+			line-height: 1em;
+		}
+		a {
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @color-blue-1;
+				text-decoration: underline;
+			}
+		}
 	}
-	dd {}
-	.cols {}
-	.col {}
+	.properties {
+		.dt {
+			width: 80px;
+		}
+	}
+	.btn-download-info {
+		font-size: 15px;
+		&, &:visited {
+			color: @color-blue-1;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+	}
 }
 
 @media (min-width: @vw-iphone-6-land) {
 	.section-company-contacts {
-		.cols {}
+		.wrap {
+			padding: 20px 0 0;
+		}
+		/*.cols {}
 		.col {
 			width: 50%;
 			float: left;
-		}
+		}*/
 	}
 }

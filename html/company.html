@@ -454,18 +454,25 @@
     <main class="main" role="main">
         <section class="section section-company-intro">
             <div class="section-cnt">
-                <div class="container-fluid container-fluid-wide">
-                    <div class="col-sm-7">
-                        <h1 class="company-h1">ООО «Мобильные телесистемы»</h1>
-                        <button>Заказать звонок</button>
-                        <button>оставить отзыв</button>
-                        <button>в закладки</button>
-                    </div>
-                    <div class="col-sm-5">
-                        <br>
-                        <div><i class="md-done"></i>Проверенная компания</div>
-                        <div>
-                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i>
+                <div class="wrap">
+                    <div class="clearfix">
+                        <div class="col col-left">
+                            <h1 class="company-h1">ООО «Мобильные телесистемы»</h1>
+                            <aside class="buttons">
+                                <a href="#" class="btn btn-callback">Заказать звонок</a>
+                                <span class="block">
+                                    <a href="#" class="btn btn-review"><i class="md-thumb-up icon"></i> оставить отзыв</a>
+                                    <a href="#" class="btn btn-favorites"><i class="md-star icon"></i> в закладки</a>
+                                </span>
+                            </aside>
+                        </div>
+                        <div class="col col-right">
+                            <a href="#" class="btn-verified" title="Узнайте как была проверена данная компания">
+                                <i class="icon md-done"></i>Проверенная компания
+                            </a>
+                            <div class="rating">
+                                <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -473,39 +480,59 @@
         </section>
         <section class="section section-company-contacts">
             <div class="section-cnt">
-                <div class="container-fluid container-fluid-wide">
-                    <div class="col-lg-8">
-                        <div class="cols clearfix">
-                            <div class="col">
-                                <dl>
-                                    <dt>Сайт</dt>
-                                    <dd><a href="#">www.yandex.ru</a></dd>
-                                    <dt>E-mail</dt>
-                                    <dd><a href="#">manager@meridian.com</a></dd>
-                                    <dt>Телефон</dt>
-                                    <dd>+7 812 984 76 98</dd>
-                                    <dt>Факс</dt>
-                                    <dd>+7 812 984 76 98</dd>
-                                    <dt>Адрес</dt>
-                                    <dd>ул. Марата, д. 42, г. Санкт-Петербург</dd>
-                                </dl>
-                            </div>
-                            <div class="col">
-                                <dl>
-                                    <dt>ОГРН</dt>
-                                    <dd>312774626200010</dd>
-                                    <dt>ИНН</dt>
-                                    <dd>772787090200</dd>
-                                    <dt>КПП</dt>
-                                    <dd>772801001</dd>
-                                </dl>
+                <div class="wrap">
+                    <div class="container-fluid container-fluid-wide">
+                        <div class="col-lg-8">
+                            <div class="cols clearfix">
+                                <div class="container-fluid container-fluid-wide">
+                                    <div class="col-sm-8">
+                                        <table class="list contacts">
+                                            <tr>
+                                                <td class="dt">Сайт</td>
+                                                <td class="dd"><a href="#">www.yandex.ru</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">E-mail</td>
+                                                <td class="dd"><a href="#">manager@meridian.com</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">Телефон</td>
+                                                <td class="dd"><a href="tel:+78129847698">+7 812 984 76 98</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">Факс</td>
+                                                <td class="dd">+7 812 984 76 98</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">Адрес</td>
+                                                <td class="dd">ул. Марата, д. 42, г. Санкт-Петербург</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <table class="list properties">
+                                            <tr>
+                                                <td class="dt">ОГРН</td>
+                                                <td class="dd">312774626200010</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">ИНН</td>
+                                                <td class="dd">772787090200</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="dt">КПП</td>
+                                                <td class="dd">772801001</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="../img/company-logo.png" alt="Название компании">
-                        <div>
-                            <a href="#">Скачать карточку организации</a>
+                        <div class="col-lg-4 c">
+                            <div class="company-logo">
+                                <img src="../img/company-logo.png" alt="Название компании">
+                            </div>
+                            <a href="#" class="btn-download-info">Скачать карточку организации</a>
                         </div>
                     </div>
                 </div>
@@ -520,7 +547,59 @@
         </section>
         <section class="section section-company-callback">
             <div class="section-cnt">
-
+                <h1>Разместите заказ | Закажите звонок</h1>
+                <div class="request-form">
+                    <div class="request">
+                        <form action="/" class="form">
+                            <div class="form-group container-fluid container-fluid-wide">
+                                <label class="col-sm-6">
+                                    <input type="text" class="form-control input-lg" placeholder="Ваше имя">
+                                </label>
+                                <label class="col-sm-6">
+                                    <input type="tel" class="form-control input-lg" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group container-fluid clearfix">
+                                <label class="col-sm-6">
+                                    <select class="form-control input-lg">
+                                        <option>Лицензирование</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                    </select>
+                                </label>
+                                <label class="col-sm-6">
+                                    <select class="form-control input-lg">
+                                        <option>Лицензия на розничную продажу алкогольной продукции</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                        <option value="a">aaaaaaaa</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="form-group container-fluid clearfix">
+                                <label class="form-submit">
+                                    <input type="submit" value="Получить выгодные условия">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="phone-form">
+                    <form action="/">
+                        <div class="form-group container-fluid container-fluid-wide">
+                            <label class="col-sm-4">
+                                <input type="text" class="form-control input-lg" placeholder="Ваше имя">
+                            </label>
+                            <label class="col-sm-4">
+                                <input type="tel" class="form-control input-lg" placeholder="Ваш телефон">
+                            </label>
+                            <label class="col-sm-4">
+                                <input type="submit" value="Получить выгодные условия">
+                            </label>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <section class="section section-company-specialist">

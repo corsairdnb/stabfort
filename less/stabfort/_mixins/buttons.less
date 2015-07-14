@@ -33,7 +33,6 @@
 .btn-orange() {
 	.natural-button(@color-orange-btn-1, @color-orange-btn-2);
 }
-
 .btn-green() {
 	.natural-button(@color-green-btn-1, @color-green-btn-2);
 }
@@ -130,5 +129,28 @@
 		background: @color;
 		color: #fff;
 		text-decoration: none;
+	}
+}
+
+.favorite-button {
+	display: inline-block;
+	padding: 1px 10px 3px;
+	font-family: @font-condensed;
+	font-size: 17px;
+	line-height: 1.5em;
+	border-radius: 3px;
+	border: 1px solid @color-grey-4;
+	.icon {
+		color: @color-orange-1;
+		vertical-align: middle;
+	}
+	&, &:visited, &:hover {
+		background-color: #fff;
+		color: @color-grey-2;
+		text-decoration: none;
+	}
+	&:hover {
+		border-color: @color-grey-2;
+		color: @color-grey-1;
 	}
 }

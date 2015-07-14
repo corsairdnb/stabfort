@@ -146,9 +146,15 @@
 					border-top-color: #fff;
 					color: #fff;
 					text-decoration: none;
+					background-color: darken(@color-blue-1, 5%);
 				}
 				&.desktop-hidden {
 					display: none;
+				}
+				&.active {
+					a:hover {
+						background-color: darken(@color-blue-1, 5%);
+					}
 				}
 			}
 		}
