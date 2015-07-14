@@ -1,10 +1,10 @@
 .section-company-intro {
 	.wrap {
-		padding-bottom: 20px;
+		padding: 25px 0 20px;
 		border-bottom: 1px solid @color-grey-4;
 	}
 	.company-h1 {
-		margin: 1em 0 .5em;
+		margin: .3em 0 .5em;
 		font: 300 30px/1em @font-condensed;
 		text-align: center;
 		.word-break();
@@ -20,7 +20,7 @@
 	}
 	.btn-callback {
 		.btn-green-small();
-		font: 400 18px/1em @font-condensed;
+		font: 400 16px/1.2em @font-condensed;
 	}
 	.btn-review {
 		.favorite-button();
@@ -34,7 +34,7 @@
 	.btn-verified {
 		display: inline-block;
 		max-width: @vw-iphone - 30px;
-		margin: 0 auto;
+		margin: 10px auto 0;
 		padding: 7px 11px;
 		font: 700 18px/1em @font-condensed;
 		text-transform: uppercase;
@@ -62,7 +62,6 @@
 
 	}
 	.col-right {
-		padding: 10px 0 0;
 		text-align: center;
 	}
 }
@@ -70,7 +69,7 @@
 @media (min-width: @vw-iphone-5-land) {
 	.section-company-intro {
 		.company-h1 {
-			margin: 20px 0;
+			margin: 16px 0;
 			font-size: 38px;
 			font-weight: 300;
 		}
@@ -93,6 +92,48 @@
 				text-decoration: none;
 				color: @color-grey-1;
 			}
+		}
+	}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.section-company-intro {
+		.col {
+			float: left;
+		}
+		.col-left {
+			width: 70%;
+		}
+		.col-right {
+			width: 30%;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-company-intro {
+		.wrap {
+			padding: 10px 0 15px;
+		}
+		.company-h1 {
+			text-align: left;
+		}
+		.buttons {
+			text-align: left;
+		}
+		.block {
+			display: inline;
+		}
+		.btn-verified {
+			margin-top: 26px;
+		}
+		.col {
+
+		}
+		.col-left {
+
+		}
+		.col-right {
+
 		}
 	}
 }
