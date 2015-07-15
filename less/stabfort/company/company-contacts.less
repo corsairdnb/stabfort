@@ -4,30 +4,31 @@
 		margin: 0 auto;
 		width: 80%;
 		img {
-			max-width: 100%;
+			width: 100%;
+			max-width: @vw-iphone - 30px;
 			height: auto;
 		}
 	}
 	.list {
 		width: 100%;
-		margin: 0;
+		margin: 20px 0;
 		border: 0 none;
 		border-spacing: 0;
 		td {
-			padding: 7px 0;
+			padding: 5px 0;
 			vertical-align: top;
 		}
 		.dt {
 			width: 90px;
 			color: @color-grey-2;
 			font-size: 13px;
-			line-height: 1em;
+			line-height: 1.6em;
 			font-style: italic;
 			text-transform: uppercase;
 		}
 		.dd {
 			font-size: 15px;
-			line-height: 1em;
+			line-height: 1.2em;
 		}
 		a {
 			&, &:visited {
@@ -38,11 +39,6 @@
 				color: @color-blue-1;
 				text-decoration: underline;
 			}
-		}
-	}
-	.properties {
-		.dt {
-			width: 80px;
 		}
 	}
 	.btn-download-info {
@@ -62,6 +58,14 @@
 	.section-company-contacts {
 		.wrap {
 			padding: 20px 0 0;
+		}
+		.list {
+			margin: 0;
+		}
+		.properties {
+			.dt {
+				width: 80px;
+			}
 		}
 		/*.cols {}
 		.col {

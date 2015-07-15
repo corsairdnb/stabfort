@@ -1,6 +1,7 @@
 .natural-button(@color-1, @color-2) {
 	display: inline-block;
-	padding: 15px 20px;
+	padding: 16px 20px;
+	background: mix(@color-1, @color-2);
 	background: linear-gradient(to bottom, @color-1, @color-2);
 	border: 0 none;
 	border-bottom: 1px solid @color-2;
@@ -8,6 +9,7 @@
 	border-radius: 7px;
 	font-size: 19px;
 	font-weight: 700;
+	line-height: 1em;
 	text-align: center;
 	text-transform: uppercase;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.4);
@@ -16,14 +18,17 @@
 		text-decoration: none;
 	}
 	&:hover {
+		background: mix(@color-1, lighten(@color-2, 10%));
 		background: linear-gradient(to bottom, @color-1, lighten(@color-2, 10%));
 		color: #fff;
 		text-decoration: none;
 	}
 	&:active {
+		background: mix(@color-2, @color-1);
 		background: linear-gradient(to bottom, @color-2, @color-1);
 	}
 	&[disabled] {
+		background: mix(@color-grey-2, @color-grey-1);
 		background: linear-gradient(to bottom, @color-grey-2, @color-grey-1);
 		box-shadow: none;
 		border-bottom-color: @color-grey-2;
