@@ -1,6 +1,6 @@
 .services-list-level-2 {
 	width: @vw-iphone - 10px;
-	min-height: 450px;
+	min-height: 300px;
 	padding: 0 0 55px;
 	position: fixed;
 	z-index: 1100;
@@ -124,6 +124,11 @@
 @media (min-width: @vw-iphone-6-land) {
 	.services-list-level-2 {
 		width: floor(@vw-iphone-6-land/2);
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.services-list-level-2 {
+		min-height: 450px;
 	}
 }
 @media (min-width: @vw-tablet-lg) {
