@@ -1,0 +1,51 @@
+.modal-default {
+	.modal-header,
+	.modal-body,
+	.modal-footer {
+		border: 0 none;
+	}
+	.modal-content {
+		border-radius: 0;
+	}
+	.modal-header {
+		background: @color-grey-3;
+		font: 22px/1em @font-condensed;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.modal-body {
+		padding: 10px 15px;
+		font-size: 16px;
+		line-height: 1.6em;
+		text-align: center;
+	}
+	.modal-footer {
+		background: @color-grey-3;
+		padding: 20px;
+	}
+	@{inputs} {
+		text-align: center;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.modal-default {
+		.modal-header {
+			font-size: 30px;
+		}
+		.modal-body {
+			padding: 15px 30px;
+		}
+	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.modal-default {
+		.modal-body {
+			text-align: left;
+		}
+		@{inputs} {
+			text-align: left;
+		}
+	}
+}

@@ -14,13 +14,15 @@
 	}
 	.btn {
 		margin: 0 0 10px;
+		vertical-align: top;
 	}
 	.block {
 		display: block;
 	}
 	.btn-callback {
 		.btn-green-small();
-		font: 400 16px/1.3em @font-condensed;
+		padding: 10px 20px;
+		font: 400 15px/1.3em @font-default;
 	}
 	.btn-review {
 		.favorite-button();
@@ -73,30 +75,21 @@
 			font-size: 37px;
 			font-weight: 300;
 		}
-		.btn-callback, .btn-review {
-			padding: 5px 15px;
-			font-size: 14px;
-		}
-		.btn-callback {
-			font-size: 22px;
-			line-height: 1.5em;
-		}
 		.btn-review {
-			display: inline-block;
-			text-shadow: none;
-			font-weight: 500;
-			text-align: center;
-			text-transform: uppercase;
-			border-radius: 7px;
-			border: 1px solid @color-grey-1;
-			&, &:visited, &:hover {
-				text-decoration: none;
-				color: @color-grey-1;
-			}
+			.strong-button(@color-blue-1);
+			padding: 6px 20px;
+			font-size: 19px;
 		}
 	}
 }
 
+@media (min-width: @vw-tablet-sm) {
+	.section-company-intro {
+		.block {
+			display: inline;
+		}
+	}
+}
 @media (min-width: @vw-tablet-lg) {
 	.section-company-intro {
 		.col {
