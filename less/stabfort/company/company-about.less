@@ -1,14 +1,36 @@
 .section-company-about {
 	margin-bottom: 50px;
+	.content {
+		padding: 0 15px;
+	}
 	.h1 {
 		margin: 1em 0;
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 1em;
 		font-weight: 400;
 	}
 	p {
 		margin: 1em 0;
-		font-size: 18px;
+		font-size: 15px;
 		line-height: 1.5em;
+	}
+}
+
+@media (min-width: @vw-iphone-6-land) {
+	.section-company-about {
+
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-company-about {
+		.content {
+			padding: 0;
+		}
+		.h1 {
+			font-size: 24px;
+		}
+		p {
+			font-size: 18px;
+		}
 	}
 }

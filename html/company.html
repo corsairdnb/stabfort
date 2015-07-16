@@ -532,17 +532,68 @@
                             <div class="company-logo">
                                 <img src="../img/company-logo.png" alt="Название компании">
                             </div>
-                            <a href="#" class="btn-download-info">Скачать карточку организации</a>
+                            <a href="#" class="btn-download-info" data-toggle="modal" data-target="#download-modal">Скачать карточку организации</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section service-selection">
+            <div class="section-cnt">
+                <div class="wrap">
+                    <div class="text">
+                        <div class="title">Популярные услуги</div>
+                    </div>
+                    <div class="selection">
+                        <div class="service-selection-item">
+                            <a href="#" class="service-selection-item-link">
+                                <span class="service-selection-item-name">Лицензия на фармацевтическую деятельность</span>
+                                <span class="service-selection-item-order"><i class="md-add-shopping-cart icon"></i> <a href="#">Заказать услугу</a></span>
+                                <span class="service-selection-item-online"><i class="md-chat icon"></i> <a href="#">Получить консультацию</a></span>
+                            </a>
+                        </div>
+                        <div class="service-selection-item">
+                            <a href="#" class="service-selection-item-link">
+                                <span class="service-selection-item-name">Медицинская лицензия</span>
+                                <span class="service-selection-item-order"><i class="md-add-shopping-cart icon"></i> <a href="#">Заказать услугу</a></span>
+                                <span class="service-selection-item-online"><i class="md-chat icon"></i> <a href="#">Получить консультацию</a></span>
+                            </a>
+                        </div>
+                        <div class="service-selection-item">
+                            <a href="#" class="service-selection-item-link">
+                                <span class="service-selection-item-name">Лицензия МЧС</span>
+                                <span class="service-selection-item-order"><i class="md-add-shopping-cart icon"></i> <a href="#">Заказать услугу</a></span>
+                                <span class="service-selection-item-online"><i class="md-chat icon"></i> <a href="#">Получить консультацию</a></span>
+                            </a>
+                        </div>
+                        <div class="service-selection-item">
+                            <a href="#" class="service-selection-item-link">
+                                <span class="service-selection-item-name">Получение любых документов БТИ</span>
+                                <span class="service-selection-item-order"><i class="md-add-shopping-cart icon"></i> <a href="#">Заказать услугу</a></span>
+                                <span class="service-selection-item-online"><i class="md-chat icon"></i> <a href="#">Получить консультацию</a></span>
+                            </a>
+                        </div>
+                        <div class="service-selection-item">
+                            <a href="#" class="service-selection-item-link">
+                                <span class="service-selection-item-name">Кадастровая выписка о земельном участке</span>
+                                <span class="service-selection-item-order"><i class="md-add-shopping-cart icon"></i> <a href="#">Заказать услугу</a></span>
+                                <span class="service-selection-item-online"><i class="md-chat icon"></i> <a href="#">Получить консультацию</a></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn btn-default">Все услуги</a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section section-company-about">
             <div class="section-cnt">
-                <p class="h1">Что вы получаете, работая с нами</p>
-                <p>Розничная продажа алкогольной продукции предусматривает обязательную процедуру лицензирования. Наша компания предлагает свои услуги по законному и оперативному получению лицензии на осуществляемую розничную продажу любой алкогольной продукции. Срок получения данной лицензии составляет 30 дней. А срок действия этого вида лицензии на 5 лет.</p>
-                <p>Розничная продажа алкогольной продукции предусматривает обязательную процедуру лицензирования. Наша компания предлагает свои услуги по законному и оперативному получению лицензии на осуществляемую розничную продажу любой алкогольной продукции. Срок получения данной лицензии составляет 30 дней. А срок действия этого вида лицензии на 5 лет.</p>
+                <div class="content">
+                    <p class="h1">Что вы получаете, работая с нами</p>
+                    <p>Розничная продажа алкогольной продукции предусматривает обязательную процедуру лицензирования. Наша компания предлагает свои услуги по законному и оперативному получению лицензии на осуществляемую розничную продажу любой алкогольной продукции. Срок получения данной лицензии составляет 30 дней. А срок действия этого вида лицензии на 5 лет.</p>
+                    <p>Розничная продажа алкогольной продукции предусматривает обязательную процедуру лицензирования. Наша компания предлагает свои услуги по законному и оперативному получению лицензии на осуществляемую розничную продажу любой алкогольной продукции. Срок получения данной лицензии составляет 30 дней. А срок действия этого вида лицензии на 5 лет.</p>
+                </div>
             </div>
         </section>
         <section class="section section-company-callback">
@@ -700,18 +751,27 @@
     </div>
 </div>
 
-<div class="modal fade modal-iconic modal-success" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-default" id="download-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <p class="modal-title">Ваша заявка успешно отправлена!</p>
+                <p class="modal-title">Скачать карточку организации</p>
             </div>
             <div class="modal-body">
-                <div class="col col-icon">
-                    <i class="md-check icon"></i>
-                </div>
-                <div class="col">
-                    <p>Коммерческие предложения от компаний вы сможете просмотреть, как в личном кабинете, так и на электронной почте. Надеемся вы подберете лучшие условия для выполнения вашей заявки благодаря нашему сервису</p>
+                <div class="container-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-push-2">
+                        <p class="c">Пожалуйста, введите ваш электронный адрес.<br> Запрошенные Вами документы мы отправим на этот адрес</p>
+                        <form action="/">
+                            <div class="form-group container-fluid container-fluid-wide">
+                                <label class="col-sm-7">
+                                    <input type="email" class="form-control input-lg" placeholder="Ваш E-mail">
+                                </label>
+                                <label class="col-sm-5">
+                                    <button type="submit" class="btn btn-success btn-xl"><i class="md-mail"></i> Отправить</button>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
