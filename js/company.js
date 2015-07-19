@@ -139,4 +139,6 @@ $(function(){
 		onSetup: undefined
 	});
 
+	initPhotoSwipeFromDOM('.item-docs');
+
 });
