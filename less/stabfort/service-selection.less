@@ -10,33 +10,218 @@
 		text-align: center;
 	}
 	.buttons {
+		margin: 30px 0 0;
 		text-align: center;
+		.btn {
+			.flat-button(@color-blue-1, 18px);
+			display: inline-block;
+			margin: 0;
+			padding: 8px 20px;
+			font-weight: 900;
+			text-shadow: none;
+			text-transform: uppercase;
+		}
 	}
 	.selection {
 		margin: 15px 0;
-		padding: 0 15px;
 	}
 	.service-selection-item {
-		background-color: @color-grey-5;
-		margin: 5px 0;
-		box-shadow: 0 1px 1px rgba(0,0,0,.3);
-		transition: all .2s;
+		margin: 0 0 15px;
+		padding: 0 5px;
+		.clearfix();
+	}
+	.service-selection-item-link {
+		display: block;
+		&, &:visited {
+			color: @color-default;
+			text-decoration: none;
+		}
 		&:hover {
-			background-color: #fffbe8;
+			color: @color-default;
+			text-decoration: none;
 		}
 	}
-	.service-selection-item-link {}
-	.service-selection-item-name {}
-	.service-selection-item-order {}
-	.service-selection-item-online {}
+	.service-selection-item-name {
+		display: block;
+		padding: 5px 5px 10px;
+		font-size: 20px;
+		line-height: 1.2em;
+		font-weight: 300;
+		text-align: center;
+	}
+	.service-selection-item-order,
+	.service-selection-item-online {
+		float: left;
+		width: 50%;
+		background: @color-blue-1;
+		padding: 10px 0 8px;
+		color: #fff;
+		font: 300 16px/1em @font-condensed;
+		text-align: center;
+		white-space: nowrap;
+		&:hover {
+			background: darken(@color-blue-1, 10%);
+		}
+		.icon {
+			vertical-align: bottom;
+		}
+	}
+	.service-selection-item-order {
+		font-weight: 400;
+		border-radius: 0 5px 5px 0;
+	}
+	.service-selection-item-online {
+		border-radius: 5px 0 0 5px;
+		border-right: 1px solid #fff;
+		.icon {
+			display: none;
+		}
+	}
 }
 
 @media (min-width: @vw-iphone-land) {
 	.service-selection {
-		.service-selection-item  {
-			padding: 15px 0;
-			border-width: 0 12px;
-			font-size: 16px;
+		.service-selection-item-online {
+			.icon {
+				display: inline-block;
+			}
+		}
+	}
+}
+@media (min-width: @vw-iphone-land) and (max-width: (@vw-tablet-sm - 1)) {
+	.service-selection {
+		.service-selection-item-order,
+		.service-selection-item-online {
+			font-size: 20px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) {
+	.service-selection {
+		.title {
+			font-size: 37px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) and (max-width: (@vw-tablet-sm - 1)) {
+	.service-selection {
+		.title {
+			font-size: 37px;
+		}
+		.buttons {
+			.btn {
+				font-size: 23px;
+			}
+		}
+		.service-selection-item {
+			padding: 0 15px;
+		}
+		.service-selection-item-link {
+			text-align: center;
+		}
+		.service-selection-item-name {
+			font-size: 24px;
+		}
+		.service-selection-item-order,
+		.service-selection-item-online {
+			display: inline-block;
+			float: none;
+			width: 250px;
+			color: @color-blue-1;
+			background: #fff;
+			border: 1px solid transparent;
+			padding: 12px 0 10px;
+			border-radius: 10px;
+			font: 400 18px/1em;
+		}
+		.service-selection-item-order {
+			border-color: currentColor;
+			&:hover {
+				background: @color-blue-1;
+				color: #fff;
+			}
+		}
+		.service-selection-item-online {
+			&:hover {
+				background: lighten(@color-blue-1, 38%);
+				border-color: lighten(@color-blue-1, 30%);
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.service-selection {
+		.title {
+			margin-bottom: .5em;
+		}
+		.selection {
+			padding: 0 15px;
+		}
+		.service-selection-item {
+			margin: 0 0 5px;
+			padding: 5px 15px 0;
+			background-color: @color-grey-5;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+			transition: all .2s;
+			&:hover {
+				background-color: #fffbe8;
+			}
+		}
+		.service-selection-item-link {
+			text-align: center;
+		}
+		.service-selection-item-name {
+			margin: 0 0 5px;
+			padding: 0;
+			font-size: 20px;
+			font-weight: 400;
+		}
+		.service-selection-item-order,
+		.service-selection-item-online {
+			display: inline-block;
+			float: none;
+			width: auto;
+			background: none;
+			border: 0 none;
+			padding: 6px;
+			color: @color-default;
+			font: 300 18px/1em @font-condensed;
+			text-align: center;
+			&:hover {
+				background: none;
+				color: #000;
+				.icon {
+					color: #000;
+				}
+			}
+			.icon {
+				vertical-align: middle;
+				color: @color-grey-1;
+			}
+		}
+		.service-selection-item-online {
+			margin-right: 15px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.service-selection {
+		.service-selection-item {
+			padding: 10px 30px 0;
+		}
+		.service-selection-item-name {
+			font-size: 23px;
+		}
+		.service-selection-item-order,
+		.service-selection-item-online {
+			padding-bottom: 10px;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.service-selection {
+		.selection {
+			padding: 0;
 		}
 	}
 }
