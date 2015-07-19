@@ -1,0 +1,186 @@
+.section-company-reviews {
+	margin: 70px 0;
+	.title {
+		font: 300 30px/1em @font-condensed;
+		text-transform: uppercase;
+		text-align: center;
+		.title-text {
+			display: block;
+		}
+		.link {
+			background: lighten(@color-blue-1, 38%);
+			margin: 0 0 0 8px;
+			padding: 0 15px 1px 5px;
+			vertical-align: top;
+			font-size: 16px;
+			text-transform: none;
+			font-weight: 400;
+			position: relative;
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				background: @color-blue-1;
+				color: #fff;
+				text-decoration: none;
+			}
+			&:after {
+				content: "";
+				.arrow-after(4px, currentColor, left);
+			}
+		}
+	}
+	.items {
+
+	}
+	.item {
+		a {
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: underline;
+			}
+			&:hover {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+		}
+	}
+	.item-left {
+		padding: 20px 15px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.item-right {
+		max-width: @vw-tablet-sm - 30px;
+		margin: 0 auto;
+	}
+	.item-doc {
+		object-fit: contain;
+		max-width: 100%;
+		max-height: 300px;
+		padding: 5px;
+		background: @color-grey-3;
+		border: 1px solid @color-grey-4;
+	}
+	.review-photo {
+		text-align: center;
+		img {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+		}
+	}
+	.review-content {
+		padding: 0 15px;
+		text-align: center;
+		p {
+			margin: .5em 0;
+			font-size: 15px;
+			line-height: 1.5em;
+		}
+	}
+	.review-name {
+		font-weight: 500;
+	}
+	.review-rating {
+		color: @color-orange-1;
+	}
+	.review-date {
+		font-size: 14px;
+		color: @color-grey-2;
+	}
+	.review-company {
+		font-size: 15px;
+		line-height: 1.5em;
+		a {
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 0 0 5px;
+				.arrow(5px, currentColor, left);
+			}
+			&, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.section-company-reviews {
+		.title {
+			.title-text {
+				display: inline;
+			}
+		}
+		.item-right {
+			padding: 0 15px;
+		}
+		.review-photo {
+			display: table-cell;
+			width: 120px;
+			vertical-align: top;
+		}
+		.review-content {
+			display: table-cell;
+			text-align: left;
+			vertical-align: top;
+		}
+		.review-rating {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.review-date {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 5px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-company-reviews {
+		.review-cnt {
+			position: relative;
+			padding: 12px 20px;
+			box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+			&:before {
+				content: '';
+				display: block;
+				.arrow(11px, #fff, right);
+				position: absolute;
+				left: 0;
+				top: 42px;
+				margin: 0 0 0 -20px;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-company-reviews {
+		.item-left {
+			width: 50%;
+			display: table-cell;
+			padding: 20px 15px;
+			vertical-align: top;
+		}
+		.item-right {
+			display: table-cell;
+			padding: 30px 20px 0 0;
+			vertical-align: top;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-company-reviews {
+		.item-right {
+			padding: 30px 0 0 0;
+		}
+	}
+}
