@@ -1,0 +1,160 @@
+.section-company-specialist {
+	margin: 50px 0;
+	.title {
+		font: 300 30px/1em @font-condensed;
+		text-transform: uppercase;
+		text-align: center;
+		.title-text {
+			display: block;
+		}
+		.link {
+			background: lighten(@color-blue-1, 38%);
+			margin: 0 0 0 8px;
+			padding: 0 15px 1px 5px;
+			vertical-align: top;
+			font-size: 16px;
+			text-transform: none;
+			font-weight: 400;
+			position: relative;
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				background: @color-blue-1;
+				color: #fff;
+				text-decoration: none;
+			}
+			&:after {
+				content: "";
+				.arrow-after(4px, currentColor, left);
+			}
+		}
+	}
+	.items {
+		margin: 0 15px;
+	}
+	.item {
+		margin: 5px 0 25px;
+		text-align: center;
+	}
+	.item-link {
+		display: block;
+		overflow: hidden;
+		&, &:visited {
+			color: @color-default;
+			text-decoration: none;
+		}
+		&:hover {
+			color: @color-default;
+			text-decoration: none;
+		}
+	}
+	.item-img {
+		display: block;
+		width: 185px;
+		height: 185px;
+		margin: 0 auto;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	.item-name {
+		display: block;
+		margin: 5px 0 3px;
+		font-size: 22px;
+		line-height: 1em;
+		font-weight: 500;
+		.word-break();
+	}
+	.item-function {
+		display: block;
+		font-size: 16px;
+		line-height: 1em;
+	}
+	.item-ask {
+		display: block;
+		color: @color-blue-1;
+		text-decoration: underline;
+		font-weight: 500;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.item-status {
+		display: inline-block;
+		font-size: 0;
+		line-height: 0;
+		width: 7px;
+		height: 7px;
+		vertical-align: top;
+		border-radius: 50%;
+		&.online {
+			background: @color-green-2;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.section-company-specialist {
+		.item {
+			margin: 30px 0 0;
+			width: 50%;
+			float: left;
+			&:nth-of-type(2n+3) {
+				clear: both;
+			}
+		}
+		.item-link {
+			padding: 0 10px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) {
+	.section-company-specialist {
+		.title {
+			.title-text {
+				display: inline;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-company-specialist {
+		.item {
+			width: 33.333%;
+			float: left;
+			&:nth-of-type(2n+3) {
+				clear: none;
+			}
+			&:nth-of-type(3n+4) {
+				clear: both;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-company-specialist {
+		.item {
+			width: 20%;
+			float: left;
+			clear: none !important;
+		}
+		.item-img {
+			width: 150px;
+			height: 150px;
+		}
+		.item-name {
+			margin: 8px 0;
+			font-size: 20px;
+			line-height: 1em;
+			font-weight: 400;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-company-specialist {
+		.items {
+			margin: 0;
+		}
+	}
+}
