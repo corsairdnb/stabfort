@@ -1,0 +1,169 @@
+.section-company-actions {
+	margin: 70px 0;
+	.title {
+		font: 300 30px/1em @font-condensed;
+		text-transform: uppercase;
+		text-align: center;
+		.title-text {
+			display: block;
+		}
+		.link {
+			background: lighten(@color-blue-1, 38%);
+			margin: 0 0 0 8px;
+			padding: 0 15px 1px 5px;
+			vertical-align: top;
+			font-size: 16px;
+			text-transform: none;
+			font-weight: 400;
+			position: relative;
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				background: @color-blue-1;
+				color: #fff;
+				text-decoration: none;
+			}
+			&:after {
+				content: "";
+				.arrow-after(4px, currentColor, left);
+			}
+		}
+	}
+	.items {
+		margin: 0 15px;
+	}
+	.item {
+		margin: 20px 0 30px;
+		padding: 14px 12px 10px;
+		position: relative;
+		background: #fff;
+		box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		text-align: center;
+		&:before {
+			content: '';
+			display: block;
+			.arrow(11px, #fff, bottom);
+			position: absolute;
+			left: 50%;
+			top: 0;
+			margin: -17px 0 0 -5px;
+		}
+	}
+	.item-link {
+		display: block;
+		&, &:visited {
+			color: @color-default;
+			text-decoration: none;
+		}
+		&:hover {
+			color: @color-default;
+			text-decoration: none;
+		}
+	}
+	.item-title {
+		display: block;
+		margin: 0 0 .5em;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.3em;
+		color: lighten(@color-blue-1, 5%);
+	}
+	.item-text {
+		display: block;
+		margin: 0 0 .3em;
+		font-size: 15px;
+		line-height: 1.4em;
+	}
+	.item-more {
+		display: inline-block;
+		font-size: 13px;
+		line-height: 1em;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: @color-blue-1;
+		text-decoration: underline;
+		&:after {
+			content: '';
+			.arrow(4px, currentColor, left);
+			display: inline-block;
+			margin: 0 0 0 5px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.section-company-actions {
+		.item-title {
+			font-size: 20px;
+		}
+		.item-text {
+			font-size: 16px;
+			margin: 0 0 .8em;
+		}
+		.item-more {
+			font-size: 14px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) {
+	.section-company-actions {
+		.title {
+			.title-text {
+				display: inline;
+			}
+		}
+	}
+}
+@media (min-width: @vw-iphone-6-land) {
+	.section-company-actions {
+		.items {
+			text-align: center;
+			font-size: 0;
+		}
+		.item {
+			margin: 30px 1% 0;
+			display: inline-block;
+			vertical-align: top;
+			max-width: 48%;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-company-actions {
+		.item {
+			margin: 30px 1%;
+			max-width: 31.333%;
+			box-shadow: 0 -3px 18px rgba(0, 0, 0, 0.12);
+			border-radius: 20px;
+			transition: all .2s;
+			&:before {
+				margin-top: -19px;
+			}
+		}
+		.item-title {
+			font-size: 18px;
+		}
+		.item-text {
+			font-size: 16px;
+			margin: 0 0 .8em;
+		}
+		.item-more {
+			font-size: 14px;
+		}
+		.item:hover {
+			box-shadow: 0 -3px 18px rgba(0, 0, 0, 0.2);
+			.item-title {
+				color: @color-blue-1;
+			}
+			.item-more {
+				text-decoration: none;
+			}
+		}
+	}
+}
