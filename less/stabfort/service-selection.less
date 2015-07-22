@@ -207,14 +207,40 @@
 @media (min-width: @vw-tablet-lg) {
 	.service-selection {
 		.service-selection-item {
-			padding: 10px 30px 0;
+			padding: 0;
+		}
+		.service-selection-item-link {
+			text-align: left;
+			font-size: 0;
 		}
 		.service-selection-item-name {
-			font-size: 23px;
+			display: inline-block;
+			margin: 0;
+			padding: 15px 30px 15px 20px;
+			width: 61%;
+			font-size: 19px;
+			line-height: 1em;
+			vertical-align: middle;
+			text-align: left;
 		}
 		.service-selection-item-order,
 		.service-selection-item-online {
-			padding-bottom: 10px;
+			display: inline-block;
+			margin: 0;
+			padding: 15px 0;
+			width: 22%;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1em;
+			text-align: left;
+			vertical-align: middle;
+			color: lighten(@color-default, 10%);
+		}
+		.service-selection-item-order {
+			width: 17%;
+		}
+		.service-selection-item-online {
+			width: 22%;
 		}
 	}
 }
