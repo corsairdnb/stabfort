@@ -1,0 +1,74 @@
+.service-categories {
+	margin: 20px 0;
+	.cols {
+		text-align: center;
+		font-size: 0;
+	}
+	.col {
+		margin: 6px 0;
+		padding: 0 15px;
+	}
+	.link {
+		display: block;
+		margin: .4em 0;
+		position: relative;
+		font: 18px/1.2em @font-condensed;
+		&, &:visited {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+		&:hover {
+			color: @color-blue-1;
+			text-decoration: underline;
+		}
+	}
+	.badge {
+		display: inline-block;
+		margin: 0 0 0 4px;
+		padding: 4px 5px 3px;
+		background: @color-blue-1;
+		color: #fff;
+		font: 700 14px/1em @font-condensed;
+		border-radius: 3px;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.service-categories {
+		.col {
+			padding: 0 20px;
+		}
+		.link {
+			margin: .6em 0;
+			font-size: 20px;
+		}
+		.badge {
+			font-size: 15px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.service-categories {
+		.col {
+			display: inline-block;
+			vertical-align: top;
+			max-width: 33.333%;
+			text-align: left;
+		}
+		.link {
+			margin: .5em 0;
+			font-size: 18px;
+		}
+		.badge {
+			font-size: 14px;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.service-categories {
+		.col {
+			max-width: none;
+			width: 33.333%;
+		}
+	}
+}
