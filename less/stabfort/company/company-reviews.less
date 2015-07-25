@@ -1,8 +1,8 @@
 .section-company-reviews {
+	margin: 70px 0;
 	.wrap {
 		position: relative;
 	}
-	margin: 70px 0;
 	.title {
 		font: 300 30px/1em @font-condensed;
 		text-transform: uppercase;
@@ -39,6 +39,7 @@
 		z-index: 1;
 	}
 	.item {
+		margin-bottom: 30px;
 		a {
 			&, &:visited {
 				color: @color-blue-1;
@@ -125,6 +126,9 @@
 			}
 		}
 	}
+	.controls {
+		display: none;
+	}
 }
 
 @media (min-width: @vw-iphone-5-land) {
@@ -133,6 +137,9 @@
 			.title-text {
 				display: inline;
 			}
+		}
+		.item {
+			margin-bottom: 0;
 		}
 		.item-right {
 			padding: 0 15px 30px;
@@ -177,6 +184,7 @@
 			}
 		}
 		.controls {
+			display: block;
 			width: 100%;
 			height: 100%;
 			position: absolute;
