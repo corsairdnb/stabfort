@@ -123,6 +123,16 @@
 		display: inline-block;
 		vertical-align: top;
 	}
+	.services-filter-location-current {
+		padding: 7px 18px 3px 0;
+		max-width: 250px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:after {
+			margin-top: 0;
+		}
+	}
 	.services-filter-type {
 		display: inline-block;
 		margin: 0;
@@ -151,6 +161,9 @@
 		margin: 0;
 		float: left;
 	}
+	.services-filter-location-current {
+		max-width: 350px;
+	}
 	.services-filter-type {
 		display: inline-block;
 		vertical-align: top;
@@ -164,5 +177,10 @@
 		display: block;
 		vertical-align: top;
 		margin: 0 10px 0 0;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.services-filter-location-current {
+		max-width: 500px;
 	}
 }

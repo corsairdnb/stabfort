@@ -82,62 +82,67 @@ $(function(){
 		e.preventDefault();
 	});
 
-	$('.peppermint').Peppermint({
-		//transition time when changing slides, ms
-		speed: 1000,
+	if (document.documentElement.clientWidth >= 768) {
+		var slider = $('.peppermint');
+		slider.Peppermint({
+			//transition time when changing slides, ms
+			speed: 1000,
 
-		//transition time when changing slides after touch, ms
-		touchSpeed: 300,
+			//transition time when changing slides after touch, ms
+			touchSpeed: 300,
 
-		//slideshow enabled
-		slideshow: true,
+			//slideshow enabled
+			slideshow: true,
 
-		//slideshow interval, ms
-		slideshowInterval: 10000,
+			//slideshow interval, ms
+			slideshowInterval: 10000,
 
-		//stop slideshow after user interacts with the slider
-		stopSlideshowAfterInteraction: false,
+			//stop slideshow after user interacts with the slider
+			stopSlideshowAfterInteraction: false,
 
-		//slide number to start with
-		startSlide: 0,
+			//slide number to start with
+			startSlide: 0,
 
-		//use mouse to drag the slider
-		mouseDrag: true,
+			//use mouse to drag the slider
+			mouseDrag: true,
 
-		//don't initialize Peppermint if there's only one slide
-		disableIfOneSlide: true,
+			//don't initialize Peppermint if there's only one slide
+			disableIfOneSlide: true,
 
-		//Prefix to be used with Peppermint classes,
-		//such as `inactive`, `active`, `mouse`, `drag`, etc.
-		//Don't forget to change the stylesheet appropriately!
-		cssPrefix: 'peppermint-',
+			//Prefix to be used with Peppermint classes,
+			//such as `inactive`, `active`, `mouse`, `drag`, etc.
+			//Don't forget to change the stylesheet appropriately!
+			cssPrefix: 'peppermint-',
 
-		//show dots
-		dots: false,
+			//show dots
+			dots: false,
 
-		//prepend dots to dotsContainer (default is append)
-		dotsPrepend: false,
+			//prepend dots to dotsContainer (default is append)
+			dotsPrepend: false,
 
-		//Element to contain dots, defaults to Peppermint's root element.
-		//Can be anywhere on the page.
-		dotsContainer: undefined,
+			//Element to contain dots, defaults to Peppermint's root element.
+			//Can be anywhere on the page.
+			dotsContainer: undefined,
 
-		//element containing slides, defaults to Peppermint's root element
-		slidesContainer: undefined,
+			//element containing slides, defaults to Peppermint's root element
+			slidesContainer: undefined,
 
-		//Callback function, runs at slide change.
-		//Receives slide number as a parameter.
-		onSlideChange: function(a){
-			/*var slide = $('.home-carousel').find('.slide').eq(parseInt(a)-1).find('.slide-content').css('opacity', 0);
-			 setTimeout(function(){
-			 slide.css('opacity', 1);
-			 }, 300, slide);*/
-		},
+			//Callback function, runs at slide change.
+			//Receives slide number as a parameter.
+			onSlideChange: function (a) {
+				/*var slide = $('.home-carousel').find('.slide').eq(parseInt(a)-1).find('.slide-content').css('opacity', 0);
+				 setTimeout(function(){
+				 slide.css('opacity', 1);
+				 }, 300, slide);*/
+			},
 
-		//Callback function, runs at setup end.
-		//Receives total number of slides as a parameter.
-		onSetup: undefined
-	});
+			//Callback function, runs at setup end.
+			//Receives total number of slides as a parameter.
+			onSetup: undefined
+		});
+		$('.control-left').on('click', slider.data('Peppermint').prev);
+		$('.control-right').on('click', slider.data('Peppermint').next);
+	}
 
 	initPhotoSwipeFromDOM('.item-docs');
 
