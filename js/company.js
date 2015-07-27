@@ -159,4 +159,9 @@ $(function(){
 		$('.tab-content').filter('#'+$(this).parent('li').addClass('active').attr('rel')).show();
 	});
 
+	$('.company-common-header-title').on('click', function(e){
+		e.preventDefault();
+		$('[rel="tab-common"] a').click();
+	});
+
 });

@@ -1,7 +1,7 @@
 .section-company-experts {
-	margin: 70px 0;
 	.wrap {
 		position: relative;
+		padding: 40px 0;
 	}
 	.title {
 		font: 300 30px/1em @font-condensed;
@@ -11,29 +11,413 @@
 			display: block;
 		}
 	}
+	.items {
+		margin: 25px 0 0;
+	}
+	.item {
+		margin: 0;
+		padding: 30px 0;
+		background: linear-gradient(to bottom, @color-grey-3, transparent 150px);
+	}
+	.item-photo {
+		margin: 0 0 15px;
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 125px;
+			height: auto;
+			border-radius: 100%;
+			object-fit: cover;
+		}
+	}
+	.item-content {
+		padding: 0 15px;
+		font-size: 0;
+	}
+	.item-header {
+		margin: 0 0 10px;
+	}
+	.item-name {
+		margin: 0 0 .3em;
+		font-size: 18px;
+		line-height: 1.2em;
+		font-weight: 500;
+		text-align: center;
+		a {
+			&, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @color-blue-1;
+				text-decoration: underline;
+			}
+		}
+	}
+	.item-function {
+		font-size: 15px;
+		line-height: 1.2em;
+		color: @color-grey-2;
+		text-align: center;
+	}
+	.item-aside {
+		text-align: center;
+		font-size: 14px;
+	}
+	.item-status {
+		&.online {
+			&:before {
+				content: '';
+				display: inline-block;
+				font-size: 0;
+				line-height: 0;
+				width: 7px;
+				height: 7px;
+				margin: 0 4px 0 0;
+				border-radius: 50%;
+				background: @color-green-2;
+			}
+		}
+	}
+	.item-counters, .item-counter {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.item-counters {
+		color: @color-grey-2;
+	}
+	.item-counter {
+		margin: 0 5px;
+	}
+	.item-domain {
+		margin: 15px 0;
+		font-size: 14px;
+		line-height: 1.3em;
+		a {
+			&, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.item-domain-left {
+		font-family: @font-condensed;
+		text-transform: uppercase;
+		color: @color-grey-2;
+	}
+	.item-domain-right {}
+	.item-fields {
+		margin: 20px 0 0;
+	}
+	.item-field {
+		margin: 0 0 15px;
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.3em;
+		a {
+			&, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.item-field-name {
+		font: 300 20px/1.2em @font-condensed;
+		text-transform: uppercase;
+		color: @color-grey-2;
+	}
+	.item-field-value {
+		.word-break();
+	}
+	.item-buttons {
+		text-align: center;
+	}
+	.btn-ask {
+		.icon {
+			font-size: 1.3em;
+			vertical-align: text-bottom;
+		}
+	}
 }
 
+@media (min-width: @vw-iphone-6) {
+	.section-company-experts {
+		.item-name {
+			font-size: 20px;
+		}
+		.item-function {
+			font-size: 16px;
+		}
+		.item-domain {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-land) {
+	.section-company-experts {
+		.item {
+			margin: 25px 0;
+		}
+		.item-photo {
+			margin: 0 0 20px;
+			img {
+				width: 150px;
+			}
+		}
+		.item-content {
+			padding: 0 30px;
+		}
+		.item-fields {
+			margin: 30px 0 10px;
+			font-size: 0;
+		}
+		.item-field {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			padding: 0 15px 0 0;
+			text-align: left;
+		}
+		.item-field-name {
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+}
 @media (min-width: @vw-iphone-5-land) {
 	.section-company-experts {
 		.title {
+			font-size: 37px;
 			.title-text {
 				display: inline;
 			}
+		}
+		.item {
+			margin: 20px 0;
+			padding: 20px 15px;
+		}
+		.item-photo {
+			display: table-cell;
+			margin: 0;
+			padding: 0 15px 0 0;
+			vertical-align: top;
+			img {
+				margin: 0;
+				width: 100px;
+			}
+		}
+		.item-content {
+			display: table-cell;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			vertical-align: top;
+		}
+		.item-header {
+			margin: 0 0 10px;
+		}
+		.item-name {
+			margin: 0 0 .3em;
+			font-size: 16px;
+			line-height: 1.2em;
+			font-weight: 500;
+			text-align: left;
+		}
+		.item-function {
+			font-size: 13px;
+			text-align: left;
+		}
+		.item-aside {
+			text-align: left;
+			font-size: 14px;
+		}
+		.item-status {
+			display: inline-block;
+			margin: 0 5px 0 0;
+		}
+		.item-domain {
+			margin: 10px 0;
+			font-size: 14px;
+		}
+		.item-domain-right {}
+		.item-fields {
+			margin: 15px 0 0;
+		}
+		.item-field {
+
+		}
+		.item-field-name {
+
+		}
+		.item-field-value {
+
+		}
+		.item-buttons {
+			text-align: left;
 		}
 	}
 }
 @media (min-width: @vw-tablet-sm) {
 	.section-company-experts {
-		
+		.items {
+			padding: 0 15px;
+		}
+		.item {
+			margin: 10px 0;
+			padding: 15px;
+			background: @color-grey-5;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+			transition: all .2s;
+		}
+		.item-photo {
+			img {
+				width: 120px;
+			}
+		}
+		.item-header {
+			margin: 0 0 15px;
+		}
+		.item-name {
+			margin: 0;
+			font-size: 25px;
+			font-weight: 300;
+		}
+		.item-function {
+			font-size: 16px;
+		}
+		.item-aside {
+			font-size: 16px;
+		}
+		.item-domain {
+			margin: 15px 0;
+			font-size: 16px;
+		}
+		.item-fields {
+			margin: 25px 0 0;
+		}
 	}
 }
 @media (min-width: @vw-tablet-lg) {
 	.section-company-experts {
-		
+		.item {
+			margin: 15px 0;
+			padding: 20px 20px 25px;
+		}
+		.item-photo {
+			padding-right: 25px;
+			img {
+				width: 150px;
+			}
+		}
+		.item-header {
+			display: inline-block;
+			vertical-align: top;
+			width: 65%;
+			margin: 0 0 15px;
+		}
+		.item-name {
+			font-size: 30px;
+		}
+		.item-function {
+			font-size: 20px;
+		}
+		.item-aside {
+			display: inline-block;
+			vertical-align: top;
+			width: 35%;
+			padding: 0 0 0 20px;
+			font-size: 18px;
+		}
+		.item-domain {
+			margin: 15px 0 17px;
+			font-size: 18px;
+		}
+		.item-domain-left {
+			width: 90px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.item-counter {
+			margin: 0 10px 0 0;
+		}
+		.item-fields {
+			margin: 0;
+			width: 72%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		.item-field-name {
+			display: inline-block;
+			width: 90px;
+			vertical-align: top;
+		}
+		.item-field-value {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.item-buttons {
+			width: 28%;
+			padding: 0 0 0 10px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: right;
+		}
 	}
 }
 @media (min-width: @vw-laptop-sm) {
 	.section-company-experts {
-		
+		.items {
+			padding: 0 15px;
+		}
+		.item {
+			margin: 10px 0;
+			padding: 10px 15px;
+		}
+		.item-photo {
+			padding-right: 15px;
+			img {
+				width: 120px;
+			}
+		}
+		.item-header {
+			margin: 0 0 15px;
+		}
+		.item-name {
+			margin: 0;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.item-function {
+			font-size: 16px;
+		}
+		.item-aside {
+			font-size: 16px;
+		}
+		.item-domain {
+			margin: 20px 0 15px;
+			font-size: 16px;
+		}
+		.item-domain-left {
+			width: 80px;
+		}
+		.item-fields {
+			width: 75%;
+			margin: 0;
+		}
+		.item-field-name {
+			width: 80px;
+			font-size: 16px;
+		}
+		.item-buttons {
+			width: 25%;
+			.btn {
+				padding: .4em 1.1em;
+				font-size: 13px;
+			}
+		}
 	}
 }

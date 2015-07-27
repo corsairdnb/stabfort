@@ -1,0 +1,33 @@
+.company-common-header {
+	margin: 0 0 20px;
+}
+.company-common-header-title {
+	padding: 0 15px;
+	color: @color-blue-1;
+	text-align: center;
+	a {
+		font: 300 16px/1em @font-condensed;
+		border-bottom: 1px solid lighten(@color-blue-1, 15%);
+		&, &:visited {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+		&:hover {
+			color: @color-blue-1;
+			text-decoration: none;
+			border-bottom-color: transparent;
+		}
+	}
+	.icon {
+		font-size: 1.3em;
+		vertical-align: text-bottom;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.company-common-header-title {
+		a {
+			font-size: 20px;
+		}
+	}
+}
