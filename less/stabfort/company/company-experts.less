@@ -93,6 +93,7 @@
 		margin: 15px 0;
 		font-size: 14px;
 		line-height: 1.3em;
+		text-align: center;
 		a {
 			&, &:visited {
 				text-decoration: none;
@@ -141,6 +142,11 @@
 			font-size: 1.3em;
 			vertical-align: text-bottom;
 		}
+		a {
+			&, &:visited, &:hover {
+				color: @color-default;
+			}
+		}
 	}
 }
 
@@ -170,6 +176,9 @@
 		}
 		.item-content {
 			padding: 0 30px;
+		}
+		.item-domain {
+			text-align: left;
 		}
 		.item-fields {
 			margin: 30px 0 10px;
