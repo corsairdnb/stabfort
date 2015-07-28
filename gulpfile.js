@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
 	less = require('gulp-less'),
 	autoprefixer = require('gulp-autoprefixer'),
-	sourcemaps = require('gulp-sourcemaps');
+	sourcemaps = require('gulp-sourcemaps'),
+	csso = require('gulp-csso');
 
 gulp.task('less', function () {
 	return gulp
@@ -13,6 +14,7 @@ gulp.task('less', function () {
 			cascade: false
 		}))
 		.pipe(sourcemaps.write())
+		//.pipe(csso(true))
 		.pipe(gulp.dest('css/'))
 });
 
