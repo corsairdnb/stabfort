@@ -1,7 +1,8 @@
 .company-common-header {
-	margin: 0 0 20px;
+
 }
-.company-common-header-title {
+.company-common-header-subtitle {
+	margin: 0 0 20px;
 	padding: 0 15px;
 	color: @color-blue-1;
 	text-align: center;
@@ -23,11 +24,19 @@
 		vertical-align: text-bottom;
 	}
 }
+.company-common-header-title {
+	font: 300 30px/1em @font-condensed;
+	text-transform: uppercase;
+	text-align: center;
+}
 
 @media (min-width: @vw-iphone-5-land) {
-	.company-common-header-title {
+	.company-common-header-subtitle {
 		a {
 			font-size: 20px;
 		}
+	}
+	.company-common-header-title {
+		font-size: 37px;
 	}
 }
