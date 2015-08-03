@@ -1,0 +1,149 @@
+.section-faq {
+	padding: 40px 0 0;
+	.items {
+		margin: 20px 0;
+		padding: 0 5px;
+	}
+	.panel {
+		border: 0 none;
+		background: none;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		transition: all .2s;
+		&:hover {
+			background: #fff;
+		}
+	}
+	.panel-heading {
+		background: @color-grey-5;
+		background: linear-gradient(to bottom, #fff, @color-grey-5);
+		position: relative;
+	}
+	.panel-body {
+		font-size: 15px;
+		p {
+			margin: 0;
+		}
+		p + p {
+			margin-top: 1em;
+		}
+	}
+	.panel-title {
+		.clearfix();
+	}
+	.faq-image,
+	.faq-title {
+		display: table-cell;
+		vertical-align: top;
+	}
+	.faq-image {
+		display: table-cell;
+		width: 50px;
+		padding: 0 10px 0 0;
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+	}
+	.faq-title {
+		font-size: 15px;
+		line-height: 1.4em;
+		font-weight: 500;
+		&, &:visited, &:hover {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+	}
+	.faq-name {
+		color: @color-grey-1;
+		font-weight: 400;
+		text-decoration: underline;
+	}
+	.faq-icon {
+		display: none;
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.section-faq {
+		.items {
+			padding: 0 15px;
+		}
+		.panel-body {
+			font-size: 16px;
+		}
+		.faq-title {
+			font-size: 16px;
+		}
+		.faq-image {
+			width: 80px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-faq {
+		.panel-body {
+			font-size: 18px;
+			p {
+				margin: .5em 0;
+			}
+		}
+		.panel-body,
+		.panel-heading {
+			padding: 15px 20px;
+		}
+		.faq-title {
+			font-size: 18px;
+		}
+		.faq-image {
+			width: 110px;
+			padding-right: 20px;
+		}
+		.faq-name {
+			text-decoration: none;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-faq {
+		.faq-image {
+			width: 70px;
+			padding-right: 15px;
+		}
+		.panel-title {
+			width: 94%;
+		}
+		.faq-icon {
+			display: block;
+			width: 6%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			line-height: 0;
+			color: @color-grey-3;
+			> .icon {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: 57px;
+				font-size: 57px;
+			}
+		}
+		.panel:hover {
+			.faq-icon {
+				color: darken(@color-grey-3, 5%);
+			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-faq {
+		.items {
+			margin: 20px 0 50px;
+			padding: 0;
+		}
+	}
+}

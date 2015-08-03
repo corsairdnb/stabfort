@@ -164,4 +164,6 @@ $(function(){
 		$('[rel="tab-common"] a').click();
 	});
 
+	$('#faq').collapse();
+
 });

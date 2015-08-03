@@ -29,6 +29,32 @@
 	font: 300 30px/1em @font-condensed;
 	text-transform: uppercase;
 	text-align: center;
+	> span {
+		display: block;
+	}
+	> a {
+		background: lighten(@color-blue-1, 38%);
+		margin: 0 0 0 8px;
+		padding: 0 15px 1px 5px;
+		vertical-align: top;
+		font-size: 16px;
+		text-transform: none;
+		font-weight: 400;
+		position: relative;
+		&, &:visited {
+			color: @color-blue-1;
+			text-decoration: none;
+		}
+		&:hover {
+			background: @color-blue-1;
+			color: #fff;
+			text-decoration: none;
+		}
+		&:after {
+			content: "";
+			.arrow-after(4px, currentColor, left);
+		}
+	}
 }
 
 @media (min-width: @vw-iphone-5-land) {
@@ -39,5 +65,8 @@
 	}
 	.company-common-header-title {
 		font-size: 37px;
+		> span {
+			display: inline;
+		}
 	}
 }

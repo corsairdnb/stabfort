@@ -131,6 +131,14 @@
 	}
 }
 
+.section-company-reviews-full {
+	margin: 0;
+	padding: 40px 0 0;
+	.item {
+		margin: 30px 0;
+	}
+}
+
 @media (min-width: @vw-iphone-5-land) {
 	.section-company-reviews {
 		.title {
@@ -218,6 +226,12 @@
 }
 @media (min-width: @vw-tablet-lg) {
 	.section-company-reviews {
+		.item {
+			display: table;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
 		.item-left {
 			width: 46%;
 			display: table-cell;
@@ -226,8 +240,16 @@
 		}
 		.item-right {
 			display: table-cell;
-			padding: 30px 20px 0 0;
+			padding: 30px 10% 0 10%;
 			vertical-align: top;
+		}
+		.item-left + .item-right {
+			padding: 30px 20px 0 0;
+		}
+	}
+	.section-company-reviews-full {
+		.items {
+			margin-bottom: 60px;
 		}
 	}
 }
