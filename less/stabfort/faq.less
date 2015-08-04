@@ -10,13 +10,16 @@
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 		transition: all .2s;
 		&:hover {
-			background: #fff;
+			box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 		}
 	}
 	.panel-heading {
 		background: @color-grey-5;
-		background: linear-gradient(to bottom, #fff, @color-grey-5);
+		background: linear-gradient(to bottom, #fff, #f8f8f8);
 		position: relative;
+		&:hover {
+			background: #fff;
+		}
 	}
 	.panel-body {
 		font-size: 15px;
@@ -79,6 +82,10 @@
 		.faq-image {
 			width: 80px;
 		}
+		.faq-image,
+		.faq-title {
+			vertical-align: middle;
+		}
 	}
 }
 @media (min-width: @vw-tablet-sm) {
@@ -89,9 +96,11 @@
 				margin: .5em 0;
 			}
 		}
-		.panel-body,
 		.panel-heading {
 			padding: 15px 20px;
+		}
+		.panel-body {
+			padding: 15px 25px;
 		}
 		.faq-title {
 			font-size: 18px;
@@ -136,6 +145,12 @@
 			.faq-icon {
 				color: darken(@color-grey-3, 5%);
 			}
+			.faq-title {
+				color: darken(@color-blue-1, 5%);
+			}
+		}
+		.panel-group .panel + .panel {
+			margin-top: 8px;
 		}
 	}
 }

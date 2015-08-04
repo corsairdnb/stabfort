@@ -141,7 +141,7 @@
 					text-transform: uppercase;
 					transition: all .15s;
 				}
-				a:hover {
+				&.active a, a:hover {
 					background: none;
 					border-top-color: #fff;
 					color: #fff;
@@ -150,11 +150,6 @@
 				}
 				&.desktop-hidden {
 					display: none;
-				}
-				&.active {
-					a:hover {
-						background-color: darken(@color-blue-1, 5%);
-					}
 				}
 			}
 		}
