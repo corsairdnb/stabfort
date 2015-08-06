@@ -70,7 +70,9 @@ $(function(){
 		e.preventDefault();
 	});
 
-
-
+	$('.tariff-header').on('click', function(){
+		$('.tariff-header').add($('.tariff')).removeClass('active');
+		$('.tariff').filter('[data-tariff="'+ $(this).data('tariff') +'"]').add($(this)).addClass('active');
+	});
 
 });

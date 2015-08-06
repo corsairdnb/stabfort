@@ -50,19 +50,119 @@
 
         <section class="section section-tariff-common">
             <div class="section-cnt">
-                <div class="container-fluid container-fluid-wide">
-                    <div class="col-xs-3">
-                        <h1 class="h1">Тарифы</h1>
-                    </div>
-                    <div class="col-xs-7">
-                        <p class="brief">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                    </div>
+                <div class="block">
+                    <h1 class="h1">Тарифы</h1>
+                    <p class="brief">Выберите подходящий вам тариф. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                 </div>
             </div>
         </section>
 
         <section class="section section-tariff-table">
             <div class="section-cnt">
+
+                <div class="table-tariff-mobile">
+                    <div class="tariff-selector">
+                        <div class="tariff-header active" data-tariff="1">
+                            <div>Стандарт</div>
+                        </div>
+                        <div class="tariff-header" data-tariff="2">
+                            <div>Престиж</div>
+                        </div>
+                        <div class="tariff-header" data-tariff="3">
+                            <div>Премиум</div>
+                        </div>
+                    </div>
+                    <div class="tariffs">
+                        <div class="tariff active" data-tariff="1">
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">20</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">СМС уведомление</div>
+                                <div class="advantage-value">не предусмотрено</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">20</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">СМС уведомление</div>
+                                <div class="advantage-value">не предусмотрено</div>
+                            </div>
+                        </div>
+                        <div class="tariff" data-tariff="2">
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">40</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> СМС уведомление</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">20</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">СМС уведомление</div>
+                                <div class="advantage-value">не предусмотрено</div>
+                            </div>
+                        </div>
+                        <div class="tariff" data-tariff="3">
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">Безлимит</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> СМС уведомление</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">Количество услуг</div>
+                                <div class="advantage-value">20</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Все регионы</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name"><i class="md-check"></i> Статистика</div>
+                            </div>
+                            <div class="advantage">
+                                <div class="advantage-name">СМС уведомление</div>
+                                <div class="advantage-value">не предусмотрено</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <table class="table table-striped table-tariff">
                     <colgroup>
@@ -237,15 +337,15 @@
                         <td></td>
                         <td class="tariff-select">
                             <button type="submit" class="btn btn-success">8000 руб.</button>
-                            <p>Срок действия: 1 год</p>
+                            <p>Срок действия: <b>1 год</b></p>
                         </td>
                         <td class="tariff-select">
                             <button type="submit" class="btn btn-success">15000 руб.</button>
-                            <p>Срок действия: 1 год</p>
+                            <p>Срок действия: <b>1 год</b></p>
                         </td>
                         <td class="tariff-select">
                             <button type="submit" class="btn btn-success">30000 руб.</button>
-                            <p>Срок действия: 1 год</p>
+                            <p>Срок действия: <b>1 год</b></p>
                         </td>
                     </tr>
                     </tfoot>
