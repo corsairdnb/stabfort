@@ -68,11 +68,11 @@
                                     Об услуге&nbsp;<i class="md-expand-more"></i>
                                 </div>
                             </li>
-                            <li class="active"><a href="#">Об услуге</a></li>
-                            <li><a href="#">Статьи</a></li>
+                            <li class="active" rel="tab-common"><a href="#">Об услуге</a></li>
+                            <li rel="tab-articles"><a href="#">Статьи</a></li>
                             <li><a href="#">Новости</a></li>
                             <li><a href="#">Законодательство</a></li>
-                            <li><a href="#">Вопрос-ответ</a></li>
+                            <li rel="tab-faq"><a href="#">Вопрос-ответ</a></li>
                             <li><a href="#">Дополнительные услуги</a></li>
                             <li><a href="#">Оборудование</a></li>
                         </ul>
@@ -452,6 +452,10 @@
     </div>
 
     <main class="main" role="main">
+
+        <!-- Обертка .tab-content только для демонстрации! -->
+        <div class="tab-content" id="tab-common">
+
         <section class="section service-main">
             <div class="section-cnt">
                 <h1 class="service-content-h1">Лицензия на розничную продажу алкогольной продукции</h1>
@@ -713,16 +717,16 @@
                     <form action="/" class="form">
                         <div class="form-group container-fluid clearfix">
                             <div class="col-sm-12">
-                                <p>Вы вошли под учетной записью example@email.com</p>
+                                <p class="bg-info">Вы вошли под учетной записью <b>example@email.com</b></p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="form-control-static">ФИО: Дмитрий</p>
+                                <p class="form-control-static"><b>ФИО:</b> Василий Иванов</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="form-control-static">E-mail: dmitry.rychkov@mail.ru</p>
+                                <p class="form-control-static"><b>E-mail:</b> example@email.com</p>
                             </div>
                             <div class="col-sm-6">
-                                <p class="form-control-static">Телефон: 89897568920</p>
+                                <p class="form-control-static"><b>Телефон:</b> 89897568920</p>
                             </div>
                         </div>
                         <div class="form-group container-fluid clearfix">
@@ -1079,6 +1083,360 @@
                 </div>
             </div>
         </section>
+        </div>
+        <div class="tab-content" id="tab-articles">
+            <section class="section widget-news widget-news-full-width">
+                <div class="section-cnt">
+                    <div class="news">
+                        <div class="title">
+                            <span>Статьи</span>
+                        </div>
+                        <div class="news-items">
+                            <div class="news-item">
+                                <div class="news-item-date">
+                                    02.03.2015
+                                </div>
+                                <div class="news-item-title">
+                                    <p><a href="#">Общая информация о СРО, варианты вступления без посредников или с посредниками</a></p>
+                                </div>
+                                <div class="news-item-preview">
+                                    <p>С того момента, как федеральным законом РФ отменили строительные лицензии, прошло более 4-х лет. Эти годы доказали правильность государственного решения по созданию института саморегулируемых организаций (СРО).</p>
+                                    <p><a href="#" class="detail-link">Подробнее</a></p>
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-item-date">
+                                    02.03.2015
+                                </div>
+                                <div class="news-item-title">
+                                    <p><a href="#">О строительных СРО, порядке вступления ЮЛ (ИП) и получении допуска СРО</a></p>
+                                </div>
+                                <div class="news-item-preview">
+                                    <p>Строительные СРО демонстрируют среди всех других видов саморегулируемых организаций наибольшую эффективность. В обеспечении качества строительных работ достигнут значительный прогресс. Причинами являются принципы организации строительных СРО, наличие коллективной ответственности репутацией сообщества и одновременно каждого его члена за результаты труда любого ИП или ЮЛ, являющегося членом СРО.</p>
+                                    <p><a href="#" class="detail-link">Подробнее</a></p>
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-item-date">
+                                    02.03.2015
+                                </div>
+                                <div class="news-item-title">
+                                    <p><a href="#">Россия требует расследовать нападение на Генконсульство РФ в Харькове</a></p>
+                                </div>
+                                <div class="news-item-preview">
+                                    <p>Ранее СМИ сообщали о планах Вашингтона разместить тяжелое вооружение, в том числе танки и боевые машины пехоты (БМП), в Восточной Европе в качестве шага "по сдерживанию возможной российской агрессии в Европе". </p>
+                                    <p><a href="#" class="detail-link">Подробнее</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="tab-content" id="tab-faq">
+            <section class="section section-faq">
+                <div class="section-cnt">
+
+                    <div class="title">
+                        <span class="title-text">Вопрос-Ответ</span>
+                        <a href="#" class="link">Задать вопрос</a>
+                    </div>
+
+                    <div class="items panel-group faq" id="faq">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <!--<span class="faq-image"><img src="../img/reviews_sample.jpg"></span>-->
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-1" class="faq-title">
+                                        <span class="faq-name">Павел:</span> Обязательно ли оформлять страховой полюс, при вступлении в СРО?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <div class="company-answer">
+                                                    <p class="company-answer-title">Ответ компании <br> <b>ООО «Мобильные телесистемы»</b></p>
+                                                    <p>
+                                                        Да обязательно. При совершении ошибок в строительстве, суммы компенсаций на порядок выше, чем оплаченные страховые взносы. В первую очередь выплаты происходят за счет страховой компании, если страховая сумма не покрывает нанесенный ущерб, то выплаты идут за счет компенсационного фонда.
+                                                    </p>
+                                                </div>
+                                                <div class="company-answer">
+                                                    <p class="company-answer-title">Ответ компании <br> <b>ООО «Еще одна компания»</b></p>
+                                                    <p>
+                                                        Да обязательно. При совершении ошибок в строительстве, суммы компенсаций на порядок выше, чем оплаченные страховые взносы. В первую очередь выплаты происходят за счет страховой компании, если страховая сумма не покрывает нанесенный ущерб, то выплаты идут за счет компенсационного фонда.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <!--<span class="faq-image"><img src="../img/reviews_sample.jpg"></span>-->
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-2" class="faq-title">
+                                        <span class="faq-name">Роман:</span> Что такое Компенсационный фонд СРО?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Компенсационный Фонд(далее - КФ) СРО это одно из обеспечения имущественной ответственности членов СРО. Целевое назначение КФ СРО –возмещение вреда, причиненного вследствие недостатков работ, которые оказывают влияние на безопасность объектов капитального строительства.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <!--<span class="faq-image"><img src="../img/reviews_sample.jpg"></span>-->
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-3" class="faq-title">
+                                        <span class="faq-name">Михаил:</span> Что означают виды работ отмеченные звездочкой*? Что значат номера у видов работ?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    1- Данные виды работ  требуют получения допуска СРО если они выполняются на объектах, указанных в статье 48.1 ГК,(на особо опасных, технически сложных и уникальных объектах).
+                                                    2- Это номерной классификатор Перечня Приказа №624 от 30.11.2009г.Минрегионразвития.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-4" class="faq-title">
+                                        <span class="faq-name">Федор:</span> Может ли Индивидуальный Предприниматель получить допуск на строительные работы?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Да, индивидуальные предприниматели, обязаны получить допуск СРО, если осуществляют строительную деятельность, чтобы их деятельность была в рамках российского законодательства.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-5" class="faq-title">
+                                        <span class="faq-name">Максим:</span> Может ли организация состоять в нескольких сро одновременно?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Да, организация или ип, может состоять в нескольких СРО одновременно, но при условии что допуски полученные в этих СРО, предназначены для разных видов работ.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-6" class="faq-title">
+                                        <span class="faq-name">Сергей:</span> Какой срок действия допуска, и на какую территорию он распростроняется?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-6" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    1- Допуск не имеет срока действия(статья 55.8 ГК РФ).
+                                                    2- Полученный допуск в Российском СРО, действует на всей территории России. Ведение строительной деятельности российскими строительными компаниями, на территории других государств, регулируется законодательством этих государств.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-7" class="faq-title">
+                                        <span class="faq-name">Светлана:</span> Как часто СРО имеет право проводить периодические проверки своих членов?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-7" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Периодические проверки проходят по утвержденному плану проверок СРО, но не реже одного раза в год.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-8" class="faq-title">
+                                        <span class="faq-name">Евгений:</span> Какие требования к сотрудникам строительной компании у СРО?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-8" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Для получения допуска к работам на особо опасных объектах, в штате компании должны быть минимум 3 специалиста с высшим профильным образованием и стажем работы от 3х лет или минимум 5 специалистов со средним профильным образованием и стажем работы от 5 лет, по специальности. Для ИП необходимо иметь высшее или среднее профильное образование и опыт работы минимум 5 лет. Повышение квалификации сотрудников, должно проходить минимум раз в 5 лет.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <span class="faq-image"><img src="../img/reviews_sample.jpg"></span>
+                                    <a data-toggle="collapse" data-parent="#faq" href="#question-9" class="faq-title">
+                                        <span class="faq-name">Марат:</span> Что происходит с допуском если НП лишили стула сро?
+                                    </a>
+                                </h4>
+                                <div class="faq-icon">
+                                    <i class="icon md-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div id="question-9" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="media">
+
+                                        <div class="clearfix"></div>
+                                        <div class="popover bottom">
+                                            <div class="arrow"></div>
+                                            <div class="popover-content">
+                                                <p>
+                                                    Статус допуска, выданного Некоммерческим партнерством, которое было лишено статуса СРО, является недействительным.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
 </div><!--.wrapper-->
@@ -1188,6 +1546,8 @@
 <script src="../less/peppermint/dist/peppermint.js"></script>
 <script src="../js/service.js"></script>
 <script src="../js/components/fixed-menu.js"></script>
+<script src="../less/bootstrap/js/transition.js"></script>
+<script src="../less/bootstrap/js/collapse.js"></script>
 
 </body>
 </html>

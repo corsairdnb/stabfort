@@ -82,4 +82,14 @@ $(function(){
 		e.preventDefault();
 	});
 
+	$('.tab-content').hide();
+	$('.tab-content').filter('#'+$('.fixed-menu li.active').attr('rel')).show();
+	$('.fixed-menu a').on('click', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+		$('.tab-content').hide();
+		$('.fixed-menu li').removeClass('active');
+		$('.tab-content').filter('#'+$(this).parent('li').addClass('active').attr('rel')).show();
+	});
+
 });
