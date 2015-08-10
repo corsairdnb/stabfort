@@ -1,7 +1,6 @@
 body {
 	background: #f9ffff url("../img/tariff_bg.jpg") no-repeat center bottom;
 	background-size: cover;
-	background-attachment: fixed;
 }
 .footer {
 	background: darken(fade(#556567, 90%), 10%);
@@ -79,6 +78,9 @@ body {
 	}
 }
 @media (min-width: @vw-laptop-sm) {
+	body {
+		background-attachment: fixed;
+	}
 	.section-tariff-common {
 		.h1 {
 			margin: 0 0 .5em;
