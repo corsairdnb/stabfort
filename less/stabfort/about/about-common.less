@@ -1,0 +1,18 @@
+.wrapper {
+	background: #e3f6fc url("../img/about_bg.jpg") no-repeat center bottom;
+	background-size: 100% auto;
+}
+.footer {
+	background: darken(fade(#556567, 90%), 10%);
+}
+
+@media (min-width: @vw-laptop-sm) {
+	body {
+		background: #e3f6fc url("../img/about_bg.jpg") no-repeat center bottom;
+		background-size: cover;
+		//background-attachment: fixed;
+	}
+	.wrapper {
+		background: none;
+	}
+}
