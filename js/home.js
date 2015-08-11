@@ -12,7 +12,7 @@ $(function(){
 		e.stopPropagation();
 		e.preventDefault();
 	});
-	$('body').on('click', function(e){
+	$('.wrapper').on('click', function(e){
 		$('.top-menu').removeClass('opened');
 	});
 

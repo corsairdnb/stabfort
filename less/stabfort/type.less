@@ -1,14 +1,112 @@
+.fl {
+	float: left;
+}
+.r {
+	text-align: right;
+}
+.l {
+	text-align: left;
+}
+.c {
+	text-align: center;
+}
+:link, :visited {
+	color: @color-blue-1;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
 .typography {
+	padding: 0 15px;
+	font-size: 16px;
+	line-height: 1.6em;
+
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-		margin: 1em 0;
+		margin: 30px 0 20px;
 	}
 	h1, .h1 {
-
+		font-size: 35px;
+		line-height: 1em;
+		font-weight: 300;
 	}
-	p {}
+	h2, .h2 {
+		font-size: 28px;
+		line-height: 1em;
+		font-weight: 300;
+	}
+	h3, .h3 {
+		font-size: 26px;
+		line-height: 1em;
+		font-weight: 400;
+		color: lighten(@color-default, 10%);
+	}
+	h4, .h4 {
+		font-size: 22px;
+		line-height: 1em;
+		font-weight: 500;
+	}
+	h5, .h5 {
+		font-size: 18px;
+		line-height: 1em;
+		font-weight: 500;
+	}
+	h6, .h6 {
+		font-size: 16px;
+		line-height: 1em;
+		font-weight: 700;
+	}
+	p {
+		margin: 20px 0;
+	}
 	ul, ol {}
 	table {}
-	blockquote {}
+	blockquote {
+		margin: 1.8em 0;
+		padding: 0 0 0 1.5em;
+		font-style: italic;
+		border-left: 10px solid fade(@color-blue-1, 70%);
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.typography {
+		font-size: 18px;
+		h1, .h1 {
+			font-size: 44px;
+		}
+		h2, .h2 {
+			font-size: 34px;
+		}
+		h3, .h3 {
+			font-size: 28px;
+		}
+		h4, .h4 {
+			font-size: 24px;
+		}
+		h5, .h5 {
+			font-size: 20px;
+		}
+		h6, .h6 {
+			font-size: 18px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-6-land) {
+	.typography {
+		padding: 0 30px;
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.typography {
+		padding: 0 40px;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.typography {
+		padding: 0;
+	}
 }
 
 .bg-primary,

@@ -1,18 +1,18 @@
-.wrapper {
-	background: #e3f6fc url("../img/about_bg.jpg") no-repeat center bottom;
-	background-size: 100% auto;
-}
-.footer {
-	background: darken(fade(#556567, 90%), 10%);
+.section-about-common {
+	padding: 10px 0;
+	.video {
+		margin: 2em 0;
+		text-align: center;
+	}
 }
 
-@media (min-width: @vw-laptop-sm) {
-	body {
-		background: #e3f6fc url("../img/about_bg.jpg") no-repeat center bottom;
-		background-size: cover;
-		//background-attachment: fixed;
-	}
-	.wrapper {
-		background: none;
+@media (min-width: @vw-tablet-lg) {
+	.section-about-common {
+		padding: 10px 0 60px;
+		.video {
+			width: 400px;
+			float: right;
+			margin: 20px 0 50px 50px;
+		}
 	}
 }
