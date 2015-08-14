@@ -55,12 +55,15 @@ $(function(){
 	});
 
 
-	$('.fixed-menu-nav-trigger').on('click', function(){
+	$('.fixed-menu-nav-trigger').on('click', function(e){
 		$('.fixed-menu-nav').toggleClass('opened');
-	});
-	$('.fixed-menu-nav-trigger, .fixed-menu-nav ul li a').on('click', function(e){
 		e.stopPropagation();
 		e.preventDefault();
+	});
+	$('.fixed-menu-nav ul li a').on('click', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+		$('.fixed-menu-nav').removeClass('opened').find('.current span').text($(this).text());
 	});
 	$('.wrapper').on('click', function(e){
 		$('.fixed-menu-nav').removeClass('opened');
