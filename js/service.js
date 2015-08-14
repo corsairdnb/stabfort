@@ -92,4 +92,8 @@ $(function(){
 		$('.tab-content').filter('#'+$(this).parent('li').addClass('active').attr('rel')).show();
 	});
 
+	$(document).on('click', '.panel-heading', function(e){
+		$(this).siblings('.panel-collapse').collapse('toggle')
+	});
+
 });
