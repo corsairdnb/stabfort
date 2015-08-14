@@ -166,4 +166,8 @@ $(function(){
 
 	$('#faq').collapse();
 
+	$(document).on('click', '.panel-heading', function(e){
+		$(this).siblings('.panel-collapse').collapse('toggle')
+	});
+
 });

@@ -17,6 +17,7 @@
 		background: @color-grey-5;
 		background: linear-gradient(to bottom, #fff, #f8f8f8);
 		position: relative;
+		cursor: pointer;
 		&:hover {
 			background: #fff;
 		}
@@ -53,7 +54,7 @@
 		font-size: 15px;
 		line-height: 1.4em;
 		font-weight: 500;
-		&, &:visited, &:hover {
+		&, &:link, &:visited, &:hover {
 			color: @color-blue-1;
 			text-decoration: none;
 		}
@@ -83,7 +84,7 @@
 			text-transform: none;
 			font-weight: 400;
 			position: relative;
-			&, &:visited {
+			&, &:link, &:visited {
 				color: @color-blue-1;
 				text-decoration: none;
 			}
@@ -147,7 +148,6 @@
 }
 @media (min-width: @vw-tablet-sm) {
 	.section-faq {
-		padding: 60px 0 0;
 		.title {
 			text-align: left;
 		}

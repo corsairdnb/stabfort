@@ -38,7 +38,7 @@
 		text-align: center;
 		color: lighten(@color-default, 15%);
 		a {
-			&, &:visited {
+			&, &:link, &:visited {
 				color: @color-blue-1;
 				text-decoration: none;
 			}
@@ -94,7 +94,7 @@
 		line-height: 1.3em;
 		text-align: center;
 		a {
-			&, &:visited {
+			&, &:link, &:visited {
 				text-decoration: none;
 			}
 			&:hover {
@@ -116,7 +116,7 @@
 		font-size: 16px;
 		line-height: 1.3em;
 		a {
-			&, &:visited {
+			&, &:link, &:visited {
 				text-decoration: none;
 			}
 			&:hover {
@@ -141,7 +141,7 @@
 			vertical-align: text-bottom;
 		}
 		a {
-			&, &:visited, &:hover {
+			&, &:link, &:visited, &:hover {
 				color: @color-default;
 			}
 		}
@@ -397,7 +397,7 @@
 			transition: all .2s;
 			a {
 				transition: all .2s;
-				&, &:visited {
+				&, &:link, &:visited {
 					color: lighten(desaturate(@color-blue-1, 10%), 10%)
 				}
 			}
@@ -405,7 +405,7 @@
 		.item:hover {
 			.item-name {
 				a {
-					&, &:visited {
+					&, &:link, &:visited {
 						color: @color-blue-1;
 					}
 				}
@@ -429,7 +429,7 @@
 		.item-field, .item-domain {
 			a {
 				transition: all .2s;
-				&, &:visited {
+				&, &:link, &:visited {
 					color: inherit;
 				}
 			}
@@ -437,7 +437,7 @@
 		.item:hover {
 			.item-domain, .item-field {
 				a {
-					&, &:visited {
+					&, &:link, &:visited {
 						color: @color-blue-1;
 					}
 				}

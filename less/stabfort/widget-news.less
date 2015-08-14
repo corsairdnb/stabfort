@@ -44,7 +44,7 @@
 		line-height: 1.2em;
 		font-weight: 500;
 		a {
-			&, &:visited {
+			&, &:link, &:visited {
 				color: @color-blue-1;
 				text-decoration: none;
 			}
@@ -69,7 +69,7 @@
 		line-height: 1em;
 	}
 	.detail-link {
-		&, &:visited {
+		&, &:link, &:visited {
 			color: @color-blue-1;
 			text-decoration: underline;
 		}
@@ -90,7 +90,7 @@
 		font: 22px/1.4em @font-condensed;
 		a {
 			position: relative;
-			&, &:visited {
+			&, &:link, &:visited {
 				color: @color-grey-2;
 				text-decoration: underline;
 			}
@@ -137,7 +137,6 @@
 		padding-right: 20px;
 	}
 	.widget-news {
-		margin: 60px 0;
 		.news {
 			.widget-padding();
 		}
@@ -168,7 +167,7 @@
 			font-size: 25px;
 			line-height: 1.2em;
 			a {
-				&, &:visited {
+				&, &:link, &:visited {
 					color: @color-default;
 					text-decoration: none;
 				}
