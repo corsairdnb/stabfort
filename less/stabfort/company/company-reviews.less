@@ -41,7 +41,6 @@
 	.item {
 		margin-bottom: 30px;
 		a {
-			margin-left: 5px;
 			font-weight: 400;
 			&, &:link, &:visited {
 				color: @color-blue-1;
@@ -128,6 +127,11 @@
 			}
 		}
 	}
+	.review-text {
+		.item-docs {
+			margin: 15px 0 0;
+		}
+	}
 	.controls {
 		display: none;
 	}
@@ -193,6 +197,12 @@
 				margin: 0 0 0 -20px;
 			}
 		}
+		.item a {
+			margin-left: 5px;
+		}
+		.review-name > div {
+			display: inline;
+		}
 		.controls {
 			display: block;
 			width: 100%;
@@ -223,7 +233,6 @@
 		.control-right {
 			right: 0;
 		}
-		.control-icon {}
 	}
 }
 @media (min-width: @vw-tablet-lg) {

@@ -14,6 +14,7 @@ $(function(){
 	});
 	$('.wrapper').on('click', function(e){
 		$('.top-menu').removeClass('opened');
+		$('.search-output-item').tooltip('hide');
 	});
 
 	$('#trigger-level-2').on('click', function(e){
@@ -131,5 +132,18 @@ $(function(){
 		e.stopPropagation();
 		$(this).parent().addClass('active').siblings().removeClass('active');
 	});
+
+	$('.search-output-item')
+		.on('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$('.search-output-item').tooltip('hide');
+		})
+		.tooltip({
+			container: '.search-brief-output',
+			html: true,
+			title: 'Пройдите <a href="#">регистрацию</a> и получите доступ к заявкам',
+			trigger: 'click'
+		});
 
 });

@@ -9,5 +9,42 @@
 		text-align: center;
 		font: 300 40px/1em @font-condensed;
 		text-transform: uppercase;
+		.title-total {
+			display: block;
+			font-size: 18px;
+			font-family: @font-default;
+			text-transform: none;
+		}
+		.title-total-counter {
+			font-weight: 500;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.search-block {
+		.title {
+			.title-total {
+				height: 28px;
+				margin: 0 0 4px 10px;
+				display: inline-block;
+				vertical-align: middle;
+				background: lighten(@color-blue-1, 10%);
+				color: #fff;
+				font-size: 20px;
+				line-height: 1em;
+				font-weight: 400;
+			}
+			.title-total-label {
+				display: inline-block;
+				padding: 3px 0 0 8px;
+			}
+			.title-total-counter {
+				display: inline-block;
+				padding: 3px 5px;
+				height: 100%;
+				background: @color-blue-1;
+			}
+		}
 	}
 }
