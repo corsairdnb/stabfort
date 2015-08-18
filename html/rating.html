@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex, nofollow, noarchive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рейтинг компаний | Stabfort.ru</title>
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/rating.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400,300|Roboto:500,900,400italic,100,700italic,300,700,400&amp;subset=latin,cyrillic' rel='stylesheet'>
 </head>
 <body>
@@ -48,17 +48,17 @@
 
     <main class="main" role="main">
 
-        <section class="section section-about-common">
+        <section class="section section-rating-common">
             <div class="section-cnt">
                 <div class="typography">
                     <h1 class="h1">Рейтинг компаний</h1>
-                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <div class="">
+                <div class="filter">
                     <form action="/">
                         <div class="form-group container-fluid clearfix">
                             <div class="row">
-                                <label class="col-sm-6">
+                                <label class="col-xs-12 col-sm-4">
                                     <select class="form-control input-lg">
                                         <option>Выберите категорию...</option>
                                         <option value="a">aaaaaaaa</option>
@@ -66,7 +66,7 @@
                                         <option value="a">aaaaaaaa</option>
                                     </select>
                                 </label>
-                                <label class="col-sm-6">
+                                <label class="col-xs-12 col-sm-4">
                                     <select class="form-control input-lg">
                                         <option>Выберите город...</option>
                                         <option value="a">aaaaaaaa</option>
@@ -74,9 +74,7 @@
                                         <option value="a">aaaaaaaa</option>
                                     </select>
                                 </label>
-                            </div>
-                            <div class="row">
-                                <label class="col-sm-6">
+                                <label class="col-xs-12 col-sm-4">
                                     <select class="form-control input-lg">
                                         <option>Выберите услугу...</option>
                                         <option value="a">aaaaaaaa</option>
@@ -88,32 +86,83 @@
                         </div>
                     </form>
                 </div>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>№</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td>ООО Компания</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td>ООО Компания</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td>ООО Компания</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="table-rating-cnt">
+                    <table class="table-rating">
+                        <colgroup>
+                            <col class="col-1">
+                            <col class="col-2">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>№</th>
+                            <th class="search">
+                                <form>
+                                    <label><i class="icon md-search"></i><input type="text" placeholder="Поиск..." class="search-input"></label>
+                                </form>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="number">1</span>
+                            </td>
+                            <td>
+                                <span class="company">ООО &laquo;Компания&raquo;</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="number">2</span>
+                                <span class="trend trend-down"><i class="trend-icon"></i>1</span>
+                            </td>
+                            <td>
+                                <span class="company">ООО &laquo;Lorem ipsum dolor sit amet&raquo;</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="number">30</span>
+                                <span class="trend trend-down"><i class="trend-icon"></i>40</span>
+                            </td>
+                            <td>
+                                <span class="company">ООО &laquo;Меридиан&raquo;</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="number">100</span>
+                            </td>
+                            <td>
+                                <span class="company">ООО Компания</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="number">1024</span>
+                                <span class="trend trend-up"><i class="trend-icon"></i>4096</span>
+                            </td>
+                            <td>
+                                <span class="company">Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="number">6</span>
+                            </td>
+                            <td>
+                                <span class="company">ООО Меридиан</span>
+                                <span class="rating"><i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
