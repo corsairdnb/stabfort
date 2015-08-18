@@ -82,10 +82,10 @@
 		margin: 0 2px 0 0;
 	}
 	.trend-down {
-		color: @color-red-1;
+		color: lighten(@color-red-1, 10%);
 		.trend-icon {
 			vertical-align: middle;
-			.arrow(.5em, @color-red-1, top);
+			.arrow(.5em, lighten(@color-red-1, 10%), top);
 		}
 	}
 	.trend-up {
@@ -102,6 +102,7 @@
 	.rating {
 		display: block;
 		color: @color-orange-1;
+		white-space: nowrap;
 	}
 }
 
@@ -139,25 +140,56 @@
 
 @media (min-width: @vw-tablet-sm) {
 	.table-rating {
+		th {
+			background: none !important;
+			border: 0 none !important;
+		}
+		td {
+			&:last-child {
+				padding: 20px;
+			}
+		}
 		td, th {
 			text-align: left;
 			&:first-child {
 				text-align: center;
+				background: #556567 !important;
+				border-color: #556567 !important;
+				border-bottom-color: #fff !important;
+				border-right-color: #fff !important;
+				color: #fff;
 			}
 			&, &:first-child, &:last-child {
 				border: 1px solid @color-grey-4;
 			}
 		}
-		td {
-			&:last-child {
-				padding: 10px 20px;
-			}
-		}
 		.search {
 			padding: 10px 20px;
 		}
+		.company {
+			font-size: 20px;
+		}
 		.company, .rating {
 			display: inline;
+		}
+		.number {
+			font-size: 26px;
+			font-weight: 300;
+		}
+	}
+}
+
+
+@media (min-width: @vw-tablet-lg) {
+	.table-rating {
+		.rating {
+			float: right;
+			font-size: 1.5em;
+		}
+		.company {
+			margin-right: 20px;
+			font-size: 24px;
+			font-weight: 300;
 		}
 	}
 }
