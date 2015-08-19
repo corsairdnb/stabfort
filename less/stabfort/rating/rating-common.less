@@ -1,19 +1,24 @@
 .section-rating-common {
-	.filter {
-		max-width: @vw-iphone-5-land;
-		margin: 40px auto 0;
+	margin: 0 0 20px;
+	padding: 20px 0 10px;
+	background: #fff;
+	background: linear-gradient(to bottom, #E9F7F9, #fff);
+	box-shadow: 0 1px 21px rgba(0,0,0,.15);
+	.h1 {
+		margin-top: 0;
 	}
 }
 
-@media (min-width: @vw-tablet-sm) {
+@media (max-width: (@vw-android - 1)) {
 	.section-rating-common {
-		.filter {
-			padding: 0 15px;
-			max-width: none;
+		.h1 {
+			font-size: 33px;
 		}
 	}
-	.table-rating-cnt {
-		margin: 0 0 50px;
-		padding: 0 30px;
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-rating-common {
+		margin: 0 0 30px;
+		padding: 25px 0;
 	}
 }
