@@ -1,0 +1,139 @@
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/mixins.less";
+
+@import "bootstrap/less/normalize.less";
+
+@import "bootstrap/less/utilities.less";
+@import "bootstrap/less/grid.less";
+
+@import "stabfort/variables.less";
+@import "stabfort/type.less";
+@import "stabfort/mixins.less";
+
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #fff;
+	font: 16px/1.5em @font-default;
+	color: @color-default;
+	min-width: @vw-iphone;
+}
+.main {
+	box-sizing: content-box;
+}
+.section-cnt {
+	max-width: @vw-laptop-sm - 40px;
+	margin: 0 auto;
+}
+.relative {
+	position: relative;
+}
+
+.stabfort-logo {
+	width: 185px;
+	height: 46px;
+	> a {
+		height: 100%;
+		&, > img {
+			display: block;
+		}
+	}
+}
+.stabfort-slogan {
+	display: none;
+	width: 185px;
+	position: absolute;
+	left: 0;
+	top: 36px;
+	z-index: 1120;
+	text-align: center;
+	color: #fff;
+	white-space: nowrap;
+	font-size: 11px;
+	line-height: 1em;
+	letter-spacing: 1px;
+}
+
+.stabfort-preloader {
+	width: 64px;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 0;
+	> i {
+		display: inline-block;
+		vertical-align: top;
+		background-color: rgb(99,189,197);
+		height: 14px;
+		margin-left: 7px;
+		width: 14px;
+		animation-name: bounce;
+		animation-duration: 1.0675s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		border-radius: 9px;
+		&:nth-of-type(1) {
+			animation-delay: .1395s;
+		}
+		&:nth-of-type(2) {
+			animation-delay: .3155s;
+		}
+		&:nth-of-type(3) {
+			animation-delay: .4085s;
+		}
+	}
+	@keyframes bounce {
+		50%{
+			background-color: rgba(99,189,197,0);
+		}
+	}
+}
+
+.section-article {
+	padding: 0 0 50px;
+}
+.meta {
+	margin: 35px 0 0;
+	+ * {
+		margin-top: 10px;
+	}
+	.icon {
+		font-size: 85%;
+	}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.stabfort-logo {
+		height: 58px;
+	}
+	.stabfort-slogan {
+		display: inline-block;
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	html, body {
+		height: 100%;
+	}
+	body {
+		display: table;
+		width: 100%;
+	}
+	.wrapper {
+		display: table-row-group;
+	}
+	.container-fluid-wide {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+}
+@media (max-width: (@vw-laptop-sm - 1)) {
+	.container-fluid-wide {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+@import "stabfort/header.less";
+@import "stabfort/top-menu.less";
+@import "stabfort/auth-block.less";

@@ -27,17 +27,18 @@ a:hover {
 		margin: 30px 0 20px;
 	}
 	h1, .h1 {
-		font-size: 35px;
+		font-size: 30px;
 		line-height: 1em;
 		font-weight: 300;
+		.word-break();
 	}
 	h2, .h2 {
-		font-size: 28px;
+		font-size: 26px;
 		line-height: 1em;
 		font-weight: 300;
 	}
 	h3, .h3 {
-		font-size: 26px;
+		font-size: 24px;
 		line-height: 1em;
 		font-weight: 400;
 		color: lighten(@color-default, 10%);
@@ -68,19 +69,43 @@ a:hover {
 		font-style: italic;
 		border-left: 10px solid fade(@color-blue-1, 70%);
 	}
+	time,
+	.parent-link {
+		display: block;
+	}
+	time {
+		margin-right: 10px;
+		font-size: .85em;
+		color: @color-grey-2;
+	}
+	.parent-link {
+		font-size: .85em;
+		line-height: 1em;
+		&:link {
+			text-decoration: none;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	img,
+	iframe,
+	object {
+		max-width: 100%;
+	}
 }
 
 @media (min-width: @vw-iphone-land) {
 	.typography {
 		font-size: 18px;
 		h1, .h1 {
-			font-size: 44px;
+			font-size: 38px;
 		}
 		h2, .h2 {
-			font-size: 34px;
+			font-size: 30px;
 		}
 		h3, .h3 {
-			font-size: 28px;
+			font-size: 26px;
 		}
 		h4, .h4 {
 			font-size: 24px;
@@ -96,6 +121,10 @@ a:hover {
 @media (min-width: @vw-iphone-6-land) {
 	.typography {
 		padding: 0 30px;
+		time,
+		.parent-link {
+			display: inline;
+		}
 	}
 }
 @media (min-width: @vw-tablet-lg) {

@@ -6,9 +6,17 @@
 	box-shadow: 0 1px 21px rgba(0,0,0,.15);
 	.h1 {
 		margin-top: 0;
+		font-size: 35px;
 	}
 }
 
+@media (min-width: @vw-iphone-land) {
+	.section-about-common {
+		.h1 {
+			font-size: 44px;
+		}
+	}
+}
 @media (max-width: (@vw-android - 1)) {
 	.section-rating-common {
 		.h1 {
