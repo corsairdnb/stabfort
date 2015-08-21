@@ -102,6 +102,52 @@ body {
 	}
 }
 
+.back-to-top {
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	bottom: 15px;
+	right: 15px;
+	overflow: hidden;
+	border: 4px solid @color-blue-1;
+	border-radius: 50%;
+	opacity: 0;
+	z-index: -1;
+	cursor: pointer;
+	transition: opacity .3s;
+	font-size: 42px;
+	line-height: 50px;
+	text-align: center;
+	color: @color-blue-1;
+	> .icon {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	&.is-hidden {
+		z-index: -1;
+	}
+	&.is-hidden, &.is-hidden.is-visible {
+		opacity: .4;
+	}
+	&.is-visible, &.is-visible:hover, &.is-hidden:hover {
+		opacity: 1;
+		z-index: 1001;
+	}
+	&:active {
+		background-color: @color-blue-1;
+		color: #fff;
+	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.back-to-top {
+		display: none !important;
+	}
+}
 @media (min-width: @vw-tablet-lg) {
 	.stabfort-logo {
 		height: 58px;
