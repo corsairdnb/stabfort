@@ -73,20 +73,37 @@ a:hover {
 	.parent-link {
 		display: block;
 	}
+	time,
+	.parent-link,
+	.parent-link,
+	.author-link,
+	.company-link {
+		font-size: .85em;
+	}
 	time {
 		margin-right: 10px;
-		font-size: .85em;
 		color: @color-grey-2;
 	}
 	.parent-link {
-		font-size: .85em;
 		line-height: 1em;
+	}
+	.parent-link,
+	.author-link,
+	.company-link,
+	.next-link {
+		line-height: 1em;
+		.icon {
+			margin-right: 4px;
+		}
 		&:link {
 			text-decoration: none;
 		}
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+	.author-link {
+		margin-right: 10px;
 	}
 	img,
 	iframe,
