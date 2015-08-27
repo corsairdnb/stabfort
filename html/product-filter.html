@@ -88,11 +88,108 @@
             <div class="section-cnt">
                 <div class="filter-header">
                     <div class="h1">Проекты</div>
-
+                    <div class="count">
+                        <div class="count-item">Проектов <b>2000+</b></div>
+                        <div class="count-item">Архитекторов <b>1600+</b></div>
+                    </div>
+                    <div class="social">
+                        <img src="../img/social_example.png" alt="">
+                    </div>
+                    <div class="favorites">
+                        <a href="#" class="favorite-button" role="button"><i class="md-star icon"></i> в закладки</a>
+                    </div>
                 </div><!--.filter-header-->
                 <div class="filter-main">
-                    <form action="">
-                        form
+                    <form class="form form-filter-standard">
+                        <div class="form-group">
+                            <label for="select-2">Тип строения</label>
+                            <select class="form-control" id="select-2">
+                                <option></option>
+                                <option selected>Дом</option>
+                                <option>Сарай</option>
+                                <option>Баня</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-7">Материал стен</label>
+                            <select class="form-control" id="select-7">
+                                <option></option>
+                                <option selected>Кирпич</option>
+                                <option>Солома</option>
+                                <option>Бетон</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-8">Количество этажей</label>
+                            <select class="form-control" id="select-8" multiple>
+                                <option selected>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-9">Количество комнат</label>
+                            <select class="form-control" id="select-9" multiple>
+                                <option selected>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="slider-1">Общая площадь</label>
+                            <div class="slider-native">
+                                от <input class="form-control" type="number" step="1" value="50" data-min="slider-1">
+                                до <input class="form-control" type="number" step="1" value="200" data-max="slider-1">
+                            </div>
+                            <div class="slider-custom" style="position: relative">
+                                <input id="slider-1" type="text" class="slider-input" value="" data-slider-min="10" data-slider-max="500" data-slider-step="1" data-slider-value="[50,200]">
+                            </div>
+                        </div>
+                        <!--<div class="form-group">
+                            <label for="select-1">Архитектор</label>
+                            <select class="form-control" id="select-1">
+                                <option></option>
+                                <option selected>Иванов М.В.</option>
+                                <option>Петров И.А.</option>
+                                <option>Иванов М.В.</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-3">Предназначение</label>
+                            <select class="form-control" id="select-3">
+                                <option></option>
+                                <option selected>Для постоянного проживания</option>
+                                <option>Для убежища от ядерной войны</option>
+                                <option>Для ухода от налогов</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-4">Стиль</label>
+                            <select class="form-control" id="select-4">
+                                <option></option>
+                                <option selected>Хай-тек</option>
+                                <option>Постмодерн</option>
+                                <option>Совок</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-5">Тип крыши</label>
+                            <select class="form-control" id="select-5">
+                                <option></option>
+                                <option selected>Мансардная</option>
+                                <option>Мансардная</option>
+                                <option>Мансардная</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-6">Фасад</label>
+                            <select class="form-control" id="select-6">
+                                <option></option>
+                                <option selected>Камень</option>
+                                <option>Брус</option>
+                                <option>Стекло</option>
+                            </select>
+                        </div>-->
                     </form>
                 </div><!--.filter-main-->
                 <div class="filter-more">
@@ -152,6 +249,7 @@
 <script src="../js/components/fixed-menu.js"></script>
 <script src="../js/vendor/jquery.scrollTo.min.js"></script>
 <script src="../js/components/back-to-top.js"></script>
+<script src="../less/bootstrap-slider/js/bootstrap-slider.js"></script>
 
 </body>
 </html>

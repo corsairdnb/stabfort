@@ -66,4 +66,15 @@ $(function(){
 		$('.service-content-detail').toggle();
 	});
 
+	$('.slider-input')
+		.slider({
+			formatter: function(ar) {
+				return ar[0] + ' - ' + ar[1];
+			}
+		})
+		.on('slide', function(e) {
+			$('[data-min="' + e.currentTarget.id + '"]').val(e.value[0]);
+			$('[data-max="' + e.currentTarget.id + '"]').val(e.value[1]);
+		});
+
 });
