@@ -103,8 +103,7 @@
                     <form class="form form-filter-standard">
                         <div class="form-group">
                             <label for="select-2">Тип строения</label>
-                            <select class="form-control" id="select-2">
-                                <option></option>
+                            <select class="form-control custom-select" id="select-2">
                                 <option selected>Дом</option>
                                 <option>Сарай</option>
                                 <option>Баня</option>
@@ -112,8 +111,7 @@
                         </div>
                         <div class="form-group">
                             <label for="select-7">Материал стен</label>
-                            <select class="form-control" id="select-7">
-                                <option></option>
+                            <select class="form-control custom-select" id="select-7">
                                 <option selected>Кирпич</option>
                                 <option>Солома</option>
                                 <option>Бетон</option>
@@ -121,18 +119,19 @@
                         </div>
                         <div class="form-group">
                             <label for="select-8">Количество этажей</label>
-                            <select class="form-control" id="select-8" multiple>
-                                <option selected>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                            <select class="form-control custom-select" id="select-8" multiple name="select-8[]">
+                                <option>Один</option>
+                                <option>Два</option>
+                                <option>Три</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="select-9">Количество комнат</label>
-                            <select class="form-control" id="select-9" multiple>
-                                <option selected>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                            <select class="form-control custom-select" id="select-9" multiple name="select-9[]">
+                                <option>Одна</option>
+                                <option>Две</option>
+                                <option>Три</option>
+                                <option>Десять</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -141,7 +140,7 @@
                                 от <input class="form-control" type="number" step="1" value="50" data-min="slider-1">
                                 до <input class="form-control" type="number" step="1" value="200" data-max="slider-1">
                             </div>
-                            <div class="slider-custom" style="position: relative">
+                            <div class="slider-custom">
                                 <input id="slider-1" type="text" class="slider-input" value="" data-slider-min="10" data-slider-max="500" data-slider-step="1" data-slider-value="[50,200]">
                             </div>
                         </div>
@@ -193,13 +192,111 @@
                     </form>
                 </div><!--.filter-main-->
                 <div class="filter-more">
-                    Подробный фильтр
+                    <form class="form form-filter-standard">
+                        <div class="form-group">
+                            <label for="slider-2">Цена застройки</label>
+                            <div class="slider-native">
+                                от <input class="form-control" type="number" step="1" value="0" data-min="slider-2"> $
+                                до <input class="form-control" type="number" step="1" value="100000" data-max="slider-2"> $
+                            </div>
+                            <div class="slider-custom">
+                                <input id="slider-2" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="slider-3">Цена проекта</label>
+                            <div class="slider-native">
+                                от <input class="form-control" type="number" step="1" value="0" data-min="slider-3"> $
+                                до <input class="form-control" type="number" step="1" value="100000" data-max="slider-3"> $
+                            </div>
+                            <div class="slider-custom">
+                                <input id="slider-3" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">
+                            </div>
+                        </div>
+                    </form>
                 </div><!--.filter-more-->
+                <div class="filter-go-advanced">
+                    <a href="#">Подробный фильтр<i class="md-arrow-forward"></i></a>
+                </div><!--.filter-sorting-->
                 <div class="filter-sorting">
-                    sort
+                    <div class="sort-btn-cnt">
+                        <a href="#" class="btn btn-sort btn-sort-list"><i class="md-view-list"></i></a>
+                        <a href="#" class="btn btn-sort btn-sort-tile"><i class="md-view-module"></i></a>
+                    </div>
                 </div><!--.filter-sorting-->
                 <div class="filter-output">
-                    output
+                    <div class="output-item">
+                        <div class="output-item-image">
+                            <div class="output-item-image-cnt">
+                                <img src="../img/example.jpg" alt="" class="output-item-img">
+                            </div>
+                            <div class="output-item-buttons">
+                                <a href="#" class="btn btn-more"></a>
+                                <a href="#" class="btn btn-book"></a>
+                                <a href="#" class="btn btn-buy"></a>
+                                <a href="#" class="btn btn-rent"></a>
+                            </div>
+                        </div>
+                        <div class="output-item-name">
+                            <a href="#">Название проекта</a>
+                        </div>
+                        <div class="output-item-rating">
+                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                        </div>
+                        <div class="output-item-feature">
+                            <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
+                        </div>
+                        <div class="output-item-param">
+                            <span class="output-item-param-name">Архитектор:</span>
+                            <span class="output-item-param-value"><a href="#">Иванов М.В.</a></span>
+                        </div>
+                        <div class="output-item-param">
+                            <span class="output-item-param-value">Санкт-Петербург</span>
+                        </div>
+                        <div class="output-item-price">
+                            <span class="output-item-param-name">Цена проекта:</span>
+                            <span class="output-item-param-value"><b>45 000</b> руб.</span>
+                        </div>
+                        <div class="output-item-button">
+                            <a href="#" class="btn btn-main">Показать проект</a>
+                        </div>
+                    </div>
+                    <div class="output-item">
+                        <div class="output-item-image">
+                            <div class="output-item-image-cnt">
+                                <img src="../img/example.jpg" alt="" class="output-item-img">
+                            </div>
+                            <div class="output-item-buttons">
+                                <a href="#" class="btn btn-more"></a>
+                                <a href="#" class="btn btn-book"></a>
+                                <a href="#" class="btn btn-buy"></a>
+                                <a href="#" class="btn btn-rent"></a>
+                            </div>
+                        </div>
+                        <div class="output-item-name">
+                            <a href="#">Название проекта</a>
+                        </div>
+                        <div class="output-item-rating">
+                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                        </div>
+                        <div class="output-item-feature">
+                            <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
+                        </div>
+                        <div class="output-item-param">
+                            <span class="output-item-param-name">Архитектор:</span>
+                            <span class="output-item-param-value"><a href="#">Иванов М.В.</a></span>
+                        </div>
+                        <div class="output-item-param">
+                            <span class="output-item-param-value">Санкт-Петербург</span>
+                        </div>
+                        <div class="output-item-price">
+                            <span class="output-item-param-name">Цена проекта:</span>
+                            <span class="output-item-param-value"><b>45 000</b> руб.</span>
+                        </div>
+                        <div class="output-item-button">
+                            <a href="#" class="btn btn-main">Показать проект</a>
+                        </div>
+                    </div>
                 </div><!--.filter-output-->
             </div>
         </section>
@@ -250,6 +347,10 @@
 <script src="../js/vendor/jquery.scrollTo.min.js"></script>
 <script src="../js/components/back-to-top.js"></script>
 <script src="../less/bootstrap-slider/js/bootstrap-slider.js"></script>
+<script src="../less/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="../less/bootstrap-select/dist/js/i18n/defaults-ru_RU.min.js"></script>
+<script src="../less/bootstrap/js/dropdown.js"></script>
+<script src="../js/components/custom-controls.js"></script>
 
 </body>
 </html>
