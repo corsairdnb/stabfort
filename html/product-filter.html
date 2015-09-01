@@ -86,17 +86,21 @@
 
         <section class="section section-product-filter" role="main">
             <div class="section-cnt">
-                <div class="filter-header">
-                    <div class="h1">Проекты</div>
-                    <div class="count">
-                        <div class="count-item">Проектов <b>2000+</b></div>
-                        <div class="count-item">Архитекторов <b>1600+</b></div>
+                <div class="filter-header clearfix">
+                    <div class="filter-header-left">
+                        <div class="header-h1">Проекты</div>
+                        <div class="header-count">
+                            <div class="header-count-item">Проектов <b>2000+</b></div>
+                            <div class="header-count-item">Архитекторов <b>1600+</b></div>
+                        </div>
                     </div>
-                    <div class="social">
-                        <img src="../img/social_example.png" alt="">
-                    </div>
-                    <div class="favorites">
-                        <a href="#" class="favorite-button" role="button"><i class="md-star icon"></i> в закладки</a>
+                    <div class="filter-header-right">
+                        <div class="header-social">
+                            <img src="../img/social_example.png" alt="">
+                        </div>
+                        <div class="header-favorites">
+                            <a href="#" class="favorite-button" role="button"><i class="md-star icon"></i> в закладки</a>
+                        </div>
                     </div>
                 </div><!--.filter-header-->
                 <div class="filter-main">
@@ -104,15 +108,17 @@
                         <div class="form-group">
                             <label for="select-2">Тип строения</label>
                             <select class="form-control custom-select" id="select-2">
-                                <option selected>Дом</option>
+                                <option>Любой</option>
+                                <option>Дом</option>
                                 <option>Сарай</option>
                                 <option>Баня</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="select-7">Материал стен</label>
-                            <select class="form-control custom-select" id="select-7">
-                                <option selected>Кирпич</option>
+                            <select class="form-control custom-select" id="select-7" name="material">
+                                <option>Любой</option>
+                                <option>Кирпич</option>
                                 <option>Солома</option>
                                 <option>Бетон</option>
                             </select>
@@ -136,9 +142,21 @@
                         </div>
                         <div class="form-group">
                             <label for="slider-1">Общая площадь</label>
-                            <div class="slider-native">
-                                от <input class="form-control" type="number" step="1" value="50" data-min="slider-1">
-                                до <input class="form-control" type="number" step="1" value="200" data-max="slider-1">
+                            <div class="slider-native clearfix">
+                                <div class="slider-native-left">
+                                    <label class="sr-only" for="number-1">Общая площадь от</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">от</div>
+                                        <input class="form-control" type="number" step="1" value="50" data-min="slider-1" id="number-1">
+                                    </div>
+                                </div>
+                                <div class="slider-native-right">
+                                    <label class="sr-only" for="number-2">Общая площадь до</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">до</div>
+                                        <input class="form-control" type="number" step="1" value="50" data-max="slider-1" id="number-2">
+                                    </div>
+                                </div>
                             </div>
                             <div class="slider-custom">
                                 <input id="slider-1" type="text" class="slider-input" value="" data-slider-min="10" data-slider-max="500" data-slider-step="1" data-slider-value="[50,200]">
@@ -195,9 +213,21 @@
                     <form class="form form-filter-standard">
                         <div class="form-group">
                             <label for="slider-2">Цена застройки</label>
-                            <div class="slider-native">
-                                от <input class="form-control" type="number" step="1" value="0" data-min="slider-2"> $
-                                до <input class="form-control" type="number" step="1" value="100000" data-max="slider-2"> $
+                            <div class="slider-native clearfix">
+                                <div class="slider-native-left">
+                                    <label for="number-3">от</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" step="1" value="0" data-min="slider-2" id="number-3">
+                                        <div class="input-group-addon">$</div>
+                                    </div>
+                                </div>
+                                <div class="slider-native-right">
+                                    <label for="number-4">до</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" step="1" value="1000000" data-max="slider-2" id="number-4">
+                                        <div class="input-group-addon">$</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="slider-custom">
                                 <input id="slider-2" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">
@@ -205,9 +235,21 @@
                         </div>
                         <div class="form-group">
                             <label for="slider-3">Цена проекта</label>
-                            <div class="slider-native">
-                                от <input class="form-control" type="number" step="1" value="0" data-min="slider-3"> $
-                                до <input class="form-control" type="number" step="1" value="100000" data-max="slider-3"> $
+                            <div class="slider-native clearfix">
+                                <div class="slider-native-left">
+                                    <label for="number-5">от</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" step="1" value="0" data-min="slider-3" id="number-5">
+                                        <div class="input-group-addon">$</div>
+                                    </div>
+                                </div>
+                                <div class="slider-native-right">
+                                    <label for="number-6">до</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" step="1" value="1000000" data-max="slider-3" id="number-6">
+                                        <div class="input-group-addon">$</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="slider-custom">
                                 <input id="slider-3" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">

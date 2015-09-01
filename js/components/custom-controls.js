@@ -9,7 +9,8 @@ $(function(){
 				.slider({
 					formatter: function(ar) {
 						return ar[0] + ' - ' + ar[1];
-					}
+					},
+					tooltip_position: 'bottom'
 				})
 				.on('slide', function(e) {
 					$('[data-min="' + e.currentTarget.id + '"]').val(e.value[0]);

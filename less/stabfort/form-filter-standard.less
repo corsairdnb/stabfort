@@ -1,0 +1,67 @@
+.form-filter-standard {
+	.form-group {
+		margin: 0 0 10px;
+		padding: 0 15px;
+	}
+	.slider-native {
+		margin: 0 0 10px;
+	}
+	.slider-native-left,
+	.slider-native-right {
+		width: 48%;
+	}
+	.slider-native-left {
+		float: left;
+	}
+	.slider-native-right {
+		float: right;
+	}
+	.slider.slider-horizontal {
+		width: 100%;
+	}
+	.bootstrap-select {
+		&.btn-group {
+			&.show-tick .dropdown-menu li {
+				&.selected a span.check-mark {
+					margin-top: 0;
+					font: normal normal normal 20px/1 'Material Design Iconic Font';
+					speak: none;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					&:before {
+						content: "\f299";
+					}
+				}
+			}
+		}
+		.dropdown-menu li,
+		.dropdown-menu li a,
+		.dropdown-toggle {
+			&:focus {
+				outline: 0 none !important;
+			}
+		}
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0,0,0,0);
+		border: 0;
+	}
+	.tooltip {
+		display: none;
+	}
+}
+
+@media (min-width: (@vw-tablet-lg + 1)) {
+	.form-filter-standard {
+		.tooltip {
+			display: block;
+		}
+	}
+}

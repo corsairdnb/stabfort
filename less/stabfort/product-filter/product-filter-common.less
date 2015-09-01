@@ -1,15 +1,64 @@
-.bootstrap-select.btn-group {
-	&.show-tick .dropdown-menu li {
-		&.selected a span.check-mark {
-			margin-top: 0;
-			font: normal normal normal 20px/1 'Material Design Iconic Font';
-			speak: none;
-			text-rendering: auto;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			&:before {
-				content: "\f299";
-			}
+.section-product-filter {
+	.filter-header {
+		margin: 0 0 30px;
+		padding: 30px 15px 20px;
+		border-bottom: 5px solid @color-grey-3;
+		text-align: center;
+	}
+	.header-h1 {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 20px 10px 0;
+		font: 300 37px/1em @font-condensed;
+		text-transform: uppercase;
+	}
+	.header-count {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 20px 10px 0;
+		font-size: 14px;
+		line-height: 1.25em;
+	}
+	.header-count-item {}
+	.header-social {
+		display: inline-block;
+		vertical-align: bottom;
+		margin: 0 20px 10px 0;
+	}
+	.header-favorites {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.header-favorite-button {}
+	.filter-main {}
+	.filter-more {}
+	.filter-go-advanced {}
+	.filter-sorting {}
+	.filter-output {
+		img {
+			max-width: 100%;
 		}
 	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.section-product-filter {
+		.filter-header {
+			margin: 0 0 30px;
+			padding: 30px 30px 10px;
+			text-align: left;
+		}
+		.filter-header-left {
+			width: 50%;
+			float: left;
+		}
+		.filter-header-right {
+			width: 50%;
+			float: left;
+			text-align: right;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-product-filter {}
 }
