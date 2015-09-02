@@ -31,16 +31,156 @@
 	}
 	.header-favorite-button {}
 	.filter-main {}
-	.filter-more {}
-	.filter-go-advanced {}
-	.filter-sorting {}
+	.filter-more {
+		margin: 20px 0;
+	}
+	.filter-buttons {
+		max-width: @vw-iphone-6;
+		margin: 20px auto;
+		text-align: center;
+		.btn {
+			width: 235px;
+			margin: 0 0 10px;
+			padding: 15px 0 13px !important;
+			text-transform: uppercase;
+			font-size: 18px !important;
+			line-height: 1em !important;
+		}
+		.btn-advanced {
+			.flat-button(@color-blue-1, 16px);
+		}
+		.btn-submit {
+			.btn-green-small();
+		}
+	}
+	.filter-view {
+		display: none;
+	}
 	.filter-output {
+	}
+	.output-item {
+		margin: 0 0 40px;
+		text-align: center;
+	}
+	.output-item-image {
+		position: relative;
+	}
+	.output-item-image-cnt {
+		text-align: center;
+		font-size: 0;
+		line-height: 0;
 		img {
-			max-width: 100%;
+			width: @vw-iphone;
+			height: auto;
+		}
+	}
+	.output-item-buttons {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: @vw-iphone;
+		margin: 0 auto;
+		padding: 0;
+		background: rgba(0,0,0,.7);
+		text-align: center;
+		.btn-more {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 9px 0;
+			font-size: 20px;
+			line-height: 1em;
+			&:link, &:visited, &:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+			.icon {
+				font-size: 1.2em;
+				vertical-align: middle;
+			}
+		}
+		.dropup {
+			float: left;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.dropdown-toggle {
+			background: #000;
+			border: 0 none;
+			margin: 0;
+			padding: 10px;
+			font-size: 25px;
+			line-height: 1em;
+			color: #fff;
+		}
+	}
+	.output-item-text {
+		padding: 0 10px;
+	}
+	.output-item-header {
+		margin: 10px 0 0;
+	}
+	.output-item-name {
+		display: inline-block;
+		font: 30px/1em @font-condensed;
+		.word-break();
+		a {
+			color: @color-default;
+			text-decoration: none;
+		}
+	}
+	.output-item-feature {
+		display: inline-block;
+		margin-left: 5px;
+		color: @color-grey-1;
+		white-space: nowrap;
+	}
+	.output-item-rating {
+		margin: 0 0 10px;
+		font-size: 20px;
+		color: @color-orange-1;
+	}
+	.output-item-param {}
+	.output-item-param-name {}
+	.output-item-param-value {}
+	.output-item-price {
+		margin: 10px 0;
+		font-size: 20px;
+	}
+	.output-item-button {
+		.btn-main {
+
 		}
 	}
 }
 
+@media (min-width: @vw-iphone-land) {
+	.section-product-filter {
+		.filter-view {
+			display: block;
+			margin: 0 0 20px;
+			text-align: center;
+			.btn-view {
+				width: 40px;
+				height: 40px;
+				padding: 9px;
+				border-radius: 50%;
+				text-align: center;
+				font-size: 21px;
+				line-height: 1em;
+				box-shadow: none;
+				&:link, &:visited, &:hover {
+					color: @color-blue-1;
+					text-decoration: none;
+				}
+				&.active {
+					background: @color-blue-1;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
 @media (min-width: @vw-tablet-sm) {
 	.section-product-filter {
 		.filter-header {

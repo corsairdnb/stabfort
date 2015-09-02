@@ -257,13 +257,14 @@
                         </div>
                     </form>
                 </div><!--.filter-more-->
-                <div class="filter-go-advanced">
-                    <a href="#">Подробный фильтр<i class="md-arrow-forward"></i></a>
+                <div class="filter-buttons">
+                    <a href="#" class="btn btn-submit">Применить</a>
+                    <a href="#" class="btn btn-advanced transparent">Подробный фильтр</a>
                 </div><!--.filter-sorting-->
-                <div class="filter-sorting">
+                <div class="filter-view">
                     <div class="sort-btn-cnt">
-                        <a href="#" class="btn btn-sort btn-sort-list"><i class="md-view-list"></i></a>
-                        <a href="#" class="btn btn-sort btn-sort-tile"><i class="md-view-module"></i></a>
+                        <a href="#" class="btn btn-view btn-view-list" title="Список"><i class="md-view-list"></i></a>
+                        <a href="#" class="btn btn-view btn-view-tile active" title="Плитки"><i class="md-view-module"></i></a>
                     </div>
                 </div><!--.filter-sorting-->
                 <div class="filter-output">
@@ -272,35 +273,46 @@
                             <div class="output-item-image-cnt">
                                 <img src="../img/example.jpg" alt="" class="output-item-img">
                             </div>
-                            <div class="output-item-buttons">
-                                <a href="#" class="btn btn-more"></a>
-                                <a href="#" class="btn btn-book"></a>
-                                <a href="#" class="btn btn-buy"></a>
-                                <a href="#" class="btn btn-rent"></a>
+                            <div class="output-item-buttons clearfix">
+                                <a href="#" class="btn btn-more">Подробнее <i class="icon md-chevron-right"></i></a>
+                                <div class="dropup">
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="md-more-vert"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Бронировать</a></li>
+                                        <li><a href="#">Купить</a></li>
+                                        <li><a href="#">Арендовать</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="output-item-name">
-                            <a href="#">Название проекта</a>
-                        </div>
-                        <div class="output-item-rating">
-                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
-                        </div>
-                        <div class="output-item-feature">
-                            <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
-                        </div>
-                        <div class="output-item-param">
-                            <span class="output-item-param-name">Архитектор:</span>
-                            <span class="output-item-param-value"><a href="#">Иванов М.В.</a></span>
-                        </div>
-                        <div class="output-item-param">
-                            <span class="output-item-param-value">Санкт-Петербург</span>
-                        </div>
-                        <div class="output-item-price">
-                            <span class="output-item-param-name">Цена проекта:</span>
-                            <span class="output-item-param-value"><b>45 000</b> руб.</span>
-                        </div>
-                        <div class="output-item-button">
-                            <a href="#" class="btn btn-main">Показать проект</a>
+                        <div class="output-item-text">
+                            <div class="output-item-header">
+                                <div class="output-item-name">
+                                    <a href="#">Название проекта</a>
+                                </div>
+                                <div class="output-item-feature">
+                                    <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
+                                </div>
+                            </div>
+                            <div class="output-item-rating">
+                                <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                            </div>
+                            <div class="output-item-param">
+                                <span class="output-item-param-name">Архитектор:</span>
+                                <span class="output-item-param-value"><a href="#">Иванов М.В.</a></span>
+                            </div>
+                            <div class="output-item-param">
+                                <span class="output-item-param-value">Санкт-Петербург</span>
+                            </div>
+                            <div class="output-item-price">
+                                <span class="output-item-param-name">Цена проекта:</span>
+                                <span class="output-item-param-value"><b>45 000</b> руб.</span>
+                            </div>
+                            <div class="output-item-button">
+                                <a href="#" class="btn btn-main btn-primary">Показать проект <i class="md-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="output-item">
@@ -308,21 +320,30 @@
                             <div class="output-item-image-cnt">
                                 <img src="../img/example.jpg" alt="" class="output-item-img">
                             </div>
-                            <div class="output-item-buttons">
-                                <a href="#" class="btn btn-more"></a>
-                                <a href="#" class="btn btn-book"></a>
-                                <a href="#" class="btn btn-buy"></a>
-                                <a href="#" class="btn btn-rent"></a>
+                            <div class="output-item-buttons clearfix">
+                                <a href="#" class="btn btn-more">Подробнее <i class="icon md-chevron-right"></i></a>
+                                <div class="dropup">
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="md-more-vert"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Бронировать</a></li>
+                                        <li><a href="#">Купить</a></li>
+                                        <li><a href="#">Арендовать</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="output-item-name">
-                            <a href="#">Название проекта</a>
+                        <div class="output-item-header">
+                            <div class="output-item-name">
+                                <a href="#">Название проекта</a>
+                            </div>
+                            <div class="output-item-feature">
+                                <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
+                            </div>
                         </div>
                         <div class="output-item-rating">
                             <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
-                        </div>
-                        <div class="output-item-feature">
-                            <div class="output-item-feature-area"><b>160</b> м<sup>2</sup></div>
                         </div>
                         <div class="output-item-param">
                             <span class="output-item-param-name">Архитектор:</span>

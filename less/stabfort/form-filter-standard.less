@@ -1,4 +1,6 @@
 .form-filter-standard {
+	max-width: @vw-iphone-6;
+	margin: 0 auto;
 	.form-group {
 		margin: 0 0 10px;
 		padding: 0 15px;
@@ -18,6 +20,9 @@
 	}
 	.slider.slider-horizontal {
 		width: 100%;
+	}
+	.slider-custom {
+		margin-bottom: 20px;
 	}
 	.bootstrap-select {
 		&.btn-group {
@@ -58,9 +63,9 @@
 	}
 }
 
-@media (min-width: (@vw-tablet-lg + 1)) {
+@media (min-width: @vw-tablet-lg) {
 	.form-filter-standard {
-		.tooltip {
+		.tooltip-main {
 			display: block;
 		}
 	}
