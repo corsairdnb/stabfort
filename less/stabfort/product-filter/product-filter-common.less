@@ -40,7 +40,7 @@
 		text-align: center;
 		.btn {
 			width: 235px;
-			margin: 0 0 10px;
+			margin: 0 10px 10px;
 			padding: 15px 0 13px !important;
 			text-transform: uppercase;
 			font-size: 18px !important;
@@ -56,8 +56,7 @@
 	.filter-view {
 		display: none;
 	}
-	.filter-output {
-	}
+	.filter-output {}
 	.output-item {
 		margin: 0 0 40px;
 		text-align: center;
@@ -134,22 +133,43 @@
 		margin-left: 5px;
 		color: @color-grey-1;
 		white-space: nowrap;
+		font-size: 16px;
+		line-height: 2em;
 	}
 	.output-item-rating {
 		margin: 0 0 10px;
 		font-size: 20px;
 		color: @color-orange-1;
 	}
-	.output-item-param {}
+	.output-item-param {
+		font-size: 16px;
+	}
 	.output-item-param-name {}
 	.output-item-param-value {}
 	.output-item-price {
 		margin: 10px 0;
 		font-size: 20px;
+		line-height: 1.2em;
 	}
-	.output-item-button {
-		.btn-main {
-
+	.output-item-modifiers {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		text-align: right;
+		font-size: 0;
+		line-height: 0;
+	}
+	.output-item-modifier {
+		display: inline-block;
+		.icon {
+			display: block;
+			padding: 5px;
+			background: @color-orange-1;
+			font-size: 30px;
+			line-height: 1em;
+			color: #000;
+			font-weight: 900;
 		}
 	}
 }
@@ -179,6 +199,52 @@
 				}
 			}
 		}
+		.filter-more {
+			margin: 0;
+		}
+		.filter-buttons {
+			max-width: none;
+			margin: 0 0 30px;
+		}
+		.filter-output {
+			padding: 0 15px;
+			text-align: center;
+		}
+		.output-item {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0 40px;
+			padding: 0 12px;
+			width: 267px;
+			text-align: left;
+		}
+		.output-item-image {}
+		.output-item-image-cnt {
+			img {
+				max-width: 100%;
+				width: auto;
+				height: auto;
+			}
+		}
+		.output-item-buttons {
+			width: 100%;
+		}
+		.output-item-text {
+			padding: 0 10px;
+		}
+		.output-item-header {
+			margin: 10px 0 0;
+		}
+		.output-item-name {
+			font-size: 20px;
+		}
+		.output-item-feature {
+			font-size: 14px;
+		}
+		.output-item-price {
+			margin: 5px 0 10px;
+			font-size: 18px;
+		}
 	}
 }
 @media (min-width: @vw-tablet-sm) {
@@ -197,8 +263,89 @@
 			float: left;
 			text-align: right;
 		}
+		.output-item {
+			width: 367px;
+			text-align: center;
+		}
+		.output-item-name {
+			font-size: 30px;
+		}
+		.output-item-feature {
+			font-size: 16px;
+		}
+		.output-item-price {
+			margin: 10px 0 15px;
+			font-size: 20px;
+		}
 	}
 }
 @media (min-width: @vw-tablet-lg) {
-	.section-product-filter {}
+	.section-product-filter {
+		.filter-header {
+			padding: 30px 15px 10px;
+		}
+		.filter-main,
+		.filter-more {
+			float: left;
+		}
+		.filter-main {
+			width: 40%;
+			margin: 0 10% 0 0;
+		}
+		.filter-more {
+			width: 40%;
+			margin: 0 0 0 10%;
+		}
+		.filter-buttons {
+			margin: -80px 0 20px;
+			.btn {
+				width: 178px;
+				margin: 0;
+				text-transform: uppercase;
+			}
+			.btn-advanced {
+				font-size: 14px !important;
+				font-weight: 400 !important;
+				border-width: 1px;
+			}
+			.btn-submit {
+				margin-right: 10px;
+			}
+		}
+		.filter-buttons-cnt {
+			width: 40%;
+			float: right;
+		}
+	}
+}
+@media (min-width: @vw-laptop-md) {
+	.section-product-filter {
+		.filter-header {
+			margin: 0 0 20px;
+			padding: 30px 10px 10px 0;
+		}
+		.filter-view {
+			text-align: left;
+		}
+		.filter-output {
+			padding: 0;
+		}
+		.output-item {
+			width: 229px;
+			padding: 0 5px;
+		}
+		.output-item-name {
+			font-size: 20px;
+		}
+		.output-item-feature {
+			font-size: 14px;
+		}
+		.output-item-param {
+			font-size: 15px;
+		}
+		.output-item-price {
+			margin: 10px 0 15px;
+			font-size: 15px;
+		}
+	}
 }

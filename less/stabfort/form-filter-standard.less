@@ -63,10 +63,24 @@
 	}
 }
 
+@media (min-width: @vw-iphone-5-land) {
+	.form-filter-standard {
+		max-width: none;
+		.form-group {
+			float: left;
+			width: 50%;
+		}
+	}
+}
 @media (min-width: @vw-tablet-lg) {
 	.form-filter-standard {
 		.tooltip-main {
 			display: block;
+		}
+		.form-group {
+			float: none;
+			width: 100%;
+			padding: 0;
 		}
 	}
 }
