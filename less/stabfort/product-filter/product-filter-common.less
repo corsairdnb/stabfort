@@ -108,6 +108,7 @@
 			border: 0 none;
 			margin: 0;
 			padding: 10px;
+			border-radius: 0;
 			font-size: 25px;
 			line-height: 1em;
 			color: #fff;
@@ -172,6 +173,15 @@
 			font-weight: 900;
 		}
 	}
+	.output-item-button {
+		.btn-main {
+			background: #fff;
+			font-weight: 500;
+		}
+	}
+	.filter-view-notes {
+		display: none;
+	}
 }
 
 @media (min-width: @vw-iphone-land) {
@@ -183,17 +193,17 @@
 			.btn-view {
 				width: 40px;
 				height: 40px;
-				padding: 9px;
+				padding: 8px 8px 0 7px;
 				border-radius: 50%;
 				text-align: center;
-				font-size: 21px;
+				font-size: 23px;
 				line-height: 1em;
 				box-shadow: none;
 				&:link, &:visited, &:hover {
 					color: @color-blue-1;
 					text-decoration: none;
 				}
-				&.active {
+				&:hover, &.active {
 					background: @color-blue-1;
 					color: #fff;
 				}
@@ -284,27 +294,42 @@
 		.filter-header {
 			padding: 30px 15px 10px;
 		}
+		.filter-header-left {
+			width: 60%;
+		}
+		.filter-header-right {
+			width: 40%;
+		}
+		.header-h1 {
+			max-width: 70%;
+			margin: 0 0 10px;
+			padding: 0 20px 0 0;
+		}
+		.header-count {
+			max-width: 30%;
+			margin: 0 0 10px;
+		}
 		.filter-main,
 		.filter-more {
 			float: left;
 		}
 		.filter-main {
-			width: 40%;
-			margin: 0 10% 0 0;
+			width: 43%;
+			margin: 0 7% 0 0;
 		}
 		.filter-more {
-			width: 40%;
-			margin: 0 0 0 10%;
+			width: 43%;
+			margin: 0 0 0 7%;
 		}
 		.filter-buttons {
 			margin: -80px 0 20px;
 			.btn {
-				width: 178px;
+				width: 192px;
 				margin: 0;
 				text-transform: uppercase;
 			}
 			.btn-advanced {
-				font-size: 14px !important;
+				font-size: 15px !important;
 				font-weight: 400 !important;
 				border-width: 1px;
 			}
@@ -313,32 +338,76 @@
 			}
 		}
 		.filter-buttons-cnt {
-			width: 40%;
+			width: 43%;
 			float: right;
 		}
 	}
 }
-@media (min-width: @vw-laptop-md) {
+@media (min-width: @vw-laptop-sm) {
 	.section-product-filter {
 		.filter-header {
 			margin: 0 0 20px;
-			padding: 30px 10px 10px 0;
+			padding: 40px 10px 10px 0;
 		}
 		.filter-view {
 			text-align: left;
 		}
 		.filter-output {
+			margin: 0 0 50px;
 			padding: 0;
 		}
+		.filter-view-notes {
+			display: inline-block;
+			float: right;
+			background: @color-orange-1;
+			padding: 10px;
+			border: 2px solid #000;
+			color: #000;
+			font-size: 14px;
+			line-height: 1.1em;
+			.icon {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 10px 0 0;
+				padding: 5px 0 0;
+				font-size: 30px;
+				font-weight: 900;
+			}
+			.text {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0;
+				> b {
+					display: block;
+				}
+			}
+		}
 		.output-item {
-			width: 229px;
-			padding: 0 5px;
+			width: 220px;
+			margin: 0 6px;
+			padding: 0;
+			border-bottom: 1px solid #fff;
+			transition: box-shadow .2s;
+			&:hover {
+				background: #fff;
+				box-shadow: 0 2px 10px rgba(0,0,0,.2);
+			}
+			&:first-child, &:nth-of-type(n+5) {
+				margin-left: 0;
+			}
+			&:nth-of-type(n+4) {
+				margin-right: 0;
+			}
+		}
+		.output-item-header {
+			margin: 15px 0 0;
 		}
 		.output-item-name {
-			font-size: 20px;
+			font-size: 19px;
 		}
 		.output-item-feature {
-			font-size: 14px;
+			font-size: 13px;
+			margin-left: 3px;
 		}
 		.output-item-param {
 			font-size: 15px;
@@ -346,6 +415,55 @@
 		.output-item-price {
 			margin: 10px 0 15px;
 			font-size: 15px;
+		}
+		.output-item-text {
+			padding: 0 5px;
+		}
+		.output-item-buttons {
+			transition: background .2s, opacity .2s;
+			opacity: 0;
+		}
+		.dropdown-toggle {
+			&:hover {
+				background: none;
+			}
+		}
+		.output-item-buttons {
+			bottom: -1px;
+			.btn-more:hover {
+				color: @color-grey-4;
+			}
+		}
+		.output-item-button {
+			margin: 20px -5px 0;
+			.btn-main {
+				width: 100%;
+				padding: 10px 0;
+				border: 0 none;
+				background: none;
+				border-radius: 0;
+				transition: background .2s, color .2s;
+				&:hover {
+					border: 0 none;
+					background: none;
+				}
+			}
+		}
+		.output-item {
+			&:hover {
+				.output-item-buttons {
+					opacity: 1;
+				}
+				.output-item-button {
+					.btn-main {
+						background: @color-blue-1;
+						color: #fff;
+						&:hover {
+							background: lighten(@color-blue-1, 5%);
+						}
+					}
+				}
+			}
 		}
 	}
 }
