@@ -1,11 +1,60 @@
 @import "stabfort/common.less";
 
-@import "stabfort/footer.less";
-@import "stabfort/footer-menu.less";
-@import "stabfort/social.less";
-
+.section-article {
+	padding: 0 0 50px;
+}
+.meta {
+	margin: 35px 0 0;
+	+ * {
+		margin-top: 10px;
+	}
+	.icon {
+		font-size: 85%;
+	}
+}
+.back-to-top {
+	position: fixed;
+	height: 40px;
+	width: 40px;
+	bottom: 15px;
+	right: 15px;
+	overflow: hidden;
+	border: 3px solid @color-blue-1;
+	border-radius: 50%;
+	opacity: 0;
+	z-index: -1;
+	cursor: pointer;
+	transition: opacity .3s;
+	font-size: 35px;
+	text-align: center;
+	color: @color-blue-1;
+	&.is-hidden {
+		z-index: -1;
+	}
+	&.is-hidden, &.is-hidden.is-visible {
+		opacity: .4;
+	}
+	&.is-visible, &.is-visible:hover, &.is-hidden:hover {
+		opacity: .7;
+		z-index: 1001;
+	}
+	&:active {
+		background-color: @color-blue-1;
+		color: #fff;
+	}
+}
 .dropdown-menu > li > a {
 	text-decoration: none;
 }
+
+@media (min-width: @vw-tablet-sm) {
+	.back-to-top {
+		display: none !important;
+	}
+}
+
+@import "stabfort/footer.less";
+@import "stabfort/footer-menu.less";
+@import "stabfort/social.less";
 
 @import "material-iconic-font/less/material-design-iconic-font.less";
