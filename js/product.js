@@ -66,4 +66,12 @@ $(function(){
 		$('.service-content-detail').toggle();
 	});
 
+	initPhotoSwipeFromDOM('.product-gallery');
+
+	$('#panel').collapse();
+
+	$(document).on('click', '.panel-heading', function(e){
+		$(this).siblings('.panel-collapse').collapse('toggle')
+	});
+
 });

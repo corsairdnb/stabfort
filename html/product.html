@@ -87,14 +87,89 @@
 
         <section class="section section-product" role="main">
             <div class="section-cnt">
-                <h1 class="h1">Проект XTR 12345/09876</h1>
-                <p>jkfdjfkd</p>
+                <div class="product-header">
+                    <div class="product-header-left">
+                        <h1 class="header-h1">Проект XTR 12345/09876</h1>
+                    </div>
+                    <div class="product-header-right">
+                        <div class="header-buttons">
+                            <span class="header-button-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="header-button-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                        </div>
+                        <div class="header-rating">
+                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-gallery-cnt">
+                    <div class="product-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                            </a>
+                        </figure>
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                            </a>
+                            <!--<figcaption itemprop="caption description">Image caption</figcaption>-->
+                        </figure>
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                            </a>
+                        </figure>
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="product-main">
+                    <div class="product-main-header">
+                        <div class="product-main-header-left">
+                            <h2 class="h2">Характеристики дома</h2>
+                            <a href="#" class="download-link"></a>
+                        </div>
+                        <div class="product-main-header-right">
+                            <p class="annotation">Этот проект уже нашел своего Заказчика, но если он вам понравился, вы можете обратиться к автору и заказать подобный проект с учетом ваших пожеланий</p>
+                        </div>
+                    </div>
+                    <div class="product-main-content typography">
+                        <div class="product-main-content-preview">
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="product-main-content-detail">
+                            <p><img src="../img/example.jpg" alt=""></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <div class="product-main-content-more">
+                        <a href="#" class="product-main-content-more-btn" title="Развернуть подробное описание">
+                            <span class="more">Подробнее <i class="md-expand-more icon"></i></span>
+                            <span class="less">Свернуть <i class="md-expand-less icon"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-params">
+                    <div class="product-left">
+                        <div class="product-param">
+                            <span class="product-param-name">Архитектор:</span>
+                            <span class="product-param-value"><i class="md-person"></i> <a href="#">Иванова А.И.</a></span>
+                        </div>
+                    </div>
+                    <div class="product-right">
+                        <h2 class="h2">Дополнительные услуги</h2>
+                    </div>
+                </div>
 
-                <div class="panel-group faq" id="faq">
+
+                <!--<div class="panel-group faq" id="panel">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <!--<span class="faq-image"><img src="../img/reviews_sample.jpg"></span>-->
                                 <a data-toggle="collapse" data-parent="#faq" href="#question-1" class="faq-title">
                                     <span class="faq-name">Павел:</span> Обязательно ли оформлять страховой полюс, при вступлении в СРО?
                                 </a>
@@ -121,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
             </div>
         </section>
@@ -164,13 +239,78 @@
     </div>
 </footer>
 
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 <div class="back-to-top" title="Наверх"><i class="icon md-keyboard-arrow-up"></i></div>
 
 <script src="../js/vendor/jquery-1.11.2.js"></script>
-<script src="../js/product.js"></script>
-<script src="../js/components/fixed-menu.js"></script>
 <script src="../js/vendor/jquery.scrollTo.min.js"></script>
-<script src="../js/components/back-to-top.js"></script>
+
 <!--<script src="../less/bootstrap/js/dropdown.js"></script>
 <script src="../less/bootstrap/js/tooltip.js"></script>
 <script src="../less/bootstrap-slider/js/bootstrap-slider.js"></script>
@@ -180,10 +320,16 @@
 
 <script src="../less/photoswipe/dist/photoswipe.min.js"></script>
 <script src="../less/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+<script src="../less/peppermint/dist/peppermint.js"></script>
+
+<script src="../js/components/back-to-top.js"></script>
+<script src="../js/components/fixed-menu.js"></script>
 <script src="../js/components/gallery.js"></script>
+
 <script src="../less/bootstrap/js/transition.js"></script>
 <script src="../less/bootstrap/js/collapse.js"></script>
-<script src="../less/peppermint/dist/peppermint.js"></script>
+
+<script src="../js/product.js"></script>
 
 </body>
 </html>
