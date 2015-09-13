@@ -13,19 +13,20 @@
 			vertical-align: top;
 			margin: 0 0 0 15px;
 			padding: 4px 12px 4px 10px;
-			border: 2px solid @color-default;
+			border: 2px solid @color-grey-4;
 			border-radius: 3px;
 			font-size: 13px;
 			line-height: 1.2em;
 			text-transform: uppercase;
 			font-weight: 600;
-			transition: background .2s, color .2s;
+			transition: background .2s, color .2s, border-color .2s;
 			&:link, &:visited, &:hover {
 				color: @color-default;
 				text-decoration: none;
 			}
 			&:hover {
 				background: @color-default;
+				border-color: @color-default;
 				color: #fff;
 			}
 			.icon {
@@ -56,6 +57,7 @@
 		border: 1px solid @color-grey-4;
 		border-top: 0 none;
 		border-radius: 0 0 3px 3px;
+		cursor: default;
 		.col {
 			display: table-cell;
 			width: 25%;
