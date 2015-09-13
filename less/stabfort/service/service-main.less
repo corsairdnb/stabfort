@@ -144,6 +144,9 @@
 	}
 }
 
+.service-about-block {
+	display: none;
+}
 
 
 @media (min-width: @vw-iphone-5-land) {
@@ -278,5 +281,22 @@
 	}
 	.service-content-panel {
 		padding: 0;
+	}
+
+	.service-about-block {
+		display: table;
+		width: 100%;
+		margin: 35px 0;
+	}
+	.service-about-block-left {
+		display: table-cell;
+		vertical-align: top;
+		padding-right: 28px;
+	}
+	.service-about-block-right {
+		display: table-cell;
+		vertical-align: top;
+		width: 25%;
+		padding-top: 53px;
 	}
 }

@@ -1,0 +1,128 @@
+.infographic-how-we-work {
+	.infographic-cnt {}
+	.infographic-title {
+		margin: 0 0 20px;
+		.title {
+			display: inline-block;
+			vertical-align: top;
+			font: 300 30px/1em @font-condensed;
+			text-transform: uppercase;
+		}
+		.btn {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0 0 15px;
+			padding: 4px 12px 4px 10px;
+			border: 2px solid @color-default;
+			border-radius: 3px;
+			font-size: 13px;
+			line-height: 1.2em;
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: background .2s, color .2s;
+			&:link, &:visited, &:hover {
+				color: @color-default;
+				text-decoration: none;
+			}
+			&:hover {
+				background: @color-default;
+				color: #fff;
+			}
+			.icon {
+				color: @color-red-1;
+				vertical-align: top;
+				font-size: 1.15em;
+			}
+		}
+		.link {
+			margin: 0 0 0 15px;
+			font-size: 14px;
+			&:link, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+			.icon {
+				margin-right: 3px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.infographic-content {
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid @color-grey-4;
+		border-top: 0 none;
+		border-radius: 0 0 3px 3px;
+		.col {
+			display: table-cell;
+			width: 25%;
+			padding: 10px 15px 15px;
+			vertical-align: middle;
+			border-top: 3px solid;
+			border-right: 1px solid @color-grey-4;
+			text-align: center;
+			transition: box-shadow, .3s;
+			&:hover {
+				background: linear-gradient(to bottom, #fff, #f7f6f6);
+				.col-text {
+					color: @color-default;
+				}
+			}
+			&:first-child {
+				border-top-color: #4EDE86;
+				&:hover {
+					box-shadow: 0 2px 10px fade(#4EDE86, 40%);
+					.col-icon {
+						color: #4EDE86;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				border-top-color: #7991E4;
+				&:hover {
+					box-shadow: 0 2px 10px fade(#7991E4, 40%);
+					.col-icon {
+						color: #7991E4;
+					}
+				}
+			}
+			&:nth-of-type(3) {
+				border-top-color: #AE58DC;
+				&:hover {
+					box-shadow: 0 2px 10px fade(#AE58DC, 40%);
+					.col-icon {
+						color: #AE58DC;
+					}
+				}
+			}
+			&:last-child {
+				border-top-color: #FF7B9B;
+				&:hover {
+					box-shadow: 0 2px 10px fade(#FF7B9B, 40%);
+					.col-icon {
+						color: #FF7B9B;
+					}
+				}
+				border-right: 0 none;
+			}
+		}
+		.col-icon {
+			display: block;
+			margin: 0 0 5px;
+			font-size: 70px;
+			text-shadow: 0 1px 0 #fff;
+			color: #A3BBBD;
+			transition: color .3s;
+		}
+		.col-text {
+			display: block;
+			font: 19px/1.2em @font-condensed;
+			text-shadow: 0 1px 0 #fff;
+			color: #A3BBBD;
+			transition: color .3s;
+		}
+	}
+}

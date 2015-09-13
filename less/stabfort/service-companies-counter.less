@@ -1,0 +1,83 @@
+.service-companies-counter {
+	border: 1px solid @color-green-1;
+	border-radius: 5px;
+	text-align: center;
+	.providers {
+		padding: 13px 0 13px 13px;
+		background: linear-gradient(to bottom, #fff 70%, @color-grey-3);
+		border-bottom: 1px solid @color-grey-4;
+		border-radius: 5px 5px 0 0;
+		text-align: left;
+		transition: background .2s;
+		&:hover {
+			background: linear-gradient(to bottom, @color-grey-3, @color-grey-3);
+		}
+		.link {
+			display: block;
+			.clearfix();
+			&:link, &:visited, &:hover {
+				color: @color-default;
+				text-decoration: none;
+			}
+		}
+		.line {
+			display: block;
+		}
+		.line-1 {
+			margin: 0 0 5px;
+			font: 700 18px/1em @font-condensed;
+			text-transform: uppercase;
+		}
+		.line-2 {
+			float: left;
+			margin: 0 12px 0 0;
+			padding: 5px 0 0;
+			font-size: 30px;
+			line-height: 1em;
+			font-weight: 500;
+			color: @color-green-1;
+		}
+		.line-3 {
+			font: 18px/1.1em @font-condensed;
+			text-align: left;
+		}
+	}
+	.requests {
+		padding: 8px 0 0;
+		.link {
+			display: block;
+			text-align: center;
+			&:link, &:visited, &:hover {
+				color: @color-default;
+				text-decoration: none;
+			}
+		}
+		.line {
+			display: block;
+		}
+		.line-1 {
+			font-size: 16px;
+			line-height: 1.3em;
+			font-weight: 500;
+		}
+		.line-2 {
+			font-size: 16px;
+			line-height: 1.2em;
+		}
+		.btn {
+			display: block;
+			margin: 10px 0 0;
+			padding: 5px 0;
+			background: @color-green-1;
+			border-radius: 0 0 3px 3px;
+			text-align: center;
+			color: #fff;
+			&:hover {
+				background: lighten(@color-green-1, 5%);
+			}
+			.icon {
+				vertical-align: middle;
+			}
+		}
+	}
+}
