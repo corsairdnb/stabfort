@@ -71,12 +71,13 @@
 			//transition: box-shadow .3s 1s, background .3s 1s;
 			&:hover {
 				//background: linear-gradient(to bottom, #fff, #f7f6f6);
-				.col-text {
+				/*.col-text {
 					color: @color-default;
-				}
+				}*/
 				.arrow {
 					color: #fff;
 					background: #A3BBBD;
+					border-color: #A3BBBD;
 				}
 			}
 			&:first-child {
@@ -126,12 +127,12 @@
 			position: absolute;
 			right: -15px;
 			top: 50%;
-			margin-top: -13px;
+			margin-top: -14px;
 			font-size: 25px;
-			color: #A3BBBD;
+			color: @color-grey-4;
 			padding: 1px 0 0 2px;
 			background: #fff;
-			border: 1px solid #A3BBBD;
+			border: 1px solid @color-grey-4;
 			border-radius: 50%;
 			transition: color .3s, background .3s;
 		}
