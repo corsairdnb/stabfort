@@ -101,7 +101,7 @@ $(function(){
 		scrollbars: 'custom',
 		scrollX: true,
 		scrollY: false,
-		snap: '.product-gallery-figure'
+		preventDefaultException: { className: /(^|\s)product-gallery-img(\s|$)/ }
 	});
 
 	productGalleryWrapper.on('touchmove', function (e) {
