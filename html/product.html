@@ -65,7 +65,6 @@
             <aside class="fixed-menu">
                 <nav class="fixed-menu-nav">
                     <div class="fixed-menu-nav-cnt">
-                        <a href="#"><i class="icon md-arrow-back"></i> <span>Назад к фильтру</span></a><br><br>
                         <ul>
                             <li class="current-item-mobile">
                                 <div class="current">
@@ -78,6 +77,10 @@
                         </ul>
                         <div class="fixed-menu-nav-trigger"></div>
                     </div>
+                    <a href="#" class="back-link" title="Назад к фильтру">
+                        <i class="icon md-arrow-back"></i>
+                        <span class="text">Назад к фильтру</span>
+                    </a>
                 </nav>
             </aside>
         </div>
@@ -88,40 +91,55 @@
         <section class="section section-product" role="main">
             <div class="section-cnt">
                 <div class="product-header">
-                    <div class="product-header-left">
+                    <div class="product-header-left clearfix">
                         <h1 class="header-h1">Проект XTR 12345/09876</h1>
                     </div>
-                    <div class="product-header-right">
+                    <div class="product-header-right clearfix">
                         <div class="header-buttons">
-                            <span class="header-button-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
-                            <span class="header-button-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="header-button-call">
+                                <a href="#">
+                                    <i class="md-call icon"></i>
+                                    <span class="text">Заказать звонок</span>
+                                </a>
+                            </span>
+                            <span class="header-button-online">
+                                <a href="#">
+                                    <i class="md-chat icon"></i>
+                                    <span class="text">Специалист онлайн</span>
+                                </a>
+                            </span>
                         </div>
                         <div class="header-rating">
-                            <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                            <span class="stars">
+                                <i class="md-star"></i><i class="md-star"></i><i class="md-star"></i><i class="md-star-half"></i><i class="md-star-outline"></i>
+                            </span>
+                            <span class="count">
+                                <a href="#">20 отзывов</a>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="product-gallery-cnt">
                     <div class="product-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
-                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
-                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="product-gallery-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600" class="product-gallery-link">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="product-gallery-img">
                             </a>
                         </figure>
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
-                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
-                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="product-gallery-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600" class="product-gallery-link">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="product-gallery-img">
                             </a>
                             <!--<figcaption itemprop="caption description">Image caption</figcaption>-->
                         </figure>
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
-                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
-                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="product-gallery-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600" class="product-gallery-link">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="product-gallery-img">
                             </a>
                         </figure>
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item-doc-figure">
-                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600">
-                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="item-doc">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="product-gallery-figure">
+                            <a href="../img/example.jpg" itemprop="contentUrl" data-size="800x600" class="product-gallery-link">
+                                <img src="../img/example.jpg" itemprop="thumbnail" alt="Image description" class="product-gallery-img">
                             </a>
                         </figure>
                     </div>
