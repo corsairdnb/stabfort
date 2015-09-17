@@ -234,3 +234,39 @@
 		color: @color-grey-1;
 	}
 }
+
+.btn-switch {
+	display: block;
+	max-width: @vw-iphone;
+	margin: 0 auto;
+	padding: 5px 0;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 50px;
+	box-shadow: 0 1px 1px saturate(lighten(@color-blue-1, 20%), 20%) inset, 0 1px 1px darken(@color-blue-1, 15%);
+	.icon {
+		font-size: 1.5em;
+		vertical-align: top;
+	}
+	&, &:link, &:visited, &:hover {
+		background-color: @color-blue-1;
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover {
+		background-color: darken(@color-blue-1, 15%);
+	}
+	.less {
+		display: none;
+	}
+	&.opened {
+		.more {
+			display: none;
+		}
+		.less {
+			display: inline;
+		}
+	}
+}

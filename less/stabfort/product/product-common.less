@@ -1,13 +1,13 @@
 .section-product {
-	padding: 20px 0 0;
+	//padding: 20px 0 0;
 	.product-header {
-		padding: 0 15px;
+		padding: 20px 0 10px;
 	}
 	.product-header-left {
-
+		padding: 0 15px;
 	}
 	.product-header-right {
-
+		padding: 0 15px;
 	}
 	.header-h1 {
 		display: inline-block;
@@ -24,18 +24,20 @@
 	.header-rating {
 		float: left;
 		width: 65%;
+		padding: 5px 0 0;
 		text-align: left;
+		white-space: nowrap;
 		.stars {
 			display: inline-block;
 			vertical-align: top;
 			color: @color-orange-1;
-			font-size: 16px;
+			font-size: 18px;
 		}
 		.count {
 			display: inline-block;
 			vertical-align: top;
-			margin: 0 0 0 5px;
-			font-size: 13px;
+			margin: 0 0 0 3px;
+			font-size: 14px;
 			> a {
 				&, &:visited, &:hover {
 					color: @color-grey-2;
@@ -67,10 +69,15 @@
 		}*/
 		.icon {
 			background: @color-blue-1;
-			font-size: 16px;
+			font-size: 20px;
 			border-radius: 50%;
 			padding: 6px;
 			color: #fff;
+		}
+		&:hover {
+			.icon {
+				background: darken(@color-blue-1, 10%);
+			}
 		}
 		.text {
 			display: none;
@@ -80,12 +87,13 @@
 	.header-button-online {}
 	.product-gallery-cnt {
 		width: 100%;
+		height: 88px;
 		overflow: hidden;
 		position: relative;
-		margin: 10px 0 40px;
-		padding: 0 0 7px;
-		background: @color-grey-3;
-		box-shadow: 0 0 5px rgba(0,0,0,.1) inset;
+		margin: 0 0 40px;
+		//padding: 0 0 6px;
+		background: #fff;
+		//box-shadow: 0 0 5px rgba(0,0,0,.2) inset;
 	}
 	.product-gallery {
 		width: 100%;
@@ -94,23 +102,42 @@
 		transform: translateZ(0);
 		user-select: none;
 		z-index: 1;
+		font-size: 0;
+		text-align: center;
 	}
 	.product-gallery-figure {
-		display: block;
-		float: left;
-		width: 100px;
+		display: inline-block;
+		vertical-align: top;
+		width: 107px;
 		height: 100%;
 		margin: 0;
+		border-right: 2px solid #fff;
+		&:last-child {
+			border-right: 0 none;
+			//padding-right: 0;
+		}
 	}
-	.product-gallery-link {}
+	.product-gallery-link {
+		display: block;
+	}
 	.product-gallery-img {
 		display: block;
 		max-width: 100%;
+		height: auto;
+		object-fit: cover;
 		font-size: 0;
+		line-height: 0;
 	}
 
-	h3, .h3 {
-		font: 300 22px/1em @font-condensed;
+	h2, .h2 {
+		font: 400 23px/1em @font-condensed;
 		text-transform: uppercase;
+	}
+	h3, .h3 {
+		font: 400 20px/1em @font-condensed;
+		text-transform: uppercase;
+	}
+	.product-price-cnt {
+		margin: 50px 0;
 	}
 }

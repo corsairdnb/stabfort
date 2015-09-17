@@ -74,10 +74,10 @@ $(function(){
 		window.scrollTo(0, 0);
 	});
 
-	$('.service-content-more-btn').on('click', function(e){
+	$('.product-main-content-more-btn').on('click', function(e){
 		e.preventDefault();
 		$(this).toggleClass('opened');
-		$('.service-content-detail').toggle();
+		$('.product-main-content-detail').toggle();
 	});
 
 	initPhotoSwipeFromDOM('.product-gallery');
@@ -89,10 +89,10 @@ $(function(){
 	});
 
 
-	$('.product-gallery').width((function(){
+	$('.product-gallery').css('min-width', (function(){
 		var width = 0;
 		$('.product-gallery-figure').each(function(i,e){
-			width += parseInt($(e).width());
+			width += parseInt($(e).width()) + parseInt($(e).css('border-right-width'));
 		});
 		return width;
 	}()));
