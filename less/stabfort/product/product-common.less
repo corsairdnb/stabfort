@@ -124,7 +124,6 @@
 		font-size: 0;
 		line-height: 0;
 	}
-
 	h2, .h2 {
 		font: 400 23px/1em @font-condensed;
 		text-transform: uppercase;
@@ -136,4 +135,62 @@
 	.product-price-cnt {
 		margin: 50px 0;
 	}
+	.product-buttons-group {
+		padding: 0 15px 50px;
+		text-align: center;
+		.btn {
+			display: block;
+			margin: 10px auto;
+			max-width: @vw-iphone;
+			font-size: 16px;
+		}
+	}
 }
+
+@media (min-width: @vw-iphone-5-land) {
+	.section-product {
+		.header-h1 {
+			font-size: 32px;
+		}
+		h2, .h2 {
+			font-size: 28px;
+		}
+		h3, .h3 {
+			font-size: 24px;
+		}
+		.header-button-call,
+		.header-button-online {
+			.icon {
+				padding: 8px;
+				font-size: 26px;
+			}
+		}
+		.header-rating {
+			.stars {
+				font-size: 22px;
+			}
+			.count {
+				font-size: 16px;
+			}
+		}
+		.product-buttons-group {
+			.btn {
+				margin: 12px auto;
+				font-size: 18px;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-product {
+		.product-buttons-group {
+			.btn {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 15px 0 0;
+				font-size: 16px;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {}
