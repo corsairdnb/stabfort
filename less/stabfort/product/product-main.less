@@ -39,4 +39,34 @@
 		}
 	}
 }
-@media (min-width: @vw-tablet-lg) {}
+@media (min-width: @vw-tablet-lg) {
+	.product-main {
+		.product-main-header {
+			display: table;
+			width: 100%;
+			margin: 0;
+		}
+		.product-main-header-left,
+		.product-main-header-right {
+			display: table-cell;
+			vertical-align: top;
+		}
+		.product-main-header-left {
+			.h2 {
+				margin-top: 0;
+			}
+		}
+		.product-main-header-right {
+			width: 63%;
+			.annotation {
+				margin: 0;
+				padding: 0;
+				background: none;
+				box-shadow: none;
+				font-size: 13px;
+				line-height: 1.3em;
+				color: @color-grey-2;
+			}
+		}
+	}
+}

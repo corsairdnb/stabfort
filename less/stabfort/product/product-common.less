@@ -59,14 +59,6 @@
 		&:last-child {
 			margin-left: 5px;
 		}
-		/*a {
-			&, &:visited {
-				text-decoration: none;
-			}
-			&:hover {
-				text-decoration: underline;
-			}
-		}*/
 		.icon {
 			background: @color-blue-1;
 			font-size: 20px;
@@ -91,9 +83,7 @@
 		overflow: hidden;
 		position: relative;
 		margin: 0 0 40px;
-		//padding: 0 0 6px;
 		background: #fff;
-		//box-shadow: 0 0 5px rgba(0,0,0,.2) inset;
 	}
 	.product-gallery {
 		width: 100%;
@@ -193,4 +183,89 @@
 		}
 	}
 }
-@media (min-width: @vw-tablet-lg) {}
+@media (min-width: @vw-tablet-lg) {
+	.section-product {
+		.product-header {
+			display: table;
+			width: 100%;
+			margin: 0;
+			padding: 40px 40px 15px;
+		}
+		.product-header-left,
+		.product-header-right {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 0;
+		}
+		.product-header-left {
+			padding-right: 10px;
+		}
+		.product-header-right {
+			width: 45%;
+			text-align: right;
+		}
+		.header-rating,
+		.header-buttons {
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+			width: auto;
+			text-align: right;
+			padding: 0;
+		}
+		.header-rating {
+			margin-left: 15px;
+			.count {
+				display: none;
+			}
+		}
+		.header-buttons {
+			padding-top: 3px;
+		}
+		.header-button-call,
+		.header-button-online {
+			font: 16px/1em @font-condensed;
+			text-transform: uppercase;
+			color: @color-default;
+			&:last-child {
+				margin-left: 10px;
+			}
+			.icon {
+				background: none;
+				font-size: inherit;
+				border-radius: 0;
+				padding: 0;
+				color: inherit;
+				position: relative;
+				top: 1px;
+			}
+			&:hover {
+				color: #000;
+				.icon {
+					background: none;
+				}
+			}
+			.text {
+				display: inline-block;
+			}
+			a {
+				&:link, &:visited {
+					color: @color-default;
+					text-decoration: none;
+				}
+				&:hover {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+		.product-gallery-cnt {
+			width: 100%;
+			width: ~"calc(100% - 80px)";
+			margin: 0 auto 30px;
+		}
+		.product-gallery {
+			text-align: left;
+		}
+	}
+}
