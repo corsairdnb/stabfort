@@ -6,7 +6,7 @@
 	}
 	.product-param {
 		margin: 10px 0;
-		padding: 0 15px;
+		.padding-mobile();
 	}
 	.product-param-name {
 		display: inline-block;
@@ -37,7 +37,7 @@
 		margin-bottom: 0;
 	}
 	.product-params-more {
-		padding: 0 15px;
+		.padding-mobile();
 	}
 	.product-param-value-list {
 		margin: 0 0 20px;
@@ -47,6 +47,13 @@
 		margin: 0 0 0 35px;
 		padding: 0;
 	}
+	.product-params-right .text-block {
+		.padding-mobile();
+	}
+}
+
+.product-params-secondary {
+	.padding-mobile();
 }
 
 @media (min-width: @vw-iphone-5-land) {
@@ -59,7 +66,7 @@
 			display: table;
 			width: 100%;
 			margin: 0;
-			padding: 0 15px;
+			.padding-mobile();
 			&:nth-of-type(odd) {
 				background: @color-grey-3;
 			}
@@ -89,7 +96,7 @@
 @media (min-width: @vw-tablet-sm) {
 	.product-params {
 		.product-param {
-			padding: 0 30px;
+			.padding-tablet();
 		}
 		.product-params-more {
 			text-align: left;
@@ -98,15 +105,23 @@
 				padding: .4em 1.3em .35em 2.2em;
 			}
 		}
+		.product-params-right .text-block {
+			.padding-tablet();
+		}
+	}
+	.product-params-secondary {
+		.padding-tablet();
 	}
 }
 @media (min-width: @vw-tablet-lg) {
 	.product-params {
-		display: table;
-		width: 100%;
 		margin: 50px 0 0;
 		.product-param-group {
 			padding: 0 0 0 40px;
+		}
+		.product-params-cnt {
+			display: table;
+			width: 100%;
 		}
 		.product-params-left,
 		.product-params-right {
@@ -115,11 +130,17 @@
 			width: auto;
 		}
 		.product-params-left {
-
+			padding: 30px 0 15px;
+			background: @color-grey-5;
+			border-top: 2px solid @color-grey-3;
 		}
 		.product-params-right {
-			width: 40%;
+			width: 45%;
+			padding: 0 0 0 5%;
 			.product-param-group {
+				padding: 0;
+			}
+			.text-block {
 				padding: 0;
 			}
 		}
@@ -144,11 +165,16 @@
 		.product-param-value {
 			margin: 0 0 0 10px;
 		}
-		.text {
-			padding: 0;
-		}
 		.title {
 			margin: 0 0 1em;
+		}
+	}
+	.product-params-secondary {
+		.padding-tablet();
+		.product-params-more {
+			.btn {
+				margin: 0;
+			}
 		}
 	}
 }
