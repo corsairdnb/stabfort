@@ -130,9 +130,13 @@
 			width: auto;
 		}
 		.product-params-left {
-			padding: 30px 0 15px;
+			padding: 20px 25px 15px;
 			background: @color-grey-5;
-			border-top: 2px solid @color-grey-3;
+			box-shadow: 0 0 1px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.2);
+			border-radius: 5px;
+		}
+		.product-param-group {
+			padding: 0;
 		}
 		.product-params-right {
 			width: 45%;
@@ -145,8 +149,8 @@
 			}
 		}
 		.product-param {
-			display: block;
-			margin: 0 0 10px;
+			display: table;
+			margin: 0 0 12px;
 			padding: 0;
 			&:nth-of-type(odd), &:nth-of-type(even) {
 				background: none;
@@ -154,16 +158,22 @@
 		}
 		.product-param-name,
 		.product-param-value {
-			display: inline-block;
+			display: table-cell;
 			vertical-align: top;
 			padding: 0;
 		}
 		.product-param-name {
 			width: 38%;
 			min-width: 200px;
+			padding: 0 15px 0 0;
+			font-size: 16px;
+			line-height: 1.5em;
 		}
 		.product-param-value {
 			margin: 0 0 0 10px;
+			font-size: 16px;
+			line-height: 1.5em;
+			font-weight: 400;
 		}
 		.title {
 			margin: 0 0 1em;
@@ -175,6 +185,38 @@
 			.btn {
 				margin: 0;
 			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.product-params {}
+	.product-params-secondary {
+		margin: 50px 0;
+		padding: 0;
+		.product-params-cnt {
+			display: table;
+			width: 100%;
+		}
+		.product-params-left {
+			//width: 50%;
+			display: table-cell;
+			vertical-align: top;
+		}
+		.product-params-right {
+			width: 60%;
+			display: table-cell;
+			vertical-align: top;
+			padding-left: 50px;
+			.text-block {
+				font-size: 80%;
+				color: @color-grey-1;
+			}
+		}
+		.product-param-value-list {
+			margin: 0;
+		}
+		.product-params-more {
+			margin: 20px 0 0;
 		}
 	}
 }

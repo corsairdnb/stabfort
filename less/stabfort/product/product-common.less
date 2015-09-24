@@ -6,10 +6,6 @@
 	padding-left: 30px;
 	padding-right: 30px;
 }
-.padding-desktop() {
-	padding-left: 0;
-	padding-right: 0;
-}
 
 .section-product {
 	//padding: 20px 0 0;
@@ -298,6 +294,34 @@
 			width: 100%;
 			width: ~"calc(100% - 60px)";
 			margin-bottom: 50px;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-product {
+		.product-header {
+			padding: 35px 0 20px;
+		}
+		.header-h1 {
+			margin: 0;
+			font-size: 42px;
+			font-weight: 300;
+		}
+		.product-header-left {
+			padding-right: 20px;
+		}
+		.header-button-call,
+		.header-button-online {
+
+		}
+		.product-gallery-cnt {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		.header-rating {
+			.stars {
+				font-size: 18px;
+			}
 		}
 	}
 }

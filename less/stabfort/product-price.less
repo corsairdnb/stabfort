@@ -271,3 +271,39 @@
 		}
 	}
 }
+@media (min-width: @vw-laptop-sm) {
+	.product-price {
+		.product-price-sort {
+			padding: 0;
+		}
+		.product-price-lists {
+			margin: 20px 0 0;
+			padding: 0;
+		}
+		.product-price-list {
+			display: inline-block;
+			padding-top: 15px;
+			padding-bottom: 10px;
+			&:hover {
+				background: #fff;
+				box-shadow: 0 0 1px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.2);
+				border-radius: 5px;
+			}
+			&:nth-of-type(odd) {
+				padding-left: 20px;
+				margin-left: -20px;
+			}
+			&:nth-of-type(even) {
+				padding-left: 20px;
+				padding-right: 15px;
+				margin-right: -15px;
+			}
+		}
+	}
+	.product-price-left,
+	.product-price-right {
+		.text-block {
+			padding: 0;
+		}
+	}
+}

@@ -229,6 +229,46 @@
 				}
 			}
 		}
+		.back-link {
+			display: block;
+			position: relative;
+			left: auto;
+			bottom: auto;
+			margin: 10px 0 0 14px;
+			.icon {
+				background: none;
+				font-size: 24px;
+				border-radius: 0;
+				padding: 0;
+				box-shadow: none;
+				opacity: 1;
+				vertical-align: top;
+				color: lighten(@color-blue-1, 20%);
+				transition: color .2s;
+			}
+			.text {
+				display: inline-block;
+				margin: 0 0 0 2px;
+				padding: 2px 0;
+				border-bottom: 1px solid transparent;
+				vertical-align: top;
+				font-size: 18px;
+				line-height: 1em;
+				transition: border .2s;
+			}
+			&:link, &:visited, &:hover {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				.icon {
+					color: @color-blue-1;
+				}
+				.text {
+					border-bottom-color: lighten(@color-blue-1, 28%);
+				}
+			}
+		}
 	}
 	.fixed-menu-nav-trigger {
 		display: none;
