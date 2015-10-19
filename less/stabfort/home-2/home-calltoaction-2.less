@@ -1,0 +1,59 @@
+.home-calltoaction-2 {
+	display: none;
+	background: url(../img/cityscape_bg.jpg) no-repeat center -50px;
+	background-size: auto 428px;
+	position: relative;
+	padding: 0;
+	color: @color-green-1;
+	border-bottom: 5px solid #fff;
+	.section-cnt {
+		max-width: 660px;
+		margin: 0 auto;
+		padding: 60px 0;
+		position: relative;
+		z-index: 1;
+	}
+	.btn {
+		.flat-button(@color-green-1, 25px);
+		display: inline-block;
+		width: 46%;
+		margin: 0 0 0 20px;
+		padding: 20px 0;
+		font-weight: 500;
+		text-shadow: none;
+		text-transform: uppercase;
+	}
+	.icon {
+		float: left;
+		width: 180px;
+		font-size: 170px;
+	}
+	.line-1 {
+		margin: 0;
+		padding: 28px 0 0;
+		font-size: 29px;
+		line-height: .8em;
+	}
+	.line-2 {
+		margin: 0;
+		font-size: 66px;
+		font-weight: 500;
+		line-height: .8em;
+	}
+	.line-3 {
+		margin: 0;
+		font-size: 29px;
+		line-height: 1.7em;
+	}
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.home-calltoaction-2 {
+		display: block;
+	}
+}
+@media (min-width: @vw-desktop-md) {
+	.home-calltoaction-2 {
+		background-size: 100% auto;
+	}
+}
