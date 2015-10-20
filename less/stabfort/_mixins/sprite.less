@@ -1,0 +1,30 @@
+@import "../_sprites/services.png.less";
+
+.spriteImage(@icon) {
+	@root: @img;
+	@file: extract(@icon, 5);
+	@url: "@{root}@{file}";
+	background-image: url(@url);
+}
+.spritePosition(@icon) {
+	@x: extract(@icon, 1);
+	@y: extract(@icon, 2);
+	background-position: @x @y;
+}
+.spriteWidth(@icon) {
+	@width: extract(@icon, 3);
+	width: @width;
+}
+.spriteHeight(@icon) {
+	@height: extract(@icon, 4);
+	height: @height;
+}
+.sprite {
+	background-repeat: no-repeat;
+}
+.sprite(@icon) {
+	.spriteImage(@icon);
+	.spritePosition(@icon);
+	.spriteWidth(@icon);
+	.spriteHeight(@icon);
+}
