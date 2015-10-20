@@ -1,7 +1,7 @@
 @import "../_sprites/services.png.less";
 
 .spriteImage(@icon) {
-	@root: @img;
+	@root: "@{img}sprites/";
 	@file: extract(@icon, 5);
 	@url: "@{root}@{file}";
 	background-image: url(@url);
@@ -18,9 +18,6 @@
 .spriteHeight(@icon) {
 	@height: extract(@icon, 4);
 	height: @height;
-}
-.sprite {
-	background-repeat: no-repeat;
 }
 .sprite(@icon) {
 	.spriteImage(@icon);
