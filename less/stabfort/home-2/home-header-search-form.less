@@ -42,6 +42,9 @@
 			vertical-align: middle;
 		}
 	}
+	.search-hint {
+		display: none;
+	}
 }
 
 @media (min-width: @vw-iphone-5-land) {
@@ -102,6 +105,15 @@
 		.location-input .dropdown-toggle {
 			background: @color-grey-5 !important;
 		}
+		.search-hint {
+			display: block;
+			margin: 0 20px;
+			padding: 0 5%;
+			font-size: 16px;
+			line-height: 1em;
+			color: @color-grey-1;
+			text-align: center;
+		}
 	}
 }
 @media (min-width: @vw-tablet-sm) {
@@ -140,6 +152,12 @@
 					border-top-color: @color-grey-1;
 				}
 			}
+		}
+		.search-hint {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 0;
+			text-align: left;
 		}
 	}
 }
