@@ -1,0 +1,55 @@
+.breadcrumbs-level-2 {
+	//display: none;
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.breadcrumbs-level-1 {
+		> li:hover {
+			.breadcrumbs-level-2 {
+				//display: block;
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+	.breadcrumbs-level-2 {
+		//display: none;
+		min-width: 275px;
+		max-width: 400px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: 0;
+		top: @breadcrumbs-height;
+		z-index: 10;
+		opacity: 0;
+		transform: translateY(-800px);
+		transition: transform .4s, opacity .6s;
+		border-top: 1px solid @color-grey-3;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		> li {
+			display: block;
+			padding: 0;
+			margin: 0;
+			background: @color-grey-5;
+			border: 1px solid @color-grey-3;
+			border-top: 0 none;
+			> a, > span {
+				display: block;
+				padding: 6px 10px 6px 15px;
+				font-size: 13px;
+				line-height: 1.3em;
+				white-space: normal;
+			}
+			> a {
+				&:link, &:visited, &:hover {
+					color: @color-blue-1;
+					text-decoration: none;
+				}
+				&:hover {
+					color: @color-red-2;
+				}
+			}
+		}
+	}
+}

@@ -9,7 +9,7 @@
 	overflow: hidden;
 	text-align: center;
 	z-index: 1005;
-	ul {
+	.breadcrumbs-level-1 {
 		display: none;
 	}
 }
@@ -75,32 +75,55 @@
 		left: 0;
 		top: 0;
 		text-align: left !important;
-		ul {
+		overflow: visible;
+		.breadcrumbs-level-1 {
 			display: inline-block;
+			width: 1075px;
+			height: @breadcrumbs-height;
 			margin: 0;
 			padding: 0;
-			overflow: hidden;
+			position: relative;
+			overflow: visible;
 			vertical-align: top;
-			li {
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 300px;
+				height: 100%;
+				background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 100px, #fff);
+				z-index: 30;
+			}
+			> li {
 				display: inline-block;
+				height: 100%;
 				margin: 0 0 0 10px;
-				a, span {
+				position: relative;
+				> a, > span {
 					display: inline-block;
+					height: 100%;
 					padding: 12px 0 0 15px;
 					vertical-align: top;
 					position: relative;
+					z-index: 20;
 					&:before {
 						.arrow-before(5px, currentColor, left);
 						left: 0;
-						margin-top: 0;
 					}
-					&, &:link, &:visited, &:hover {
+				}
+				> a {
+					&:link, &:visited, &:hover {
 						color: @color-blue-1;
 						text-decoration: none;
 					}
 					&:hover {
-						color: @color-blue-2;
+						color: @color-red-2;
 					}
+				}
+				> span {
+					color: @color-grey-2;
 				}
 			}
 		}
@@ -128,6 +151,7 @@
 	}
 	.breadcrumbs-cnt {
 		white-space: nowrap;
-		overflow: hidden;
 	}
 }
+
+@import './breadcrumbs-level-2.less';
