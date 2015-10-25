@@ -8,27 +8,7 @@
 			display: block;
 		}
 		.link {
-			background: lighten(@color-blue-1, 38%);
-			margin: 0 0 0 8px;
-			padding: 0 15px 1px 5px;
-			vertical-align: top;
-			font-size: 16px;
-			text-transform: none;
-			font-weight: 400;
-			position: relative;
-			&, &:link, &:visited {
-				color: @color-blue-1;
-				text-decoration: none;
-			}
-			&:hover {
-				background: @color-blue-1;
-				color: #fff;
-				text-decoration: none;
-			}
-			&:after {
-				content: "";
-				.arrow-after(4px, currentColor, left);
-			}
+			.btn-more-arrow();
 		}
 	}
 	.items {
@@ -120,6 +100,7 @@
 		.title {
 			.title-text {
 				display: inline;
+				vertical-align: middle;
 			}
 		}
 		.widget-providers-item {

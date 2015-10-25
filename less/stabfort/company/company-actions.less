@@ -8,27 +8,7 @@
 			display: block;
 		}
 		.link {
-			background: lighten(@color-blue-1, 38%);
-			margin: 0 0 0 8px;
-			padding: 0 15px 1px 5px;
-			vertical-align: top;
-			font-size: 16px;
-			text-transform: none;
-			font-weight: 400;
-			position: relative;
-			&, &:link, &:visited {
-				color: @color-blue-1;
-				text-decoration: none;
-			}
-			&:hover {
-				background: @color-blue-1;
-				color: #fff;
-				text-decoration: none;
-			}
-			&:after {
-				content: "";
-				.arrow-after(4px, currentColor, left);
-			}
+			.btn-more-arrow();
 		}
 	}
 	.items {
@@ -116,6 +96,7 @@
 		.title {
 			.title-text {
 				display: inline;
+				vertical-align: middle;
 			}
 		}
 	}
@@ -138,7 +119,7 @@
 	.section-company-actions {
 		.item {
 			margin: 30px 1%;
-			max-width: 31.333%;
+			width: 31.333%;
 			box-shadow: 0 -2px 18px rgba(0, 0, 0, 0.12);
 			border-radius: 20px;
 			transition: all .2s;

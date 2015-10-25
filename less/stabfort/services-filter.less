@@ -180,7 +180,15 @@
 	}
 }
 @media (min-width: @vw-laptop-sm) {
+	.services-filter {
+		padding-right: 0;
+	}
 	.services-filter-location-current {
 		max-width: 500px;
+	}
+	.services-filter-location {
+		+ .services-filter-type {
+			margin-left: -140px;
+		}
 	}
 }
