@@ -1,19 +1,18 @@
 .breadcrumbs-level-2 {
-	//display: none;
+	display: none;
 }
 
 @media (min-width: @vw-laptop-sm) {
 	.breadcrumbs-level-1 {
 		> li:hover {
 			.breadcrumbs-level-2 {
-				//display: block;
 				transform: translateY(0);
 				opacity: 1;
 			}
 		}
 	}
 	.breadcrumbs-level-2 {
-		//display: none;
+		display: block;
 		min-width: 275px;
 		max-width: 400px;
 		margin: 0;
@@ -23,8 +22,8 @@
 		top: @breadcrumbs-height;
 		z-index: 10;
 		opacity: 0;
-		transform: translateY(-800px);
-		transition: transform .4s, opacity .6s;
+		transform: translateY(-2000px);
+		transition: opacity .3s;
 		border-top: 1px solid @color-grey-3;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 		> li {
