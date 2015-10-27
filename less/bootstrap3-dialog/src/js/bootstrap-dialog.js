@@ -325,8 +325,8 @@
          * Will be removed in later version, after Bootstrap Modal >= 3.3.0, updating z-index is unnecessary.
          */
         updateZIndex: function () {
-            var zIndexBackdrop = 1040;
-            var zIndexModal = 1050;
+            var zIndexBackdrop = 4490;
+            var zIndexModal = 5000;
             var dialogCount = 0;
             $.each(BootstrapDialog.dialogs, function (dialogId, dialogInstance) {
                 dialogCount++;
