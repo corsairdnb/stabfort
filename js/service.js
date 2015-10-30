@@ -74,7 +74,7 @@ $(function(){
 		//$('.services-popup').toggle();
 		//window.scrollTo(0, 0);
 
-		dialogWindow('.services-popup');
+		dialogWindow('.services-dialog-content');
 	});
 
 	$('.service-content-more-btn').on('click', function(e){

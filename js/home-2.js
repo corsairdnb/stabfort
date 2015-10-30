@@ -17,13 +17,13 @@ $(function(){
 		$('.search-output-item').tooltip('hide');
 	});
 
-	/*$('#trigger-level-2').on('click', function(e){
+	$('#trigger-level-2').on('click', function(e){
 		e.preventDefault();
 		e.stopPropagation();
 		$('.services-list').addClass('level-2-active');
 		$('.services-list-level-2').addClass('active');
 		$('.level-1-overlay').show();
-	});*/
+	});
 	$('.services-list-level-1, .services-list-level-2-back, .services-list-level-2-close').on('click', function(){
 		$('.services-list').removeClass('level-2-active level-3-active');
 		$('.services-list-level-2').removeClass('active');
@@ -146,30 +146,6 @@ $(function(){
 			trigger: 'click'
 		});
 
-	var dialog = new BootstrapDialog({
-		message: function(dialogRef){
-			var $message = $('<div>OK, this dialog has no header and footer, but you can close the dialog using this button: </div>');
-			var $button = $('<button class="btn btn-primary btn-lg btn-block">Close the dialog</button>');
-			$button.on('click', {dialogRef: dialogRef}, function(event){
-				event.data.dialogRef.close();
-			});
-			$message.append($button);
 
-			return $message;
-		},
-		//closable: false,
-		cssClass: 'services-dialog',
-		description: 'This is a Bootstrap Dialog'
-	});
-	dialog.realize();
-	dialog.getModalHeader().hide();
-	dialog.getModalFooter().hide();
-	//dialog.getModalBody().css('background-color', '#0088cc');
-	//dialog.getModalBody().css('color', '#fff');
-
-
-	$('#trigger-level-2').on('click', function(){
-		dialog.open();
-	});
 
 });
