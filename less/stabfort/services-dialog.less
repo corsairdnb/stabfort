@@ -1,11 +1,18 @@
+.services-dialog-content {
+	display: none;
+}
+
 .services-dialog {
+
+	.services-dialog-content {
+		display: block;
+	}
 
 	.modal-dialog {}
 
 	.modal-body {
 		padding: 0;
 	}
-
 	.modal-header,
 	.modal-content {
 		border-radius: 0;
@@ -30,12 +37,23 @@
 	//		opacity: 1;
 	//	}
 	//}
+
+	.services-list {
+		margin: 0;
+	}
 }
 
+@media (max-width: @vw-iphone-land) {
+	.services-dialog {
+		.modal-dialog {
+			margin: 0;
+		}
+	}
+}
 @media (min-width: @vw-laptop-sm) {
 	.services-dialog {
 		.modal-dialog {
-			width: 1200px;
+			width: 1260px;
 		}
 	}
 }
