@@ -69,10 +69,12 @@ $(function(){
 		$('.fixed-menu-nav').removeClass('opened');
 	});
 
-	$('.breadcrumbs-open-services, .services-popup-less').on('click', function(){
+	$('.breadcrumbs-open-services').on('click', function(){
 		$('.breadcrumbs-open-services').toggleClass('active');
-		$('.services-popup').toggle();
-		window.scrollTo(0, 0);
+		//$('.services-popup').toggle();
+		//window.scrollTo(0, 0);
+
+		dialogWindow('.services-dialog-content');
 	});
 
 	$('.service-content-more-btn').on('click', function(e){

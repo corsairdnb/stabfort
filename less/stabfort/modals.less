@@ -7,7 +7,9 @@
 .modal-backdrop {
 	z-index: @zindex-modal-background;
 	background-color: #000;
-	&.in { .opacity(.9); }
+	&.in {
+		.opacity(.9) !important;
+	}
 }
 .modal-close-btn {
 	display: none;
