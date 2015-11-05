@@ -1332,8 +1332,8 @@
 </footer>
 
 <div class="services-dialog-content">
-    <div class="services-filter clearfix" style="display: none;">
-        <div class="services-filter-location">
+    <div class="services-filter clearfix">
+        <div class="services-filter-location" style="display: none;">
             <div class="services-filter-location-current" data-toggle="modal" data-target="#exampleModal">Петропавловск-камчатский</div>
             <select class="services-filter-location-select">
                 <option>1</option>
@@ -1341,7 +1341,7 @@
                 <option>3</option>
             </select>
         </div>
-        <div class="services-filter-type">
+        <div class="services-filter-type" style="display: none;">
             <ul class="services-filter-type-list">
                 <li class="active"><a href="#">Все услуги</a></li>
                 <li><a href="#">Для юридических лиц</a></li>
@@ -1356,10 +1356,25 @@
         </div>
         <div class="services-filter-search">
             <form action="/" class="services-search">
-                <label>
-                    <i class="md-search icon"></i>
-                    <input type="search" placeholder="Поиск услуг" class="input">
-                </label>
+                <div class="form-group">
+                    <span class="text-input-wrapper">
+                        <!--<i class="md-search icon"></i>-->
+                        <input type="search" class="text-input form-control" placeholder="Я ищу..." autocomplete="off" spellcheck="false">
+                    </span>
+                    <span class="location-input-wrapper">
+                        <select class="location-input form-control custom-select" name="location">
+                            <option>Кабардино-Балкарская Республика</option>
+                            <option>Санкт-Петербург и Ленинградская область</option>
+                            <option>Москва</option>
+                            <option>Нижний Новгород</option>
+                            <option>Екатерибург</option>
+                            <option>Казань</option>
+                        </select>
+                    </span>
+                </div>
+                <!--<label class="input-label">
+                    <input type="search" placeholder="Поиск услуг..." class="input">
+                </label>-->
             </form>
         </div>
     </div>
@@ -1633,6 +1648,7 @@
                     </div>
                 </div>
             </div>
+            <div class="btn btn-close md-close" data-dismiss="modal" title="Закрыть"></div>
         </div><!--.services-list-->
         <div class="services-list level-2 clearfix" style="display: none;">
             <div class="tiles">
@@ -1944,6 +1960,12 @@
 <script src="../less/peppermint/dist/peppermint.js"></script>
 <script src="../less/bootstrap3-dialog/src/js/bootstrap-dialog.js"></script>
 <script src="../js/components/dialog.js"></script>
+
+<script src="../less/bootstrap/js/dropdown.js"></script>
+<script src="../less/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="../less/bootstrap-select/dist/js/i18n/defaults-ru_RU.min.js"></script>
+<script src="../js/components/custom-controls.js"></script>
+
 <script src="../js/service.js"></script>
 <script src="../js/components/fixed-menu.js"></script>
 <script src="../less/bootstrap/js/transition.js"></script>
