@@ -44,12 +44,12 @@
 		}
 		.tile-header-link {
 			position: relative;
-			border-bottom: 1px dashed @color-blue-1;
+			border-bottom: 1px solid @color-blue-1;
 			font-size: 17px;
 			font-weight: 700;
 			white-space: nowrap;
 			&:after {
-				.arrow-after(6px, @color-blue-1, top);
+				.arrow-after(6px, currentColor, top);
 				margin-top: -1px;
 			}
 			&, &:link, &:visited {
@@ -57,23 +57,11 @@
 				text-decoration: none;
 			}
 			&:hover {
-				border-bottom-color: transparent;
-				color: @color-blue-1;
+				border-bottom-color: @color-red-2;
+				color: @color-red-2;
 				text-decoration: none;
 			}
 		}
-
-		//.tile:hover {
-		//	.tile-header-link {
-		//		border-bottom-color: transparent;
-		//		color: @color-blue-1;
-		//		text-decoration: none;
-		//		&:hover {
-		//			text-decoration: underline;
-		//		}
-		//	}
-		//}
-
 		.tile-body {}
 		.tile-list-item {
 			margin: @tile-list-item-margin;
@@ -86,19 +74,16 @@
 			font-size: 18px;
 			line-height: 1.2em;
 			&, &:link, &:visited {
-				color: @color-blue-1;
+				color: #fff;
 				text-decoration: none;
 			}
 			&:hover {
-				color: @color-blue-1;
-				text-decoration: underline;
+				color: @color-red-2;
+				text-decoration: none;
 			}
 		}
 	}
 }
-
-//@import "services-dialog-list-level-2.less";
-//@import "services-dialog-list-level-3.less";
 
 @media (min-width: @vw-iphone-5-land) {
 	.services-dialog {
@@ -200,6 +185,7 @@
 			width: @container-width;
 			.tile {
 				width: floor(@container-width/4);
+				transition: background-color .3s;
 				&:nth-of-type(2n+3) {
 					clear: none;
 				}
@@ -208,6 +194,9 @@
 				}
 				&:nth-of-type(4n+5) {
 					clear: both;
+				}
+				&:hover {
+					background-color: #383838;
 				}
 			}
 			.tile-list-item {

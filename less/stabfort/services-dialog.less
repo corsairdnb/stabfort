@@ -1,17 +1,14 @@
 .services-dialog-content {
 	display: none;
 }
-
 .services-dialog-wrapper {
 	padding: 20px 0;
 }
 
 .services-dialog {
-
 	.services-dialog-content {
 		display: block;
 	}
-
 	.modal-dialog {}
 
 	.modal-body {
@@ -19,31 +16,35 @@
 	}
 	.modal-header,
 	.modal-content {
-		border-radius: 0;
+		border: 0 none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
 	}
-	//.bootstrap-dialog-title {
-	//	color: #fff;
-	//	display: inline-block;
-	//	font-size: 16px;
-	//}
+	&.services-dialog-level-1 {
+		.modal-content {
+			background: none !important;
+		}
+	}
 	.bootstrap-dialog-message {
 		font-size: 16px;
 	}
-	//.bootstrap-dialog-button-icon {
-	//	margin-right: 3px;
-	//}
-	//.bootstrap-dialog-close-button {
-	//	font-size: 20px;
-	//	float: right;
-	//	opacity: 0.9;
-	//	&:hover {
-	//		cursor: pointer;
-	//		opacity: 1;
-	//	}
-	//}
-
 	.services-list {
 		margin: 0;
+	}
+	.btn-close {
+		position: absolute;
+		right: -45px;
+		top: 0;
+		padding: 0;
+		font-size: 34px;
+		color: #fff;
+		transition: transform .4s;
+		border: 0 none !important;
+		background: none !important;
+		box-shadow: none !important;
+		&:hover {
+			transform: rotate(90deg);
+		}
 	}
 }
 

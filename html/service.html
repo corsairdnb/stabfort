@@ -1357,14 +1357,21 @@
         <div class="services-filter-search">
             <form action="/" class="services-search">
                 <div class="form-group">
-                    <span class="text-input-wrapper">
+                    <span class="type-input-wrapper">
+                        <select class="type-input form-control custom-select" name="type">
+                            <option>Все услуги</option>
+                            <option>Для физ. лиц</option>
+                            <option>Для юр. лиц</option>
+                        </select>
                         <!--<i class="md-search icon"></i>-->
+                    </span>
+                    <span class="text-input-wrapper">
                         <input type="search" class="text-input form-control" placeholder="Я ищу..." autocomplete="off" spellcheck="false">
                     </span>
                     <span class="location-input-wrapper">
                         <select class="location-input form-control custom-select" name="location">
-                            <option>Кабардино-Балкарская Республика</option>
                             <option>Санкт-Петербург и Ленинградская область</option>
+                            <option>Кабардино-Балкарская Республика</option>
                             <option>Москва</option>
                             <option>Нижний Новгород</option>
                             <option>Екатерибург</option>
@@ -1382,7 +1389,7 @@
         <div class="services-list level-1 clearfix">
             <div class="level-1-overlay"></div>
             <div class="tiles">
-                <div class="tile tile--registry" id="trigger-level-2">
+                <div class="tile" id="trigger-level-2">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1405,7 +1412,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--advertise">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Рекламные услуги</a>
                     </div>
@@ -1427,7 +1434,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--polygraphy">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Полиграфические услуги</a>
                     </div>
@@ -1449,7 +1456,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--finance">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Финансовые услуги</a>
                     </div>
@@ -1471,7 +1478,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--engineer">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Инженерные услуги</a>
                     </div>
@@ -1493,7 +1500,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--construction">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Строительные услуги</a>
                     </div>
@@ -1515,7 +1522,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--country">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Загородное строительство</a>
                     </div>
@@ -1537,7 +1544,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--expertise">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Экспертизы</a>
                     </div>
@@ -1559,7 +1566,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--car">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Автоуслуги</a>
                     </div>
@@ -1581,7 +1588,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--transport">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Транспортные услуги</a>
                     </div>
@@ -1603,7 +1610,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--car-repair">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Ремонт автотранспорта</a>
                     </div>
@@ -1625,7 +1632,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tile tile--insurance">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Страхование</a>
                     </div>
@@ -1652,7 +1659,7 @@
         </div><!--.services-list-->
         <div class="services-list level-2 clearfix" style="display: none;">
             <div class="tiles">
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1675,7 +1682,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1698,7 +1705,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1721,7 +1728,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1744,7 +1751,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1767,7 +1774,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>
@@ -1790,7 +1797,7 @@
                     </div>
                     <div class="tile-second-level-trigger"></div>
                 </div>
-                <div class="tile tile--registry">
+                <div class="tile">
                     <div class="tile-header">
                         <a href="#" class="tile-header-link">Регистрационные услуги</a>
                     </div>

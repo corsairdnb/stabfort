@@ -67,8 +67,9 @@ $(function(){
 		//$('.services-popup').toggle();
 		//window.scrollTo(0, 0);
 		dialog = dialogWindow($('.services-dialog-content').clone(), {
-			onshown: function(){
+			onshown: function(dialogRef){
 				$('.breadcrumbs-open-services').toggleClass('active');
+				dialogRef.$modalContent.find('.text-input').trigger('focus');
 			},
 			onhidden: function(){
 				$('.breadcrumbs-open-services').toggleClass('active');
