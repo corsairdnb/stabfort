@@ -5,27 +5,18 @@
 	}
 
 	.form-group {
-		display: table;
-		width: 100%;
 		background: #fff;
-		background: linear-gradient(to top, @color-grey-3, #fff);
-		box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-		border-bottom: 1px solid #fff;
-		border-radius: 5px;
 	}
 	.text-input-wrapper,
 	.location-input-wrapper,
 	.type-input-wrapper {
-		display: table-cell !important;
-		vertical-align: middle;
+		min-width: 120px;
 	}
 	.text-input-wrapper {
-		min-width: 150px;
+
 	}
 	.location-input-wrapper {
-		min-width: 120px;
-		max-width: 210px;
-		padding: 17px 17px 0 17px;
+
 	}
 	.type-input-wrapper {
 
@@ -47,9 +38,10 @@
 			-webkit-appearance: none;
 			border-radius: 0;
 			transition: all .3s;
-			font-size: 32px;
+			font-size: 20px;
 			font-family: @font-default;
 			color: @color-default;
+			text-align: center;
 			&::placeholder {
 				color: @color-grey-2;
 				text-shadow: 0 2px 0 #fff;
@@ -76,6 +68,7 @@
 					font-size: 16px;
 					color: #fff;
 					text-align: center !important;
+					text-shadow: 0 1px 0 rgba(0,0,0,.3);
 				}
 				.caret {
 					border-width: 5px;
@@ -90,11 +83,57 @@
 			color: #fff;
 			background: @color-blue-1 !important;
 			border: 0 none !important;
-			border-radius: 5px 0 0 5px !important;
-			&:hover {
-				background: saturate(lighten(@color-blue-1, 5%), 20%) !important;
-				box-shadow: none !important;
+			border-radius: 0 !important;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.services-dialog {
+		.form-group {
+			display: table;
+			width: 100%;
+			background: #fff;
+			background: linear-gradient(to top, @color-grey-3, #fff);
+			box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+			border-bottom: 1px solid #000;
+			border-radius: 5px;
+		}
+		.text-input-wrapper,
+		.location-input-wrapper,
+		.type-input-wrapper {
+			display: table-cell !important;
+			vertical-align: middle;
+		}
+		.text-input-wrapper {
+			min-width: 150px;
+		}
+		.location-input-wrapper {
+			min-width: 120px;
+			max-width: 210px;
+			padding: 17px 17px 0 17px;
+		}
+
+		.services-filter-search {
+			.text-input {
+				font-size: 32px;
+				text-align: left;
 			}
+			.type-input,
+			.type-input .dropdown-toggle {
+				border-radius: 5px 0 0 5px !important;
+				&:hover {
+					background: saturate(lighten(@color-blue-1, 5%), 20%) !important;
+					box-shadow: none !important;
+				}
+			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.services-dialog {
+		.type-input-wrapper {
+			min-width: 0;
 		}
 	}
 }
