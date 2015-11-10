@@ -69,6 +69,7 @@ $(function(){
 			},
 			onhidden: function(){
 				$('.breadcrumbs-open-services').toggleClass('active');
+				$('body').removeClass('modal-dialog-open');
 			}
 		}, 'services-dialog services-dialog-level-1');
 

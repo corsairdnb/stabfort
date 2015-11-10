@@ -16,7 +16,10 @@ var DialogWindow = function(obj){
                 {
                     message: dialogObject.find('.services-dialog-wrapper'),
                     cssClass: modalClass,
-                    type: 'default'
+                    type: 'default',
+                    onshow: function(){
+                        $('body').addClass('modal-dialog-open');
+                    }
                 },
                 opts
             );
