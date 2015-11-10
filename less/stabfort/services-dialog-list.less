@@ -76,6 +76,20 @@
 				color: @color-red-2;
 				text-decoration: none;
 			}
+			&--more {
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				&, &:link, &:visited {
+					color: lighten(@color-default, 40%);
+				}
+				&:after {
+					content: "";
+					display: inline-block;
+					margin-left: 6px;
+					.arrow(4px, currentColor, left);
+				}
+			}
 		}
 		.level-header {
 			margin: 0 0 20px 15px;
@@ -173,6 +187,14 @@
 				.tile {
 					&:hover {
 						background-color: #F3F7F7;
+						.tile-list-link--more {
+							&, &:link, &:visited {
+								color: lighten(@color-default, 30%);
+							}
+							&:hover {
+								color: @color-red-2;
+							}
+						}
 					}
 				}
 			}
