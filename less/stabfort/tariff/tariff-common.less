@@ -3,7 +3,7 @@
 	background-size: 100% auto;
 }
 .footer {
-	background: darken(fade(#556567, 90%), 10%);
+	background: darken(fade(#556567, 90%), 10%) !important;
 }
 
 .section-tariff-common {
@@ -26,46 +26,14 @@
 	}
 }
 
-@media (min-width: @vw-iphone-5-land) {
-	.section-tariff-common {
-
-	}
-}
 @media (min-width: @vw-iphone-6p-land) {
 	.section-tariff-common {
 		.block {
-			display: table;
-			padding: 0;
+			padding: 0 20px;
 			text-align: left;
 		}
 		.h1 {
-			display: table-cell;
-			vertical-align: middle;
-			padding: 0 1em 0 .5em;
-			font-size: 50px;
-			line-height: 1em;
-			font-weight: 300;
-		}
-		.brief {
-			display: table-cell;
-			vertical-align: middle;
-			max-width: 700px;
-			padding: 5px 15px 0 0;
-			font-size: 15px;
-		}
-	}
-}
-@media (min-width: @vw-tablet-sm) {
-	.section-tariff-common {
-		.block {
-
-		}
-		.h1 {
-			padding: 0 .5em;
-		}
-		.brief {
-			padding: 10px 15px 0;
-			font-size: 17px;
+			font-size: 45px;
 		}
 	}
 }
@@ -94,6 +62,7 @@
 		}
 		.brief {
 			font-size: 18px;
+			padding: 0 2% 0 0;
 		}
 	}
 }
