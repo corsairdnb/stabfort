@@ -1,57 +1,32 @@
 @media (min-width: @vw-laptop-sm) {
-	@tile-height: 150px;
+	@tile-height: 90px;
 
 	.section-categories {
 		.categories-list {
 			font-size: 0;
-			//background: @color-grey-5;
-			//box-shadow: 0 1px 3px rgba(0,0,0,.3);
-			//border-radius: 3px;
 		}
 		.category {
 			display: table;
 			float: left;
 			position: relative;
 			width: 25%;
-			//width: ~"calc(25% - 20px)";
 			height: @tile-height;
-			//margin: 10px;
-			//border: 1px solid @color-grey-4;
-			//background: #fff;
-
-			border-bottom: 1px solid @color-grey-2;
-			&:hover {
-				background: @color-grey-3;
-			}
-
-			/*&:before, &:after {
-				content: '';
-				display: none;
-				position: absolute;
-				background: @color-grey-3;
-			}
 			&:before {
-				width: 50px;
-				height: 1px;
-			}
-			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 15%;
 				width: 1px;
-				height: 50px;
+				height: 70%;
+				background: @color-grey-2;
+				transition: background .2s;
 			}
-			&:first-child {
-				&:before, &:after {
-					display: block;
-					left: 0;
-					top: 0;
+			&:hover {
+				&:before {
+					background: @color-blue-1;
 				}
 			}
-			&:last-child {
-				&:before, &:after {
-					display: block;
-					right: 0;
-					bottom: 0;
-				}
-			}*/
 		}
 		.category-link {
 			display: table-cell;
@@ -59,21 +34,23 @@
 			width: 100%;
 			height: @tile-height;
 			vertical-align: middle;
-			font-size: 18px;
-			line-height: 1.2em;
-			text-align: center;
+			font-size: 19px;
+			line-height: 1.25em;
+			text-align: left;
+			font-weight: 300;
+			transition: color .2s;
 			&, &:visited {
 				color: @color-default;
 				text-decoration: none;
 			}
 			&:hover {
-				color: @color-default;
+				color: @color-blue-1;
 				text-decoration: none;
 			}
 		}
 		.category-label {
 			display: block;
-			padding: 0 15px;
+			padding: 0 25px;
 		}
 	}
 }
