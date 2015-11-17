@@ -27,6 +27,11 @@
 					background: @color-blue-1;
 				}
 			}
+			&.active {
+				&:before {
+					background: @color-red-2;
+				}
+			}
 		}
 		.category-link {
 			display: table-cell;
@@ -46,6 +51,13 @@
 			&:hover {
 				color: @color-blue-1;
 				text-decoration: none;
+			}
+		}
+		.category.active {
+			.category-link {
+				&, &:visited {
+					color: @color-red-2;
+				}
 			}
 		}
 		.category-label {
