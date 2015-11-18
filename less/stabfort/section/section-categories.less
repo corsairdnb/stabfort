@@ -10,7 +10,7 @@
 			float: left;
 			position: relative;
 			width: 25%;
-			height: @tile-height;
+			min-height: @tile-height;
 			&:before {
 				content: '';
 				display: block;
@@ -22,12 +22,7 @@
 				background: @color-grey-2;
 				transition: background .2s;
 			}
-			&:hover {
-				&:before {
-					background: @color-blue-1;
-				}
-			}
-			&.active {
+			&.active, &:hover {
 				&:before {
 					background: @color-red-2;
 				}
@@ -37,7 +32,7 @@
 			display: table-cell;
 			position: relative;
 			width: 100%;
-			height: @tile-height;
+			min-height: @tile-height;
 			vertical-align: middle;
 			font-size: 19px;
 			line-height: 1.25em;
@@ -49,12 +44,13 @@
 				text-decoration: none;
 			}
 			&:hover {
-				color: @color-blue-1;
+				color: @color-red-2;
 				text-decoration: none;
 			}
 		}
 		.category.active {
 			.category-link {
+				font-weight: 400;
 				&, &:visited {
 					color: @color-red-2;
 				}
