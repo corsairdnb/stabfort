@@ -34,13 +34,14 @@
 			width: 100%;
 			min-height: @tile-height;
 			vertical-align: middle;
-			font-size: 19px;
+			font-family: @font-condensed;
+			font-size: 21px;
 			line-height: 1.25em;
+			font-weight: 400;
 			text-align: left;
-			font-weight: 300;
 			transition: color .2s;
 			&, &:visited {
-				color: @color-default;
+				color: @color-grey-1;
 				text-decoration: none;
 			}
 			&:hover {
@@ -50,7 +51,7 @@
 		}
 		.category.active {
 			.category-link {
-				font-weight: 400;
+				font-weight: 700;
 				&, &:visited {
 					color: @color-red-2;
 				}
