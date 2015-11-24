@@ -1,16 +1,88 @@
-@media (min-width: @vw-laptop-sm) {
-	@tile-height: 90px;
+@tile-height: 90px;
 
-	.section-categories {
-		.categories-list {
-			font-size: 0;
+.section-categories {
+	.categories-list {
+		padding: 0 22px;
+		font-size: 0;
+	}
+	.category-link {
+		display: table-cell;
+		position: relative;
+		width: 100%;
+		min-height: @tile-height;
+		vertical-align: middle;
+		font-family: @font-condensed;
+		font-size: 18px;
+		line-height: 1.1em;
+		font-weight: 400;
+		text-align: left;
+		transition: color .2s;
+		&, &:visited {
+			color: @color-grey-1;
+			text-decoration: none;
 		}
+		&:hover {
+			color: @color-red-2;
+			text-decoration: none;
+		}
+	}
+	.category-label {
+
+	}
+	.category.active {
+		.category-link {
+			font-weight: 700;
+			&, &:visited {
+				color: @color-red-2;
+			}
+		}
+		.category-counter {
+			background: @color-red-2;
+			font-weight: 400;
+		}
+	}
+}
+
+@media (max-width: (@vw-iphone-5-land - 1)) {
+	.section-categories {
+		.category {
+			margin: 15px 0;
+		}
+		.category-label {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.category-counter {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 4px;
+			background: @color-grey-1;
+			color: #fff;
+			font-size: 13px;
+			font-weight: 400;
+			border-radius: 3px;
+			min-width: 1.4em;
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-6) {
+	.section-categories {
+		.category-link {
+			font-size: 21px;
+		}
+	}
+}
+@media (min-width: @vw-iphone-5-land) {
+	.section-categories {
 		.category {
 			display: table;
 			float: left;
 			position: relative;
-			width: 25%;
+			width: 33%;
 			min-height: @tile-height;
+			margin: 0;
 			&:before {
 				content: '';
 				display: block;
@@ -29,33 +101,7 @@
 			}
 		}
 		.category-link {
-			display: table-cell;
-			position: relative;
-			width: 100%;
-			min-height: @tile-height;
-			vertical-align: middle;
-			font-family: @font-condensed;
-			font-size: 21px;
-			line-height: 1.25em;
-			font-weight: 400;
-			text-align: left;
-			transition: color .2s;
-			&, &:visited {
-				color: @color-grey-1;
-				text-decoration: none;
-			}
-			&:hover {
-				color: @color-red-2;
-				text-decoration: none;
-			}
-		}
-		.category.active {
-			.category-link {
-				font-weight: 700;
-				&, &:visited {
-					color: @color-red-2;
-				}
-			}
+			font-size: 18px;
 		}
 		.category-label {
 			display: block;
@@ -68,6 +114,39 @@
 			font-size: 12px;
 			line-height: 0;
 			font-weight: 600;
+		}
+	}
+}
+@media (min-width: @vw-iphone-6-land) {
+	.section-categories {
+		.categories-list {
+			padding: 0 30px;
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.section-categories {
+		.category-link {
+			font-size: 21px;
+			line-height: 1.25em;
+		}
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-categories {
+		.category {
+			width: 25%;
+		}
+		.categories-list {
+			padding: 0 43px;
+		}
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.section-categories {
+		.categories-list {
+			padding: 0;
 		}
 	}
 }
