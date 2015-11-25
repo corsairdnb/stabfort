@@ -5,6 +5,9 @@
 	[class^="md-"], [class*=" md-"] {
 		vertical-align: bottom;
 	}
+	&:active {
+		box-shadow: none;
+	}
 }
 
 .btn-primary {
@@ -275,11 +278,15 @@
 	background: lighten(@color-blue-1, 38%);
 	margin: 0 0 0 8px;
 	padding: 0 15px 1px 5px;
+	border: 0 none;
 	vertical-align: middle;
 	font-size: 16px;
+	line-height: 1em;
 	text-transform: none;
 	font-weight: 400;
 	position: relative;
+	white-space: normal;
+	border-radius: 0;
 	&, &:link, &:visited {
 		color: @color-blue-1;
 		text-decoration: none;
