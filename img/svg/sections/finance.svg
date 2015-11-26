@@ -1,0 +1,35 @@
+<svg version="1.1" id="Ð¡Ð»Ð¾Ð¹_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+<rect x="5.454" y="11.113" transform="matrix(0.9243 -0.3817 0.3817 0.9243 -6.2829 10.5501)" fill="#81C784" width="36" height="20"></rect>
+<g>
+
+		<rect x="6.741" y="17.602" transform="matrix(0.9244 -0.3814 0.3814 0.9244 -9.942 5.0386)" fill="#1B5E20" width="2" height="20"></rect>
+
+		<rect x="8.889" y="28.433" transform="matrix(0.9243 -0.3817 0.3817 0.9243 -9.1981 12.491)" fill="#1B5E20" width="36" height="1.999"></rect>
+
+		<rect x="38.167" y="4.625" transform="matrix(-0.9242 0.3818 -0.3818 -0.9242 80.9509 13.1888)" fill="#1B5E20" width="2" height="20.001"></rect>
+
+		<rect x="3.019" y="11.794" transform="matrix(-0.9243 0.3817 -0.3817 -0.9243 43.4063 16.9797)" fill="#1B5E20" width="34" height="2"></rect>
+	<path fill="#1B5E20" d="M9.217,31.51c2.552-1.054,5.476,0.16,6.53,2.713l-4.621,1.908L9.217,31.51z"></path>
+	<path fill="#1B5E20" d="M6.214,23.904c2.552-1.054,3.768-3.977,2.713-6.529l-4.622,1.908L6.214,23.904z"></path>
+	<path fill="#1B5E20" d="M40.693,18.322c-2.553,1.055-3.767,3.978-2.713,6.53l4.621-1.909L40.693,18.322z"></path>
+	<path fill="#1B5E20" d="M37.641,10.928c-2.553,1.055-5.476-0.16-6.53-2.713l4.622-1.908L37.641,10.928z"></path>
+	<circle fill="#1B5E20" cx="13.287" cy="25.312" r="2"></circle>
+	<circle fill="#1B5E20" cx="33.621" cy="16.916" r="2"></circle>
+	<path fill="#1B5E20" d="M17.057,23.956c-1.625-3.655,0.932-6.979,3.96-8.325c3.028-1.346,7.209-1.016,8.833,2.64
+		c1.625,3.655-0.932,6.979-3.959,8.325C22.863,27.941,18.682,27.611,17.057,23.956z"></path>
+</g>
+<rect x="8" y="23" fill="#A5D6A7" width="36" height="20.001"></rect>
+<g>
+	<rect x="8" y="23" fill="#388E3C" width="2" height="20.001"></rect>
+	<rect x="8" y="41.001" fill="#388E3C" width="36" height="2"></rect>
+	<rect x="42" y="23" fill="#388E3C" width="2" height="20.001"></rect>
+	<rect x="9" y="23" fill="#388E3C" width="34" height="2"></rect>
+	<path fill="#388E3C" d="M9,37c2.761,0,5,2.238,5,5H9V37z"></path>
+	<path fill="#388E3C" d="M9,29c2.761,0,5-2.238,5-5H9V29z"></path>
+	<path fill="#388E3C" d="M43,37c-2.762,0-5,2.238-5,5h5V37z"></path>
+	<path fill="#388E3C" d="M43,29c-2.762,0-5-2.238-5-5h5V29z"></path>
+	<path fill="#388E3C" d="M19,33c0-4,3.687-6,7-6s7,2,7,6s-3.687,6-7,6S19,37,19,33z"></path>
+	<circle fill="#388E3C" cx="15" cy="33" r="2"></circle>
+	<circle fill="#388E3C" cx="37" cy="33" r="2"></circle>
+</g>
+</svg>
