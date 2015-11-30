@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	sourcemaps = require('gulp-sourcemaps'),
 	csso = require('gulp-csso'),
-	svgSprite = require('gulp-svg-sprite');
+	svgSprite = require('gulp-svg-sprite'),
+	fs = require('fs');
 
 gulp.task('less', function () {
 	return gulp
@@ -19,32 +20,58 @@ gulp.task('less', function () {
 		.pipe(gulp.dest('css/'))
 });
 
-var svgSpriteConfig                  = {
-	shape               : {
-		dimension       : {         // Set maximum dimensions
-			maxWidth    : 32,
-			maxHeight   : 32
+var svgSpriteConfig = {
+	shape: {
+		dimension: {
+			maxWidth: 50,
+			maxHeight: 50
 		},
-		spacing         : {         // Add padding
-			padding     : 10
-		},
-		//dest            : 'out/intermediate-svg'    // Keep the intermediate files
+		spacing: {
+			padding: 1
+		}
 	},
-	mode                : {
-		view            : {         // Activate the «view» mode
-			bust        : false,
-			render      : {
-				less    : true      // Activate Sass output (with default options)
+	mode: {
+		view: {
+			bust: false,
+			render: {
+				less: true
 			}
-		},
-		symbol          : true      // Activate the «symbol» mode
+		}
 	}
 };
 
 gulp.task('svg', function () {
-	gulp.src('img/svg/*.svg')
-		.pipe(svgSprite(svgSpriteConfig))
-		.pipe(gulp.dest('img/svg_sprites'));
+	fs.readdir('./img/svg/', function(err, files){
+		for (var i in files) {
+			var dirName = files[i],
+				dirPath = './img/svg/' + dirName,
+				stats = fs.lstatSync(dirPath);
+			if (stats.isDirectory()) {
+				var svgSpriteConfig = {
+					shape: {
+						dimension: {
+							maxWidth: 50,
+							maxHeight: 50
+						},
+						spacing: {
+							padding: 1
+						}
+					},
+					mode: {
+						view: {
+							bust: false,
+							render: {
+								less: true
+							}
+						}
+					}
+				};
+				gulp.src(dirPath + '/*.svg')
+					.pipe(svgSprite(svgSpriteConfig))
+					.pipe(gulp.dest('./less/stabfort/_sprites/svg/' + dirName));
+			}
+		}
+	});
 });
 
 gulp.task('watch', function () {
