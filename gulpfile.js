@@ -64,6 +64,7 @@ gulp.task('svg', function () {
 							dest: '.',
 							common: 'svg-sprite-' + dirName,
 							//mixin: 'svg-sprite-' + dirName,
+							prefix: '.svg-icon-%s',
 							dimensions: true,
 							sprite: './sprite',
 							bust: false,

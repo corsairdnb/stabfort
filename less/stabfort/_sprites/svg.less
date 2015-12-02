@@ -1,3 +1,23 @@
+.svg-box {
+	display: inline-block;
+	vertical-align: middle;
+}
+.svg-box--border, .svg-box--bg {
+	padding: 10px;
+	font: 0/0 serif;
+	border-radius: 50%;
+}
+.svg-box--border {
+	border: 5px solid desaturate(lighten(@color-blue-1, 33%), 25%);
+}
+.svg-box--bg {
+	background: @color-grey-3;
+}
+.svg-icon {
+	display: inline-block;
+}
+
+@import "svg/different/sprite.less";
 .svg-sprite-different {
-	background: url("@{svg}/different/sprite.svg") no-repeat;
+	background-image: url("@{svg}different/sprite.svg");
 }
