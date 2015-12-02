@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	csso = require('gulp-csso'),
 	svgSprite = require('gulp-svg-sprite'),
-	fs = require('fs');
+	fs = require('fs'),
+	path = require('path');
 
 gulp.task('less', function () {
 	return gulp
@@ -47,6 +48,7 @@ gulp.task('svg', function () {
 				dirPath = './img/svg/' + dirName,
 				stats = fs.lstatSync(dirPath);
 			if (stats.isDirectory()) {
+
 				var svgSpriteConfig = {
 					shape: {
 						dimension: {
@@ -58,13 +60,19 @@ gulp.task('svg', function () {
 						}
 					},
 					mode: {
-						view: {
+						css: {
+							dest: '.',
+							common: 'svg-sprite-' + dirName,
+							//mixin: 'svg-sprite-' + dirName,
+							dimensions: true,
+							sprite: './sprite',
 							bust: false,
 							render: {
 								less: true
 							}
 						}
-					}
+					},
+					dest: path.resolve('./less/stabfort/_sprites/svg/' + dirName)
 				};
 				gulp.src(dirPath + '/*.svg')
 					.pipe(svgSprite(svgSpriteConfig))
