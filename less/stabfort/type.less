@@ -67,6 +67,15 @@ a:hover {
 	}
 	ul, ol {}
 	table {}
+	td, th {
+		padding: 5px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
 	blockquote {
 		margin: 1.8em 0;
 		padding: 0 0 0 1.5em;
@@ -116,6 +125,78 @@ a:hover {
 	}
 }
 
+.table-bordered {
+	border: 1px solid @table-border-color;
+	td, th {
+		padding: 5px;
+		border: 1px solid @table-border-color;
+	}
+}
+.table-responsive {
+	overflow-x: auto;
+	min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+	@media screen and (max-width: @screen-xs-max) {
+		width: 100%;
+		margin-bottom: (@line-height-computed * 0.75);
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid @table-border-color;
+
+		// Tighten up spacing
+		> .table {
+			margin-bottom: 0;
+
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th,
+					> td {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+
+		// Special overrides for the bordered tables
+		> .table-bordered {
+			border: 0;
+
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th:first-child,
+					> td:first-child {
+						border-left: 0;
+					}
+					> th:last-child,
+					> td:last-child {
+						border-right: 0;
+					}
+				}
+			}
+
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot {
+				> tr:last-child {
+					> th,
+					> td {
+						border-bottom: 0;
+					}
+				}
+			}
+
+		}
+	}
+}
+
 @media (min-width: @vw-iphone-land) {
 	.typography {
 		font-size: 18px;
@@ -151,6 +232,21 @@ a:hover {
 		time,
 		.parent-link {
 			display: inline;
+		}
+
+		td, th {
+			padding: 10px 15px;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		.table-bordered {
+			td, th {
+				padding: 10px 15px;
+			}
 		}
 	}
 }
