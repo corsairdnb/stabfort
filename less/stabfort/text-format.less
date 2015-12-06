@@ -1,12 +1,95 @@
 .text-format {
+	&:extend(.typography p);
 	position: relative;
+	p {
+		margin: 0 0 .5em;
+	}
+	.icon {
+		margin-top: 5px;
+		font-size: 48px;
+		color: desaturate(lighten(@color-blue-2, 30%), 40%);
+	}
+	.icon-quote {
+		margin-top: -5px;
+	}
+	.icon-warning {
+		color: @color-orange-1;
+	}
+	.icon-success {
+		color: @color-green-2;
+	}
+	//.icon-help {
+	//	color: @color-blue-2;
+	//}
 }
 
 .text-format--icon {
-	padding-left: 100px;
-	.svg-box {
+	padding-left: 55px;
+	.icon-box {
 		position: absolute;
+		top: 15px;
+	}
+	.icon-box {
 		left: 0;
-		top: 0;
+	}
+	&.text-format--icon-left {
+		//padding-left: 5px;
+		.icon-box {
+			left: 0;
+		}
+	}
+	&.text-format--icon-right {
+		//padding-right: 5px;
+		.icon-box {
+			right: 0;
+		}
+	}
+	&.text-format--bg,
+	&.text-format--bg.text-format--icon-left {
+		padding-left: 70px;
+		.icon-box {
+			left: 15px;
+		}
+	}
+	&.text-format--bg.text-format--icon-right {
+		padding-right: 70px;
+		.icon-box {
+			right: 15px;
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-land) {
+	.text-format--icon {
+		padding-left: 70px;
+		.icon-box {
+			top: 10%;
+		}
+		.icon-box {
+			left: 0;
+		}
+		&.text-format--icon-left {
+			.icon-box {
+				left: 0;
+			}
+		}
+		&.text-format--icon-right {
+			.icon-box {
+				right: 0;
+			}
+		}
+		&.text-format--bg,
+		&.text-format--bg.text-format--icon-left {
+			padding-left: 85px;
+			.icon-box {
+				left: 20px;
+			}
+		}
+		&.text-format--bg.text-format--icon-right {
+			padding-right: 85px;
+			.icon-box {
+				right: 20px;
+			}
+		}
 	}
 }
