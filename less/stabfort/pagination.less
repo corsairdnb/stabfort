@@ -1,0 +1,94 @@
+.pagination {
+	margin: 25px 0;
+	white-space: nowrap;
+	@fs: 16px;
+
+	.pagination-nav {
+		text-align: center;
+		font-size: 0;
+		line-height: 0;
+	}
+	.pagination-list {
+		display: inline-block;
+		margin: 5px;
+		padding: 0;
+		vertical-align: top;
+	}
+	.pagination-item {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+		background-color: #fff;
+		border: 1px solid @color-grey-4;
+		border-right: 0 none;
+		&:first-child {
+			border-radius: 3px 0 0 3px;
+		}
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+			border-right: 1px solid @color-grey-4;
+		}
+		&:first-child:last-child {
+			border-radius: 3px;
+			border: 1px solid @color-grey-4;
+		}
+		&:hover {
+			border-color: @color-grey-2 !important;
+			border-right: 1px solid @color-grey-4;
+			+ .pagination-item {
+				border-left: 0 none;
+			}
+		}
+	}
+	.pagination-link {
+		display: block;
+		padding: @fs/2 ceil(@fs*0.8);
+		min-height: @fs*2;
+		font-size: @fs;
+		line-height: 1em;
+		&:link, &:visited, &:hover {
+			text-decoration: none;
+			color: @color-default;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			color: @color-red-2;
+		}
+		&-prev, &-next {
+			font-size: 0;
+		}
+		&-prev {
+			padding-left: 5px;
+		}
+		&-next {
+			padding-right: 5px;
+		}
+		&-active {
+			&, &:hover {
+				cursor: default !important;
+				background-color: @color-yellow-1 !important;
+			}
+		}
+	}
+	.icon-prev {
+		display: inline-block;
+		.arrow(6px, @color-default, right)
+	}
+	.icon-next {
+		display: inline-block;
+		.arrow(6px, @color-default, left)
+	}
+}
+
+@media (max-width: (@vw-iphone-5-land - 1)) {
+	.pagination {
+		.pagination-list {
+			&-buttons {
+				display: block;
+			}
+		}
+	}
+}
