@@ -1,19 +1,23 @@
 .section-section-header {
 	.h1 {
 		position: relative;
-		padding-left: 60px;
 		color: @color-blue-1;
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			left: -15px;
-			top: -17px;
-			transform: scale(.5);
-			.spriteImage(@icon-advertise);
-			.spriteWidth(@icon-advertise);
-			.spriteHeight(@icon-advertise);
+	}
+	&--iconic {
+		.h1 {
+			padding-left: 60px;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: -15px;
+				top: -17px;
+				transform: scale(.5);
+				.spriteImage(@icon-advertise);
+				.spriteWidth(@icon-advertise);
+				.spriteHeight(@icon-advertise);
 
+			}
 		}
 	}
 
@@ -51,84 +55,84 @@
 			.arrow-after(4px, currentColor, left);
 		}*/
 	}
-	&.section-section-header_registry {
+	&_registry {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-registry_blue);
 			}
 		}
 	}
-	&.section-section-header_advertise {
+	&_advertise {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-advertise_blue);
 			}
 		}
 	}
-	&.section-section-header_polygraphy {
+	&_polygraphy {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-polygraphy_blue);
 			}
 		}
 	}
-	&.section-section-header_finance {
+	&_finance {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-finance_blue);
 			}
 		}
 	}
-	&.section-section-header_engineer {
+	&_engineer {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-engineer_blue);
 			}
 		}
 	}
-	&.section-section-header_construction {
+	&_construction {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-construction_blue);
 			}
 		}
 	}
-	&.section-section-header_country {
+	&_country {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-country_blue);
 			}
 		}
 	}
-	&.section-section-header_expertise {
+	&_expertise {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-expertise_blue);
 			}
 		}
 	}
-	&.section-section-header_car {
+	&_car {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-car_blue);
 			}
 		}
 	}
-	&.section-section-header_transport {
+	&_transport {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-transport_blue);
 			}
 		}
 	}
-	&.section-section-header_car-repair {
+	&_car-repair {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-car-repair_blue);
 			}
 		}
 	}
-	&.section-section-header_insurance {
+	&_insurance {
 		.h1 {
 			&:before {
 				.spritePosition(@icon-insurance_blue);
