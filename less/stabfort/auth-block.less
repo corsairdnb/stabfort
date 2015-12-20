@@ -1,36 +1,66 @@
 .auth-block {
 	display: none;
-	position: absolute;
-	right: 10px;
-	top: 57px;
-	z-index: 1060;
-	.login, .reg, .user {
-		padding: 0 0 0 10px;
-		font: 15px/1em @font-condensed;
-		text-transform: uppercase;
-		text-shadow: 0 1px 0 #fff;
-		&, &:link, &:visited {
-			color: @color-blue-1;
-			text-decoration: none;
-		}
-		&:hover {
-			color: @color-blue-2;
-			text-decoration: none;
-		}
-	}
-	.login {}
-	.reg {}
-	.user {
-		&:after {
-			.arrow-after(4px);
-			margin-top: -1px;
-		}
-	}
 }
 
 @media (min-width: @vw-tablet-lg) {
 	.auth-block {
 		display: block;
-		top: 70px;
+		position: absolute;
+		right: 10px;
+		top: 74px;
+		padding: 0 5px;
+		z-index: 1060;
+		width: 25%;
+		width: ~"calc(25% - 10px)";
+		white-space: nowrap;
+		font-size: 0;
+		text-align: center;
+		.login, .reg, .user {
+			display: inline-block;
+			margin: 0 7px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font: 15px/1em @font-condensed;
+			text-transform: uppercase;
+			text-shadow: 0 1px 0 #fff;
+			&, &:link, &:visited {
+				color: @color-blue-1;
+				text-decoration: none;
+			}
+			&:hover {
+				color: @color-blue-2;
+				text-decoration: none;
+			}
+		}
+		//.user {
+		//	&:after {
+		//		.arrow-after(4px);
+		//		margin-top: -1px;
+		//	}
+		//}
+	}
+	.has-fixed-nav {
+		.auth-block {
+			.login, .reg, .user {
+				max-width: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.auth-block {
+		width: auto;
+		max-width: 300px;
+		text-align: right;
+		padding: 0 0 0 30px;
+		.login, .reg, .user {
+			margin: 0 0 0 10px;
+		}
+	}
+	.has-fixed-nav {
+		.auth-block {
+			background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 35px, #fff);
+		}
 	}
 }
