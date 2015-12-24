@@ -169,7 +169,8 @@
 			width: @container-width;
 			.tile {
 				width: floor(@container-width/4);
-				transition: background-color .3s;
+				transition: background-color .3s, border-color .3s;
+				border-left: 1px solid transparent;
 				&:nth-of-type(2n+3) {
 					clear: none;
 				}
@@ -186,7 +187,8 @@
 			&.level-1 {
 				.tile {
 					&:hover {
-						background-color: #F3F7F7;
+						background-color: #EEFBFB;
+						border-left-color: #D7F1F1;
 						.tile-list-link--more {
 							&, &:link, &:visited {
 								color: lighten(@color-default, 30%);

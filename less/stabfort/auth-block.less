@@ -2,6 +2,12 @@
 	display: none;
 }
 
+@media (min-width: @vw-tablet-lg) and (max-width: (@vw-laptop-sm - 1)) {
+	.auth-block {
+		width: 25%;
+		width: ~"calc(25% - 10px)";
+	}
+}
 @media (min-width: @vw-tablet-lg) {
 	.auth-block {
 		display: block;
@@ -10,8 +16,6 @@
 		top: 74px;
 		padding: 0 5px;
 		z-index: 1060;
-		width: 25%;
-		width: ~"calc(25% - 10px)";
 		white-space: nowrap;
 		font-size: 0;
 		text-align: center;
@@ -41,8 +45,11 @@
 	}
 	.has-fixed-nav {
 		.auth-block {
-			.login, .reg, .user {
-				max-width: 50%;
+			.reg, .user {
+				max-width: 60%;
+			}
+			.login {
+				max-width: 40%;
 			}
 		}
 	}
@@ -50,12 +57,14 @@
 
 @media (min-width: @vw-laptop-sm) {
 	.auth-block {
-		width: auto;
-		max-width: 300px;
+		width: 250px;
 		text-align: right;
 		padding: 0 0 0 30px;
 		.login, .reg, .user {
-			margin: 0 0 0 10px;
+			margin: 0 0 0 12px;
+			&:first-child {
+				margin-left: 0;
+			}
 		}
 	}
 	.has-fixed-nav {
