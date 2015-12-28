@@ -1,0 +1,45 @@
+.section-firms {
+	margin: 0 0 40px;
+	.filter-buttons {
+		margin: 20px auto;
+		text-align: center;
+		.btn {
+			min-width: 140px;
+			margin: 0 0 10px 20px;
+			padding: 15px 0 13px !important;
+			text-transform: uppercase;
+			font-size: 18px !important;
+			line-height: 1em !important;
+		}
+		.btn-advanced {
+			.flat-button(@color-blue-1, 16px);
+		}
+		.btn-submit {
+			width: 200px;
+			.btn-orange-small();
+		}
+	}
+}
+
+@media (min-width: @vw-iphone-6-land) {
+	.section-firms {
+
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.section-firms {
+		.form-area {
+			padding: 0 10px;
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.section-firms {
+		.form-area {
+			padding: 0;
+		}
+		.filter-buttons {
+			text-align: right;
+		}
+	}
+}

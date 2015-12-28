@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Готовые фирмы | Stabfort.ru</title>
     <link rel="stylesheet" href="../css/prolog.css">
-    <link rel="stylesheet" href="../css/product-filter.css">
+    <link rel="stylesheet" href="../css/firms.css">
     <link rel="stylesheet" href="../css/epilog.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,400,300|Roboto:500,900,400italic,100,700italic,300,700,400&amp;subset=latin,cyrillic' rel='stylesheet'>
 </head>
-<body class="has-fixed-nav">
+<body class="has-fixed-nav page-firms">
 
 <div class="wrapper">
 
@@ -83,201 +83,225 @@
 
     <main class="main" role="main">
 
-        <section class="section section-article">
+        <section class="section section-header">
             <div class="section-cnt">
                 <div class="typography">
-                    <h1>Готовые фирмы</h1>
+                    <h1 class="h1">Готовые фирмы</h1>
+                    <a href="#" class="btn btn-action-1 btn-green-small">Оформить заявку</a>
+                    <a href="#" class="btn btn-action-2">Заказать звонок</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
+            </div>
+        </section>
 
-                <form class="form form-filter-standard clearfix">
+        <section class="section section-firms">
+            <div class="section-cnt">
 
-                    <div class="container-fluid container-fluid-wide">
+                <div class="form-area">
 
-                        <div class="col-md-8ge">
-                            <div class="form-group">
-                                <label for="select-1">Форма собственности</label>
-                                <select class="form-control custom-select" multiple id="select-1">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="select-2">Лицензии</label>
-                                <select class="form-control custom-select" multiple id="select-2">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="select-3">Форма налогообложения</label>
-                                <select class="form-control custom-select" id="select-3">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="select-4">Допуски</label>
-                                <select class="form-control custom-select" id="select-4">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="select-5">Год регистрации</label>
-                                <select class="form-control custom-select" id="select-5">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="select-6">Банк</label>
-                                <select class="form-control custom-select" id="select-6">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="select-7">Город</label>
-                                <select class="form-control custom-select" id="select-7">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="select-8">ОКВЭД</label>
-                                <select class="form-control custom-select" id="select-8">
-                                    <option>-- выбрать --</option>
-                                    <option>Пункт первый</option>
-                                    <option>Пункт второй</option>
-                                    <option>Пункт третий</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-
-
-
-                    <br><br><br><br><br>
-
-                    <div class="form-group">
-                        <label for="slider-1">Общая площадь</label>
-                        <div class="slider-native clearfix">
-                            <div class="slider-native-left">
-                                <label class="sr-only" for="number-1">Общая площадь от</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">от</div>
-                                    <input class="form-control" type="number" step="1" value="50" data-min="slider-1" id="number-1">
-                                </div>
-                            </div>
-                            <div class="slider-native-right">
-                                <label class="sr-only" for="number-2">Общая площадь до</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">до</div>
-                                    <input class="form-control" type="number" step="1" value="200" data-max="slider-1" id="number-2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-custom">
-                            <input id="slider-1" type="text" class="slider-input" value="" data-slider-min="10" data-slider-max="500" data-slider-step="1" data-slider-value="[50,200]">
-                        </div>
-                    </div>
-                </form>
-
-                <div class="filter-more">
                     <form class="form form-filter-standard clearfix">
-                        <div class="form-group">
-                            <label for="slider-2">Цена застройки</label>
-                            <div class="slider-native clearfix">
-                                <div class="slider-native-left">
-                                    <label for="number-3">от</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="number" step="1" value="0" data-min="slider-2" id="number-3">
-                                        <div class="input-group-addon">$</div>
-                                    </div>
+
+                        <div class="container-fluid container-fluid-wide">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="select-1">Форма собственности</label>
+                                    <select class="form-control custom-select" multiple id="select-1">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
                                 </div>
-                                <div class="slider-native-right">
-                                    <label for="number-4">до</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="number" step="1" value="1000000" data-max="slider-2" id="number-4">
-                                        <div class="input-group-addon">$</div>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="select-2">Лицензии</label>
+                                    <select class="form-control custom-select" multiple id="select-2">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-3">Форма налогообложения</label>
+                                    <select class="form-control custom-select" id="select-3">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select-4">Допуски</label>
+                                    <select class="form-control custom-select" id="select-4">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="slider-custom">
-                                <input id="slider-2" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="select-5">Год регистрации</label>
+                                    <select class="form-control custom-select" id="select-5">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-6">Банк</label>
+                                    <select class="form-control custom-select" id="select-6">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-7">Город</label>
+                                    <select class="form-control custom-select" id="select-7">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-8">ОКВЭД</label>
+                                    <select class="form-control custom-select" id="select-8">
+                                        <option>-- выбрать --</option>
+                                        <option>Пункт первый</option>
+                                        <option>Пункт второй</option>
+                                        <option>Пункт третий</option>
+                                    </select>
+                                </div>
                             </div>
+
                         </div>
-                        <div class="form-group">
-                            <label for="slider-3">Цена проекта</label>
-                            <div class="slider-native clearfix">
-                                <div class="slider-native-left">
-                                    <label for="number-5">от</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="number" step="1" value="0" data-min="slider-3" id="number-5">
-                                        <div class="input-group-addon">$</div>
+
+                        <div class="container-fluid container-fluid-wide">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="slider-1">Оборот</label>
+                                    <div class="slider-native clearfix">
+                                        <div class="slider-native-left">
+                                            <label class="sr-only" for="number-1">Оборот от</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">от</div>
+                                                <input class="form-control" type="number" step="1" value="50" data-min="slider-1" id="number-1">
+                                            </div>
+                                        </div>
+                                        <div class="slider-native-right">
+                                            <label class="sr-only" for="number-2">Оборот до</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">до</div>
+                                                <input class="form-control" type="number" step="1" value="200" data-max="slider-1" id="number-2">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="slider-native-right">
-                                    <label for="number-6">до</label>
-                                    <div class="input-group">
-                                        <input class="form-control" type="number" step="1" value="1000000" data-max="slider-3" id="number-6">
-                                        <div class="input-group-addon">$</div>
+                                    <div class="slider-custom">
+                                        <input id="slider-1" type="text" class="slider-input" value="" data-slider-min="10" data-slider-max="500" data-slider-step="1" data-slider-value="[50,200]">
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-custom">
-                                <input id="slider-3" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="1" data-slider-value="[0,100000]">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="slider-2">Цена</label>
+                                    <div class="slider-native clearfix">
+                                        <div class="slider-native-left">
+                                            <label class="sr-only" for="number-3">Цена от</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">от</div>
+                                                <input class="form-control" type="number" step="1" value="1000" data-min="slider-2" id="number-3">
+                                                <div class="input-group-addon">$</div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-native-right">
+                                            <label class="sr-only" for="number-4">Цена до</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">до</div>
+                                                <input class="form-control" type="number" step="1" value="20000" data-max="slider-2" id="number-4">
+                                                <div class="input-group-addon">$</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-custom">
+                                        <input id="slider-2" type="text" class="slider-input" value="" data-slider-min="0" data-slider-max="100000" data-slider-step="100" data-slider-value="[0,100000]">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
-                </div><!--.filter-more-->
 
-                <div class="typography">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="filter-buttons clearfix">
+                        <div class="filter-buttons-cnt">
+                            <a href="#" class="btn">Сбросить</a>
+                            <a href="#" class="btn btn-submit">Найти</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="filter-buttons clearfix">
-                    <div class="filter-buttons-cnt">
-                        <a href="#" class="btn btn-submit">Применить</a>
-                        <a href="#" class="btn btn-advanced transparent">Подробный фильтр</a>
-                    </div>
-                </div><!--.filter-sorting-->
-                <div class="filter-view clearfix">
-                    <div class="filter-view-notes">
-                        <span class="icon">%</span>
-                        <p class="text"><b>Проекты со скидкой</b> Те же, только дешевле</p>
-                    </div>
-                    <div class="sort-btn-cnt">
-                        <a href="#" class="btn btn-view btn-view-list" title="Список"><i class="md-view-list"></i></a>
-                        <a href="#" class="btn btn-view btn-view-tile active" title="Плитки"><i class="md-view-module"></i></a>
-                    </div>
-                </div><!--.filter-sorting-->
-
 
             </div>
         </section>
+
+        <div class="firms-common">
+            <section class="section widget-providers">
+                <div class="section-cnt">
+                    <div class="title">
+                        <span class="title-text">Найдено фирм:&nbsp;<b>6</b></span>
+                        <!--<a href="#" class="link">Смотреть всех поставщиков</a>-->
+                    </div>
+                    <div class="items">
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ООО «Росстройинвестпромтехсервис»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ООО «Меридиан»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ИП «Иванов Иван Иванович»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ООО «Росстройинвестпромтехсервисмонтажтрест»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ООО «Меридиан»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                        <div class="widget-providers-item">
+                            <span class="widget-providers-item-name"><a href="#">ИП «Иванов Иван Иванович»</a></span>
+                            <span class="widget-providers-item-call"><i class="md-call icon"></i> <a href="#">Заказать звонок</a></span>
+                            <span class="widget-providers-item-online"><i class="md-chat icon"></i> <a href="#">Специалист онлайн</a></span>
+                            <span class="widget-providers-item-rating"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section-cnt">
+                <div class="firms-more">
+                    <a href="#" class="btn btn-switch">Показать еще</a>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -320,7 +344,7 @@
 <div class="back-to-top" title="Наверх"><i class="icon md-keyboard-arrow-up"></i></div>
 
 <script src="../js/vendor/jquery-1.11.2.js"></script>
-<script src="../js/product-filter.js"></script>
+<script src="../js/default.js"></script>
 <script src="../js/components/fixed-menu.js"></script>
 <script src="../js/vendor/jquery.scrollTo.min.js"></script>
 <script src="../js/components/back-to-top.js"></script>
