@@ -1,0 +1,222 @@
+.product-params {
+	margin: 20px 0;
+	.product-param-group {
+		padding: 10px 0 5px;
+		border-bottom: 2px solid @color-grey-4;
+	}
+	.product-param {
+		margin: 10px 0;
+		.padding-mobile();
+	}
+	.product-param-name {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 60%;
+		margin: 0 5px 0 0;
+		font: 15px/1.2em @font-condensed;
+		text-transform: uppercase;
+		color: @color-grey-2;
+	}
+	.product-param-value {
+		display: inline;
+		vertical-align: super;
+		margin: 0;
+		font-size: 15px;
+		line-height: 1.2em;
+		font-weight: 500;
+		a {
+			&, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.title {
+		margin-bottom: 0;
+	}
+	.product-params-more {
+		.padding-mobile();
+	}
+	.product-param-value-list {
+		margin: 0 0 20px;
+		padding: 0;
+	}
+	.product-param-value-list-item {
+		margin: 0 0 0 35px;
+		padding: 0;
+	}
+	.product-params-right .text-block {
+		.padding-mobile();
+	}
+}
+
+.product-params-secondary {
+	.padding-mobile();
+}
+
+@media (min-width: @vw-iphone-5-land) {
+	.product-params {
+		.product-param-group {
+			padding: 10px 0 30px;
+			border-bottom: 0 none;
+		}
+		.product-param {
+			display: table;
+			width: 100%;
+			margin: 0;
+			.padding-mobile();
+			&:nth-of-type(odd) {
+				background: @color-grey-3;
+			}
+		}
+		.product-param-name,
+		.product-param-value {
+			display: table-cell;
+			padding: 12px 0;
+			vertical-align: middle;
+		}
+		.product-param-name {
+			width: 40%;
+			max-width: none;
+			margin-right: 10px;
+			font-size: 18px;
+		}
+		.product-param-value {
+			font-size: 18px;
+		}
+		.product-params-more {
+			.btn {
+				font-size: 18px;
+			}
+		}
+	}
+}
+@media (min-width: @vw-tablet-sm) {
+	.product-params {
+		.product-param {
+			.padding-tablet();
+		}
+		.product-params-more {
+			text-align: left;
+			.btn {
+				display: inline-block;
+				padding: .4em 1.3em .35em 2.2em;
+			}
+		}
+		.product-params-right .text-block {
+			.padding-tablet();
+		}
+	}
+	.product-params-secondary {
+		.padding-tablet();
+	}
+}
+@media (min-width: @vw-tablet-lg) {
+	.product-params {
+		margin: 50px 0 0;
+		.product-param-group {
+			padding: 0 0 0 40px;
+		}
+		.product-params-cnt {
+			display: table;
+			width: 100%;
+		}
+		.product-params-left,
+		.product-params-right {
+			display: table-cell;
+			vertical-align: top;
+			width: auto;
+		}
+		.product-params-left {
+			padding: 20px 25px 15px;
+			background: @color-grey-5;
+			box-shadow: 0 0 1px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.2);
+			border-radius: 5px;
+		}
+		.product-param-group {
+			padding: 0;
+		}
+		.product-params-right {
+			width: 45%;
+			padding: 0 0 0 5%;
+			.product-param-group {
+				padding: 0;
+			}
+			.text-block {
+				padding: 0;
+			}
+		}
+		.product-param {
+			display: table;
+			margin: 0 0 12px;
+			padding: 0;
+			&:nth-of-type(odd), &:nth-of-type(even) {
+				background: none;
+			}
+		}
+		.product-param-name,
+		.product-param-value {
+			display: table-cell;
+			vertical-align: top;
+			padding: 0;
+		}
+		.product-param-name {
+			width: 38%;
+			min-width: 200px;
+			padding: 0 15px 0 0;
+			font-size: 16px;
+			line-height: 1.5em;
+		}
+		.product-param-value {
+			margin: 0 0 0 10px;
+			font-size: 16px;
+			line-height: 1.5em;
+			font-weight: 400;
+		}
+		.title {
+			margin: 0 0 1em;
+		}
+	}
+	.product-params-secondary {
+		.padding-tablet();
+		.product-params-more {
+			.btn {
+				margin: 0;
+			}
+		}
+	}
+}
+@media (min-width: @vw-laptop-sm) {
+	.product-params {}
+	.product-params-secondary {
+		margin: 50px 0;
+		padding: 0;
+		.product-params-cnt {
+			display: table;
+			width: 100%;
+		}
+		.product-params-left {
+			//width: 50%;
+			display: table-cell;
+			vertical-align: top;
+		}
+		.product-params-right {
+			width: 60%;
+			display: table-cell;
+			vertical-align: top;
+			padding-left: 50px;
+			.text-block {
+				font-size: 80%;
+				color: @color-grey-1;
+			}
+		}
+		.product-param-value-list {
+			margin: 0;
+		}
+		.product-params-more {
+			margin: 20px 0 0;
+		}
+	}
+}
