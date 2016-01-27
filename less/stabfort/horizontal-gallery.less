@@ -1,0 +1,63 @@
+.horizontal-gallery-cnt {
+	width: 100%;
+	height: 88px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 0 40px;
+	background: #fff;
+}
+.horizontal-gallery {
+	width: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	transform: translateZ(0);
+	user-select: none;
+	z-index: 1;
+	font-size: 0;
+	text-align: center;
+}
+.horizontal-gallery-figure {
+	display: inline-block;
+	vertical-align: top;
+	width: 107px;
+	height: 100%;
+	margin: 0;
+	border-right: 2px solid #fff;
+}
+.horizontal-gallery-link {
+	display: block;
+}
+.horizontal-gallery-img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	font-size: 0;
+	line-height: 0;
+}
+
+@media (min-width: @vw-tablet-sm) {
+	.horizontal-gallery-cnt {
+		width: 100%;
+		width: ~"calc(100% - 60px)";
+		margin: 0 auto 30px;
+	}
+	.horizontal-gallery {
+		text-align: left;
+	}
+}
+
+@media (min-width: @vw-tablet-lg) {
+	.horizontal-gallery-cnt {
+		width: 100%;
+		width: ~"calc(100% - 60px)";
+		margin-bottom: 50px;
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.horizontal-gallery-cnt {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}

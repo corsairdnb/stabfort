@@ -8,6 +8,21 @@
 }
 
 .section-firm {
+	.firm-header {
+		.padding-mobile();
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+	.firm-cost {
+		padding: 3px 10px;
+		background: @color-green-3;
+		font-size: 18px;
+		font-weight: 600;
+		color: #fff;
+	}
+	.firm-brief-text {
+		margin: 1em 0;
+	}
 	.header-h1 {
 		display: inline-block;
 		vertical-align: top;
@@ -15,31 +30,62 @@
 		font: 25px/1.2em @font-condensed;
 		.word-break();
 	}
+	.text-block {
+		.padding-mobile();
+	}
+	.title {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.horizontal-gallery-cnt {
+		max-width: 100%;
+	}
+	.firm-additional {
+		margin: 20px 0;
+	}
 }
 
 @media (min-width: @vw-iphone-5-land) {
 	.section-firm {
+		.firm-cost-wrap {
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+		}
 		.header-h1 {
 			font-size: 32px;
+			vertical-align: middle;
+			margin-right: 5px;
 		}
 	}
 }
 @media (min-width: @vw-tablet-sm) {
 	.section-firm {
-
+		.firm-header {
+			.padding-tablet();
+		}
+		.text-block {
+			.padding-tablet();
+		}
+		.product-main-content-more {
+			text-align: left;
+		}
+		.product-main-content-more-btn {
+			display: inline-block;
+			padding: .4em 1.3em .35em 2.2em;
+		}
 	}
 }
 @media (min-width: @vw-tablet-lg) {
 	.section-firm {
-
 	}
 }
 @media (min-width: @vw-laptop-sm) {
 	.section-firm {
-		.header-h1 {
-			margin: 0;
-			font-size: 42px;
-			font-weight: 300;
+		.firm-header,
+		.text-block {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 }
