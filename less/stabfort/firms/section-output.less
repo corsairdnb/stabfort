@@ -1,0 +1,58 @@
+.section-output {
+	margin: 30px 0 60px;
+	.firms-more {
+		padding: 0 10px;
+	}
+	.title {
+		margin: 10px 0;
+		padding: 0 @table-cell-padding;
+		font-size: 22px;
+	}
+	.output {
+		a {
+			&, &:visited {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: none;
+				color: @color-red-2;
+			}
+		}
+		th, td {
+			vertical-align: middle;
+			&:last-child {
+				text-align: right;
+			}
+		}
+		td.cell-name {
+			min-width: 30%;
+		}
+		.icon {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.section-output {
+		.output {
+			.icon {
+				display: inline;
+				visibility: hidden;
+				vertical-align: middle;
+			}
+			tr:hover {
+				.icon {
+					visibility: visible;
+				}
+			}
+		}
+		.output-link {
+			display: inline-block;
+			margin: 0 8px 0 0;
+			.icon {
+				visibility: visible;
+			}
+		}
+	}
+}
