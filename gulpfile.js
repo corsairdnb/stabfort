@@ -10,13 +10,13 @@ var gulp = require('gulp'),
 gulp.task('less', function () {
 	return gulp
 		.src('less/*.less')
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(autoprefixer({
 			browsers: ['Android >= 4', 'Chrome >= 20', 'Firefox >= 15', 'Explorer >= 8', 'iOS >= 6', 'Safari >= 5.1', 'Opera >= 15'],
 			cascade: false
 		}))
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		//.pipe(csso(true))
 		.pipe(gulp.dest('css/'))
 });
