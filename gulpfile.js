@@ -6,13 +6,16 @@ var csso = require('gulp-csso');
 var svgSprite = require('gulp-svg-sprite');
 var fs = require('fs');
 var path = require('path');
-var cached = require('gulp-cached');
+//var cached = require('gulp-cached');
 //var remember = require('gulp-remember');
+//var progeny = require('gulp-progeny');
+//var watch = require('gulp-watch');
 
 gulp.task('less', function () {
 	return gulp
-		.src('less/*.less', { since: gulp.lastRun('less')} )
-		.pipe(cached('less'))
+		.src('less/*.less'/*, { since: gulp.lastRun('less')}*/ )
+		//.pipe(cached('less'))
+		//.pipe(progeny())
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(autoprefixer({

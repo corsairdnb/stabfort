@@ -8,9 +8,11 @@
     "gulp-cached": "^1.1.0",
     "gulp-csso": "^1.0.0",
     "gulp-less": "^3.0.3",
+    "gulp-progeny": "^0.2.1",
     "gulp-remember": "^0.3.0",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-svg-sprite": "^1.2.15"
+    "gulp-svg-sprite": "^1.2.15",
+    "gulp-watch": "^4.3.5"
   },
   "scripts": {
     "gulp": "./node_modules/.bin/gulp"
