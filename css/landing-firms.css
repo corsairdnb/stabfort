@@ -3,3 +3,49 @@
   box-shadow: none;
   border-bottom: 0 none;
 }
+.top-menu ul li {
+  border-bottom: 0 none;
+}
+.top-menu ul li.active a,
+.top-menu ul li a:hover {
+  background: none;
+  border-top-color: #fff;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 1280px) {
+  .page-landing-firms {
+    background: url("../img/landing/bg_spb.jpg") no-repeat center top;
+    background-size: 100% auto;
+  }
+  .section-intro {
+    padding: 150px 0;
+  }
+  .section-intro .title {
+    margin: 0;
+    padding: 0 22%;
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    line-height: .8em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    text-transform: uppercase;
+  }
+  .section-intro .title > span {
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: none;
+  }
+  .section-intro .btn-main-action {
+    width: 320px;
+  }
+  .section-intro .btn-cnt {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+.section-infographic-text-icon {
+  background: #fff;
+  border-top: 5px solid #63bdc5;
+}
