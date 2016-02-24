@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-cached": "^1.1.0",
     "gulp-csso": "^1.0.0",
