@@ -1,4 +1,56 @@
 .section-infographic-numeric {
 	background: #c5fbff;
 	padding: 80px 0;
+	.title {
+		font: 700 32px/1.2em @font-condensed;
+		text-align: center;
+		text-transform: uppercase;
+		color: #5a8b92;
+		letter-spacing: 2px;
+	}
+	.subtitle {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 1.2em;
+		text-align: center;
+		color: #869a9d;
+	}
+	.items {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+		margin: 25px 0 50px;
+		border-spacing: 0;
+	}
+	.item {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 40px 10px 40px 30px;
+		background: #f9ffff;
+		&:nth-of-type(even) {
+			background: #b0f5ff;
+		}
+	}
+	.item-icon {
+		width: 85px;
+		float: left;
+		margin: 20px 15px 0 0;
+		text-align: center;
+	}
+	.svg-icon {
+		transform: scale(1.8);
+	}
+	.item-number {
+		font: 700 60px/1em @font-condensed;
+		color: #383838;
+		small {
+			font-size: 22px;
+			margin-left: 5px;
+		}
+	}
+	.item-text {
+		font: 24px/1em @font-condensed;
+		overflow: hidden;
+	}
+	.btn-cnt {}
 }
