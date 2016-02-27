@@ -17,7 +17,7 @@
 @media (min-width: 1280px) {
   .page-landing-firms {
     background: url("../img/landing/bg_spb.jpg") no-repeat center top;
-    background-size: 100% auto;
+    background-size: 100% 570px;
   }
   .section-intro {
     padding: 150px 0;
@@ -48,4 +48,8 @@
 .section-infographic-text-icon {
   background: #fff;
   border-top: 5px solid #63bdc5;
+}
+.section-infographic-numeric {
+  background: #c5fbff;
+  padding: 80px 0;
 }
