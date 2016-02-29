@@ -229,12 +229,15 @@
   box-shadow: 0 0 10px #00dfff inset;
   border-radius: 7px;
   font-size: 19px;
+  font-weight: 700;
   line-height: 1em;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  text-align: left;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
+  text-transform: none;
 }
 .section-infographic-numeric .btn-order,
 .section-infographic-numeric .btn-order:link,
@@ -263,4 +266,123 @@
   background: linear-gradient(to bottom, #b6b6b6, #a7a7a7);
   box-shadow: none;
   border-bottom-color: #b6b6b6;
+}
+.section-infographic-numeric .btn-order > .icon {
+  float: left;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  font-size: 40px;
+}
+.section-infographic-numeric .btn-order > span {
+  display: block;
+  margin-right: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.section-infographic-marks {
+  padding: 100px 0;
+}
+.section-infographic-marks .infographic-left {
+  color: #63bdc5;
+  padding-right: 50px;
+}
+.section-infographic-marks .mark {
+  position: relative;
+  margin: 25px 0;
+  padding: 0 0 0 80px;
+  color: #63bdc5;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: 300;
+}
+.section-infographic-marks .mark .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 60px;
+  color: #00d069;
+}
+.section-infographic-marks .infographic-right {
+  padding: 65px 0 0;
+  color: #4fb2c1;
+  font-size: 60px;
+  line-height: 1.1em;
+}
+.section-infographic-marks .text > b {
+  display: block;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.section-infographic-marks .text > span {
+  font-weight: 100;
+}
+.section-buy {
+  background: #c5fbff;
+  padding: 80px 0;
+}
+.section-buy .title {
+  font: 700 60px/1em 'Roboto Condensed', Tahoma, sans-serif;
+  color: #4fb2c1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-buy .items {
+  margin: 30px 0 0;
+  text-align: center;
+}
+.section-buy .item {
+  display: inline-block;
+  vertical-align: top;
+  width: 240px;
+  margin: 0 0 20px;
+  position: relative;
+}
+.section-buy .item:after {
+  content: '';
+  border-width: 16px;
+  border-color: transparent;
+  border-left-color: #fb3500;
+  border-style: solid;
+  position: absolute;
+  right: 8px;
+  top: 90px;
+  margin: -8px 0 0;
+}
+.section-buy .item:last-child:after {
+  display: none;
+}
+.section-buy .item-icon {
+  display: inline-block;
+  width: 165px;
+  height: 165px;
+  position: relative;
+  background: #fff;
+  border: 2px solid #fb3500;
+  margin: 15px;
+  border-radius: 50%;
+}
+.section-buy .item-number {
+  float: left;
+  margin: 0 15px 0 0;
+  font: 700 65px/0.9em 'Roboto Condensed', Tahoma, sans-serif;
+  color: #fb3500;
+}
+.section-buy .item-text {
+  padding: 0 15px 0 0;
+  overflow: hidden;
+  font: 18px/1.4em 'Roboto Condensed', Tahoma, sans-serif;
+  color: #4d4d4d;
+  text-align: left;
+}
+.section-buy .svg-icon {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }

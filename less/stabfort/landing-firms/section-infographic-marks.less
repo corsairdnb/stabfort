@@ -1,3 +1,39 @@
 .section-infographic-marks {
-
+	padding: 100px 0;
+	.infographic-left {
+		color: @color-blue-1;
+		padding-right: 50px;
+	}
+	.mark {
+		position: relative;
+		margin: 25px 0;
+		padding: 0 0 0 80px;
+		color: @color-blue-1;
+		font-size: 30px;
+		line-height: 1.2em;
+		font-weight: 300;
+		.icon {
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 60px;
+			color: @color-green-2;
+		}
+	}
+	.infographic-right {
+		padding: 65px 0 0;
+		color: @color-blue-3;
+		font-size: 60px;
+		line-height: 1.1em;
+	}
+	.text {
+		> b {
+			display: block;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+		> span {
+			font-weight: 100;
+		}
+	}
 }
