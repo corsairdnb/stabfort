@@ -66,4 +66,10 @@ $(function(){
 		$('.service-content-detail').toggle();
 	});
 
+	$('.btn-callback').on('click', function(e){
+		e.preventDefault();
+		$('.form-area').addClass('opened');
+		$('.form-input--name').trigger('focus');
+	});
+
 });

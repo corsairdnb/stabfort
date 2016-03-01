@@ -1,3 +1,99 @@
 .section-contact {
-
+	padding: 80px 0;
+	background-color: #fafafa;
+	.left-col {
+		text-align: right;
+	}
+	.card {
+		display: inline-block;
+		vertical-align: top;
+		background-color: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,.2);
+		padding: 60px 30px;
+	}
+	.photo {
+		width: 140px;
+		float: right;
+		margin: 0 0 0 25px;
+		> img {
+			width: 100%;
+			height: auto;
+			vertical-align: middle;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+	}
+	.name,
+	.position,
+	.phone {
+		margin: 15px 0;
+	}
+	.name {
+		font-size: 36px;
+		line-height: 1em;
+		color: @color-dark;
+		overflow: hidden;
+	}
+	.position {
+		font: 16px/1em @font-condensed;
+		text-transform: uppercase;
+		color: #bbb;
+		overflow: hidden;
+	}
+	.phone {
+		font-size: 34px;
+		line-height: 1em;
+		font-weight: 300;
+		white-space: nowrap;
+		color: @color-dark;
+		overflow: hidden;
+		> b {
+			font-size: 48px;
+			font-weight: 700;
+			vertical-align: sub;
+		}
+	};
+	.right-col {
+		padding: 0 0 0 60px;
+	}
+	.form-area {
+		padding: 50px 0 0;
+		transition: padding .5s;
+	}
+	.title {
+		font-size: 30px;
+		line-height: 1.2em;
+		font-weight: 300;
+		color: #b6b6b6;
+		> b {
+			display: block;
+			font-size: 36px;
+			font-weight: 400;
+			color: @color-dark;
+		}
+	}
+	.btn-cnt {
+		margin: 15px 0;
+	}
+	.form {
+		display: none;
+		position: absolute;
+	}
+	.form-area.opened {
+		padding-top: 10px;
+		.form {
+			display: block;
+		}
+	}
+	.form-input {
+		display: inline-block;
+		width: 40%;
+		margin: 5px 5px 5px 0;
+		&--name {}
+		&--phone {}
+		&--time {}
+	}
+	.form-submit {
+		width: 40%;
+	}
 }
