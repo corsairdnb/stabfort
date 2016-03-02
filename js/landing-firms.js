@@ -72,4 +72,130 @@ $(function(){
 		$('.form-input--name').trigger('focus');
 	});
 
+
+	if (document.documentElement.clientWidth >= 768) {
+		var slider1 = $('.peppermint-1');
+		slider1.Peppermint({
+			//transition time when changing slides, ms
+			speed: 1000,
+
+			//transition time when changing slides after touch, ms
+			touchSpeed: 300,
+
+			//slideshow enabled
+			slideshow: false,
+
+			//slideshow interval, ms
+			slideshowInterval: 10000,
+
+			//stop slideshow after user interacts with the slider
+			stopSlideshowAfterInteraction: false,
+
+			//slide number to start with
+			startSlide: 0,
+
+			//use mouse to drag the slider
+			mouseDrag: true,
+
+			//don't initialize Peppermint if there's only one slide
+			disableIfOneSlide: true,
+
+			//Prefix to be used with Peppermint classes,
+			//such as `inactive`, `active`, `mouse`, `drag`, etc.
+			//Don't forget to change the stylesheet appropriately!
+			cssPrefix: 'peppermint-',
+
+			//show dots
+			dots: false,
+
+			//prepend dots to dotsContainer (default is append)
+			dotsPrepend: false,
+
+			//Element to contain dots, defaults to Peppermint's root element.
+			//Can be anywhere on the page.
+			dotsContainer: undefined,
+
+			//element containing slides, defaults to Peppermint's root element
+			slidesContainer: undefined,
+
+			//Callback function, runs at slide change.
+			//Receives slide number as a parameter.
+			onSlideChange: function (a) {
+				/*var slide = $('.home-carousel').find('.slide').eq(parseInt(a)-1).find('.slide-content').css('opacity', 0);
+				 setTimeout(function(){
+				 slide.css('opacity', 1);
+				 }, 300, slide);*/
+			},
+
+			//Callback function, runs at setup end.
+			//Receives total number of slides as a parameter.
+			onSetup: undefined
+		});
+		$('.peppermint-1-control-left').on('click', slider1.data('Peppermint').prev);
+		$('.peppermint-1-control-right').on('click', slider1.data('Peppermint').next);
+
+
+		var slider2 = $('.peppermint-2');
+		slider2.Peppermint({
+			//transition time when changing slides, ms
+			speed: 1000,
+
+			//transition time when changing slides after touch, ms
+			touchSpeed: 300,
+
+			//slideshow enabled
+			slideshow: false,
+
+			//slideshow interval, ms
+			slideshowInterval: 10000,
+
+			//stop slideshow after user interacts with the slider
+			stopSlideshowAfterInteraction: false,
+
+			//slide number to start with
+			startSlide: 0,
+
+			//use mouse to drag the slider
+			mouseDrag: true,
+
+			//don't initialize Peppermint if there's only one slide
+			disableIfOneSlide: true,
+
+			//Prefix to be used with Peppermint classes,
+			//such as `inactive`, `active`, `mouse`, `drag`, etc.
+			//Don't forget to change the stylesheet appropriately!
+			cssPrefix: 'peppermint-',
+
+			//show dots
+			dots: false,
+
+			//prepend dots to dotsContainer (default is append)
+			dotsPrepend: false,
+
+			//Element to contain dots, defaults to Peppermint's root element.
+			//Can be anywhere on the page.
+			dotsContainer: undefined,
+
+			//element containing slides, defaults to Peppermint's root element
+			slidesContainer: undefined,
+
+			//Callback function, runs at slide change.
+			//Receives slide number as a parameter.
+			onSlideChange: function (a) {
+				/*var slide = $('.home-carousel').find('.slide').eq(parseInt(a)-1).find('.slide-content').css('opacity', 0);
+				 setTimeout(function(){
+				 slide.css('opacity', 1);
+				 }, 300, slide);*/
+			},
+
+			//Callback function, runs at setup end.
+			//Receives total number of slides as a parameter.
+			onSetup: undefined
+		});
+		$('.peppermint-2-control-left').on('click', slider2.data('Peppermint').prev);
+		$('.peppermint-2-control-right').on('click', slider2.data('Peppermint').next);
+	}
+
+	initPhotoSwipeFromDOM('.item-docs');
+
 });
