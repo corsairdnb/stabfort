@@ -886,6 +886,9 @@ a.pswp__share--download:hover {
 body {
   min-width: 1280px;
 }
+.top-menu .mobile-icon {
+  display: none !important;
+}
 .page-landing-firms {
   background: url("../img/landing/bg_city.jpg") no-repeat center top;
 }
