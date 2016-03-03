@@ -884,8 +884,11 @@ a.pswp__share--download:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .page-landing-firms {
-  background: url("../img/landing/bg_spb.jpg") no-repeat center top;
+  background: url("../img/landing/bg_city.jpg") no-repeat center top;
   background-size: 100% 570px;
+}
+.page-landing-firms--spb {
+  background-image: url("../img/landing/bg_spb.jpg");
 }
 .section-intro .section-cnt {
   padding: 150px 0;
@@ -976,9 +979,27 @@ a.pswp__share--download:hover {
   vertical-align: middle;
   padding: 40px 10px 40px 30px;
   background: #f9ffff;
+  position: relative;
+  -webkit-transition: box-shadow 0.4s, -webkit-transform 0.4s;
+  -moz-transition: box-shadow 0.4s, -moz-transform 0.4s;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.section-infographic-numeric .item:hover {
+  box-shadow: 0 2px 15px #88D1DC;
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  z-index: 1;
 }
 .section-infographic-numeric .item:nth-of-type(even) {
   background: #b0f5ff;
+}
+.section-infographic-numeric .item:link,
+.section-infographic-numeric .item:visited,
+.section-infographic-numeric .item:hover {
+  color: #383838;
+  text-decoration: none;
 }
 .section-infographic-numeric .item-icon {
   width: 85px;
@@ -994,7 +1015,6 @@ a.pswp__share--download:hover {
 }
 .section-infographic-numeric .item-number {
   font: 700 60px/1em 'Roboto Condensed', Tahoma, sans-serif;
-  color: #383838;
 }
 .section-infographic-numeric .item-number small {
   font-size: 22px;
@@ -1267,6 +1287,7 @@ a.pswp__share--download:hover {
   text-align: right;
 }
 .section-contact .card {
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   background-color: #fff;
@@ -1308,7 +1329,6 @@ a.pswp__share--download:hover {
   font-weight: 300;
   white-space: nowrap;
   color: #607d8b;
-  overflow: hidden;
 }
 .section-contact .phone > b {
   font-size: 48px;

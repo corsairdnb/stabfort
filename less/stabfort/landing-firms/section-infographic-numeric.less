@@ -29,8 +29,19 @@
 		vertical-align: middle;
 		padding: 40px 10px 40px 30px;
 		background: #f9ffff;
+		position: relative;
+		transition: box-shadow .4s, transform .4s;
+		&:hover {
+			box-shadow: 0 2px 15px #88D1DC;
+			transform: translateY(-3px);
+			z-index: 1;
+		}
 		&:nth-of-type(even) {
 			background: #b0f5ff;
+		}
+		&:link, &:visited, &:hover {
+			color: #383838;
+			text-decoration: none;
 		}
 	}
 	.item-icon {
@@ -44,7 +55,6 @@
 	}
 	.item-number {
 		font: 700 60px/1em @font-condensed;
-		color: #383838;
 		small {
 			font-size: 22px;
 			margin-left: 5px;

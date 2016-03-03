@@ -198,4 +198,9 @@ $(function(){
 
 	initPhotoSwipeFromDOM('.item-docs');
 
+	$('#switch-background').on('click', function(e){
+		e.preventDefault();
+		$('body').toggleClass('page-landing-firms--spb');
+	});
+
 });
