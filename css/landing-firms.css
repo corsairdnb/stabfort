@@ -883,9 +883,17 @@ a.pswp__share--download:hover {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.2);
 }
+body {
+  min-width: 1280px;
+}
 .page-landing-firms {
   background: url("../img/landing/bg_spb.jpg") no-repeat center top;
-  background-size: 100% 570px;
+  background-size: 1280px 570px;
+}
+@media (min-width: 1280px) {
+  .page-landing-firms {
+    background-size: 100% 570px;
+  }
 }
 .section-intro .section-cnt {
   padding: 150px 0;
@@ -1267,6 +1275,7 @@ a.pswp__share--download:hover {
   text-align: right;
 }
 .section-contact .card {
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   background-color: #fff;
@@ -1308,7 +1317,6 @@ a.pswp__share--download:hover {
   font-weight: 300;
   white-space: nowrap;
   color: #607d8b;
-  overflow: hidden;
 }
 .section-contact .phone > b {
   font-size: 48px;

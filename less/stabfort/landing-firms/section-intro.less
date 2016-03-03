@@ -1,35 +1,45 @@
-//@media (min-width: @vw-laptop-sm) {
-	.page-landing-firms {
-		background: url("../img/landing/bg_spb.jpg") no-repeat center top;
-		background-size: 100% 570px;
-	}
+body {
+  min-width: @vw-laptop-sm;
+}
 
-	.section-intro {
-		.section-cnt {
-			padding: 150px 0;
-		}
-		.title {
-			margin: 0;
-			padding: 0 22%;
-			text-align: center;
-			color: #fff;
-			font-size: 75px;
-			line-height: .8em;
-			font-weight: 400;
-			text-shadow: 0 1px 1px rgba(0,0,0,.35);
-			text-transform: uppercase;
-			> span {
-				font-size: 50px;
-				font-weight: 300;
-				text-transform: none;
-			}
-		}
-		.btn-main-action {
-			width: 320px;
-		}
-		.btn-cnt {
-			margin: 20px 0 0;
-			text-align: center;
-		}
-	}
+.page-landing-firms {
+  background: url("../img/landing/bg_spb.jpg") no-repeat center top;
+  background-size: 1280px 570px;
+}
+
+@media (min-width: @vw-laptop-sm) {
+  .page-landing-firms {
+    background-size: 100% 570px;
+  }
+}
+
+.section-intro {
+  .section-cnt {
+    padding: 150px 0;
+  }
+  .title {
+    margin: 0;
+    padding: 0 22%;
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    line-height: .8em;
+    font-weight: 400;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .35);
+    text-transform: uppercase;
+    > span {
+      font-size: 50px;
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+  .btn-main-action {
+    width: 320px;
+  }
+  .btn-cnt {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
 //}
