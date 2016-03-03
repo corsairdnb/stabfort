@@ -888,10 +888,14 @@ body {
 }
 .page-landing-firms {
   background: url("../img/landing/bg_city.jpg") no-repeat center top;
-  background-size: 100% 570px;
 }
 .page-landing-firms--spb {
   background-image: url("../img/landing/bg_spb.jpg");
+}
+@media (min-width: 1280px) {
+  .page-landing-firms {
+    background-size: 100% 570px;
+  }
 }
 .section-intro .section-cnt {
   padding: 150px 0;

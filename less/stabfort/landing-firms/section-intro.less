@@ -4,9 +4,14 @@ body {
 
 .page-landing-firms {
 	background: url("../img/landing/bg_city.jpg") no-repeat center top;
-	background-size: 100% 570px;
 	&--spb {
 		background-image: url("../img/landing/bg_spb.jpg");
+	}
+}
+
+@media (min-width: @vw-laptop-sm) {
+	.page-landing-firms {
+		background-size: 100% 570px;
 	}
 }
 
