@@ -17,7 +17,7 @@ gulp.task('less', function () {
 			cascade: false
 		}))
 		//.pipe(sourcemaps.write())
-		//.pipe(csso(true))
+		.pipe(csso(true))
 		.pipe(gulp.dest('css/'))
 });
 
