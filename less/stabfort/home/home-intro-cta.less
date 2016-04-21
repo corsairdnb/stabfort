@@ -28,13 +28,13 @@
 	.btn-1 {
 		display: inline-block;
 		padding: 17px 20px 15px;
-		background: mix(#ffaceb, #b54ba7);
-		background: linear-gradient(to bottom, #ffaceb, #b54ba7);
+		background: mix(#00dfff, #00a5bd);
+		background: linear-gradient(to bottom, #00dfff, #00a5bd);
 		border: 0 none;
-		border-bottom: 1px solid #b54ba7;
-		box-shadow: 0 0 10px #ffaceb inset, 0 2px 15px rgba(0,0,0,.2);
+		border-bottom: 1px solid #00a5bd;
+		box-shadow: 0 0 10px #00dfff inset, 0 2px 15px rgba(0,0,0,.2);
 		border-radius: 7px;
-		font-size: 19px;
+		font-size: 17px;
 		font-weight: 700;
 		line-height: 1em;
 		text-align: center;
@@ -45,14 +45,14 @@
 			text-decoration: none;
 		}
 		&:hover {
-			background: mix(#ffaceb, lighten(#b54ba7, 10%));
-			background: linear-gradient(to bottom, #ffaceb, lighten(#b54ba7, 8%));
+			background: mix(#00dfff, lighten(#00a5bd, 10%));
+			background: linear-gradient(to bottom, #00dfff, lighten(#00a5bd, 5%));
 			color: #fff;
 			text-decoration: none;
 		}
 		&:active {
-			background: mix(#b54ba7, #ffaceb);
-			background: linear-gradient(to bottom, #b54ba7, #ffaceb);
+			background: mix(#00a5bd, #00dfff);
+			background: linear-gradient(to bottom, #00a5bd, #00dfff);
 		}
 		&[disabled] {
 			background: mix(@color-grey-2, @color-grey-1);
@@ -70,7 +70,7 @@
 		border-bottom: 1px solid #2db530;
 		box-shadow: 0 0 10px #a9ff00 inset, 0 2px 15px rgba(0,0,0,.2);
 		border-radius: 7px;
-		font-size: 19px;
+		font-size: 17px;
 		font-weight: 700;
 		line-height: 1em;
 		text-align: center;
@@ -96,6 +96,9 @@
 			box-shadow: none;
 			border-bottom-color: @color-grey-2;
 		}
+	}
+	.icon {
+		font-size: 19px;
 	}
 }
 .slide-content {
@@ -149,9 +152,8 @@
 			margin: 20px 0;
 			font-size: 44px;
 			line-height: 1.2em;
-			font-weight: 700;
+			font-weight: 500;
 			text-align: center;
-			text-transform: uppercase;
 			text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
 			color: #fff;
 		}
