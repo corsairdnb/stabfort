@@ -25,80 +25,72 @@
 	.subtitle {
 		display: none;
 	}
-	.btn-1 {
+	.btn {
 		display: inline-block;
-		padding: 17px 20px 15px;
-		background: mix(#00dfff, #00a5bd);
-		background: linear-gradient(to bottom, #00dfff, #00a5bd);
+		padding: 15px 10px 12px;
 		border: 0 none;
-		border-bottom: 1px solid #00a5bd;
-		box-shadow: 0 0 10px #00dfff inset, 0 2px 15px rgba(0,0,0,.2);
 		border-radius: 7px;
-		font-size: 17px;
-		font-weight: 700;
-		line-height: 1em;
-		text-align: center;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.2em;
+		text-align: left;
 		text-transform: uppercase;
 		text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+		white-space: normal;
 		&, &:link, &:visited {
 			color: #fff;
 			text-decoration: none;
 		}
 		&:hover {
-			background: mix(#00dfff, lighten(#00a5bd, 10%));
-			background: linear-gradient(to bottom, #00dfff, lighten(#00a5bd, 5%));
 			color: #fff;
 			text-decoration: none;
+		}
+		> span {
+			display: block;
+			overflow: hidden;
+		}
+	}
+	.btn-1 {
+		padding-left: 50px;
+		background: mix(#00dfff, #00a5bd);
+		background: linear-gradient(to bottom, #00dfff, #00a5bd);
+		border-bottom: 1px solid #00a5bd;
+		box-shadow: 0 0 10px #00dfff inset, 0 2px 15px rgba(0,0,0,.2);
+		&:hover {
+			background: mix(#00dfff, lighten(#00a5bd, 10%));
+			background: linear-gradient(to bottom, #00dfff, lighten(#00a5bd, 5%));
 		}
 		&:active {
 			background: mix(#00a5bd, #00dfff);
 			background: linear-gradient(to bottom, #00a5bd, #00dfff);
 		}
-		&[disabled] {
-			background: mix(@color-grey-2, @color-grey-1);
-			background: linear-gradient(to bottom, @color-grey-2, @color-grey-1);
-			box-shadow: none;
-			border-bottom-color: @color-grey-2;
+		.icon {
+			margin-left: 5px;
+			float: right;
+			font-size: 45px;
+			position: relative;
+			right: 20px;
 		}
 	}
 	.btn-2 {
-		display: inline-block;
-		padding: 17px 20px 15px;
+		padding-left: 10px;
 		background: mix(#a9ff00, #2db530);
 		background: linear-gradient(to bottom, #a9ff00, #2db530);
-		border: 0 none;
 		border-bottom: 1px solid #2db530;
 		box-shadow: 0 0 10px #a9ff00 inset, 0 2px 15px rgba(0,0,0,.2);
-		border-radius: 7px;
-		font-size: 17px;
-		font-weight: 700;
-		line-height: 1em;
-		text-align: center;
-		text-transform: uppercase;
-		text-shadow: 0 -1px 0 rgba(0,0,0,.4);
-		&, &:link, &:visited {
-			color: #fff;
-			text-decoration: none;
-		}
 		&:hover {
 			background: mix(#a9ff00, lighten(#2db530, 10%));
 			background: linear-gradient(to bottom, #a9ff00, lighten(#2db530, 8%));
-			color: #fff;
-			text-decoration: none;
 		}
 		&:active {
 			background: mix(#2db530, #a9ff00);
 			background: linear-gradient(to bottom, #2db530, #a9ff00);
 		}
-		&[disabled] {
-			background: mix(@color-grey-2, @color-grey-1);
-			background: linear-gradient(to bottom, @color-grey-2, @color-grey-1);
-			box-shadow: none;
-			border-bottom-color: @color-grey-2;
+		.icon {
+			margin-right: 5px;
+			float: left;
+			font-size: 40px;
 		}
-	}
-	.icon {
-		font-size: 19px;
 	}
 }
 .slide-content {
